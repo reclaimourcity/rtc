@@ -1,0 +1,17 @@
+\startenvironment envCfgPaperToc
+
+% enable clickable toc
+\setupcombinedlist[content][interaction=all]
+
+% toc format
+\setupcombinedlist[content][alternative=c]
+\setuplist[chapter][width=10mm,style=bold]
+\setuplist[section][width=15mm,style=normal]
+\setuplist[subsection][width=20mm,style=normal]
+
+% change the label of \completecontent and \completeindex for english text language
+\setupheadtext[en][content=Table of Contents]
+\setupheadtext[de][content=Inhalt]
+\setupheadtext[pt][content=Conteúdo]
+
+\stopenvironment

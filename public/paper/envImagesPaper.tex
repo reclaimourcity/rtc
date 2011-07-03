@@ -1,0 +1,14 @@
+\startenvironment envImagesPaper
+
+% the image directory path points to the parent folder even 
+% if this file is actually located on the same level as the image dir
+% but due to the fact that this file is usually included from a content
+% that is located usually one level deeper, the path must point from 
+% "there" one level above in order to find the image directory
+% 
+\setupexternalfigures[directory={../../../images/common}]
+
+\useexternalfigure[ccbysa][cc_by_sa_88x31.png][frame=off]
+\useexternalfigure[cnrdLogo][cnrdLogo.jpg][frame=on, factor=fit]
+
+\stopenvironment

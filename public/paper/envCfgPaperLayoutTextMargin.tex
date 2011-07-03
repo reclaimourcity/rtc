@@ -1,0 +1,34 @@
+\startenvironment envCfgPaperLayoutTextMargin
+
+\setuppapersize[A4][A4] % this is default and may be omitted
+\setuplayout[	backspace=15mm,
+			topspace=15mm,
+			rightmargin=35mm,
+			leftmargin=13mm,
+			rightmargindistance=5mm,
+			leftmargindistance=2mm,
+			width=140mm,
+                        top=0mm,
+			height= 257mm,
+			header=5mm,
+			footer=5mm,
+			footerdistance=2.5mm,
+			headerdistance=2.5mm]
+
+% layout for coverpage/firstpage
+\definelayout[coverpage][	rightmargindistance=2mm,
+				leftmargindistance=2mm,
+				leftmargin=13mm,
+				rightmargin=13mm,
+				width=165]
+
+\definelayout[cnrd][		rightmargindistance=2mm,
+				leftmargindistance=2mm,
+				leftmargin=13mm,
+				rightmargin=13mm,
+				width=165]
+
+% right margin text is italic and block aligned
+\setupinmargin[style=slanted, align=normal]
+
+\stopenvironment 	

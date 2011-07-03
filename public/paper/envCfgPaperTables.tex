@@ -1,0 +1,22 @@
+\startenvironment envCfgPaperTables
+
+\define[]\setupDescrTable{%
+%
+\setupTABLE[c][each][frame=off, distance=.2em, background=color, backgroundcolor=gray:3, offset=.3cm, split=yes]%
+\setupTABLE[r][each][align={normal,verytolerant}, style=slanted, split=yes]%
+\setupTABLE[r][first][align=center, style=slanted]%
+%
+}
+
+\define[]\setupBoxTable{
+%
+\setupTABLE[c][each][frame=off, distance=.5em, background=color, backgroundcolor=gray:4, align=normal]%
+%
+}
+
+\defineframed[boxframed][background=color,backgroundcolor=gray:1,frame=off, align={normal,nothyphenated,verytolerant}, stretch=yes, width=local]
+
+\defineframed[definitionframed][background=color,backgroundcolor=gray:4,frame=off, align={normal,nothyphenated,verytolerant}, stretch=yes, width=local]
+
+
+\stopenvironment

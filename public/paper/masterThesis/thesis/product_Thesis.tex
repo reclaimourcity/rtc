@@ -1,0 +1,104 @@
+\startproduct product_Thesis
+\project project_MasterThesis
+
+% definitions and macros
+\environment envCfgThesisModes
+\environment envCfgPaperLanguageEn
+\environment envThesisText		% Text
+\environment envThesisUrl			% Url
+
+% switch background to cover page color
+\setupbackgrounds[page][background=color,backgroundcolor=gray:8]
+
+% change link color and styke for coverpage
+\setupinteraction[state=start,color=gray:1, click=yes, style=slanted]
+
+% define the layout for the cover page
+\definelayout[pageOne][margin=0mm,width=middle]
+\setuplayout[pageOne]
+
+\component component_Coverpage
+
+% new page for toc and in order to change local styles
+\page
+
+% change link color and style for table of content
+\setupinteraction[state=start,color=black, click=yes, style=normal]
+
+% switch background back to normal (white color) and fill header/footer area from now on
+\setupbackgrounds[page][background=color, backgroundcolor=white]
+\setupbackgrounds[header, footer][text][background=color,backgroundcolor=gray:8]
+\setupbackgrounds[header, footer][rightmargin][background=color,backgroundcolor=gray:5]
+
+% reset paper layout to normal style
+\setuplayout[reset]
+
+\component component_TOC
+
+% start page numbering from now on
+\page[1]
+\setuppagenumbering[state=start]
+
+% enable headers/footers from now on
+\setupfooter[state=start, color=gray:1, style=small, strut=yes]
+\setupheader[state=start, color=gray:1, style=small]
+
+\setupheadertexts
+        [  {\myTitle}]    []
+
+\setupfootertexts
+        [  {\getmarking[chapter]}]    [{page \pagenumber/\lastpagenumber } ]
+\setuppagenumbering[location=]
+
+% change link color and style for table of content
+\setupinteraction[state=start,color=darkgreen, click=yes, style=slanted]
+
+\component component_Declaration
+\component component_Acknowledgement
+\component component_Abstract
+\component component_Zusammenfassung
+\component component_Introduction
+\component component_Objectives
+
+\component component_TheoreticalFramework
+\component component_City
+\component component_Citizenship
+\component component_Participation
+\component component_Space
+\component component_RightToTheCity
+\component component_SelfDeterminedAction
+
+\component component_Methodology % subchapters are declared in this component
+
+\component component_LiteratureReview
+\component component_ParticipantObservation
+% \component component_GroundedTheory
+
+\component component_Fieldwork
+
+\component component_SaoPauloDiaries
+\component component_SaoPauloDiaries_Penaforte
+\component component_SaoPauloDiaries_RepublicaWithJuvenil
+\component component_SaoPauloDiaries_PadreDeCha
+\component component_SaoPauloDiaries_DayAndNight
+\component component_SaoPauloDiaries_Aruaca
+\component component_SaoPauloDiaries_SomeTalks
+\component component_SaoPauloDiaries_RedeRua
+\component component_SaoPauloDiaries_Ocas
+
+\component component_SaoPaulo
+\component component_SaoPaulo_Actors
+\component component_SaoPaulo_Places
+\component component_SaoPaulo_Actions
+\component component_SaoPaulo_Goals
+
+\component component_Conclusion
+\component component_References
+\component component_Links
+\component component_Media
+\component component_Figures
+\component component_Tables
+\component component_Abbreviations
+\component component_Appendices
+
+\stopproduct

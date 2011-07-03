@@ -1,0 +1,105 @@
+\startenvironment envCfgThesisDescriptions
+
+\definetextbackground[PersonalThoughtsBack][
+        	location=paragraph,
+       	background=color,
+	backgroundcolor=green:3,
+        	frame=off]
+
+\definetextbackground[PersonalObservationsBack][
+        	location=paragraph,
+       	background=color,
+	backgroundcolor=red:3,
+        	frame=off]
+
+\definetextbackground[QuestionBack]
+[
+        	location=paragraph,
+	width=max
+       	background=color,
+	backgroundcolor=gray:2,
+	color=magenta:8,
+        	frame=off
+]
+
+
+\definetextbackground[ADefinition]
+[
+        	location=paragraph,
+       	background=color,
+	backgroundcolor=yellow:3,
+        	frame=off
+]
+
+\definetextbackground[AReminder]
+[
+	location=text,
+       	background=color,
+	backgroundcolor=yellow:1,
+        	frame=off
+]
+
+\definetextbackground[AMark]
+[
+        	location=text,
+       	background=color,
+	backgroundcolor=orange,
+        	frame=off
+]
+
+
+\definedescription[TextQuote][
+	headstyle=slanted,
+	style={\tt},
+	align=left,
+	location=text,
+	width=fit,
+	margin=1cm, 
+	before=", 
+	after=", 
+	color=magenta:8]
+
+\definedescription[Keywords][
+	headstyle=slanted,
+	style={\tt},
+	align=left,
+	location=text,
+	width=fit,
+	margin=, 
+	before={\bf keywords }, 
+	after=, 
+	color=green:8]
+
+\definedescription[Citation][
+	headstyle=slanted,
+	style={\tt},
+	align=flusright,
+	%location=serried,
+	width=fit,
+	margin=1cm, 
+	before=, 
+	after=, 
+	color=magenta:8]
+
+\definedescription[PersonalObservation][
+	headstyle=,
+	align=normal,
+	location=text, 
+	width=fit, 
+	margin=0cm, 
+	before={\starttextbackground[PersonalObservationsBack]}, 
+	after={\stoptextbackground}, 
+	color=black]
+
+\definedescription[PersonalThoughts][
+	headstyle=, 
+	style={\em}, 
+	align=normal, 
+	location=text, 
+	width=fit,
+	margin=0cm, 
+	before={\starttextbackground[PersonalThoughtsBack]}, 
+	after={\stoptextbackground}, 
+	color=black]
+
+\stopenvironment

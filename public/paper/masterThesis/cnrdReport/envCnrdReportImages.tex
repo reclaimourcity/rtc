@@ -1,0 +1,54 @@
+\startenvironment envCnrdReportImages
+
+\setupexternalfigures[directory={./images}]
+
+\useexternalfigure[mstc][mstc.jpg][frame=on, , width=.5\textwidth]
+\useexternalfigure[flmoutside][flmoutside.jpg][frame=on, width=.5\textwidth]
+\useexternalfigure[flminside][flminside.jpg][frame=on, width=.5\textwidth]
+\useexternalfigure[luz][luz.jpg][frame=on, width=.5\textwidth,  hfactor=294]
+\useexternalfigure[police][police.jpg][frame=on, width=.5\textwidth]
+\useexternalfigure[moinho][moinho.jpg][frame=on, width=.5\textwidth, hfactor=131]
+
+\define[]\imageMstc{\placefigure[here]{Occupation MSTC}{\externalfigure[mstc]}}
+\define[]\imageFlmInside{\placefigure[here]{Inside Occupation: Av. Ipiranga}{\externalfigure[flmoutside]}}
+\define[]\imageFlmOutside{\placefigure[here]{Occupation FLM: Av. Ipiranga}{\externalfigure[flminside]}}
+\define[]\imageLuz{\placefigure[here]{Invasion for housing: Luz}{\externalfigure[luz]}}
+
+\define[]\imagePolice{\placefigure[force]{Police repression against street people: Bixiga}{\externalfigure[police]}}
+\define[]\imageMoinho{\placefigure[force]{On the roof of Favela Moinho: Bom Retiro}{\externalfigure[moinho]}}
+
+
+\define[]\combPoliceMoinho %
+{ %
+\placefigure[here] [] {none} %
+{ %
+\startcombination[2*1] % 2 columns, 1 row
+{\externalfigure[moinho]} {{\em Bom Retiro:} On the roof of Favela Moinho} %
+{\externalfigure[police]} {{\em Bixiga:} Police repression against street people} %
+\stopcombination %
+} %
+}
+
+\define[]\combAvIpirangaLuz %
+{ %
+\placefigure[here] [] {none} %
+{ %
+\startcombination[2*1] % 2 columns, 1 row
+{\externalfigure[flmoutside]} {{\em Av.Ipiranga:} Hotel occupied by FLM} %
+{\externalfigure[luz]} {{\em Luz:} Empty house invaded by citizens} %
+\stopcombination %
+} %
+}
+
+\define[]\combAvIpirangaMstc %
+{ %
+\placefigure[here] [] {none} %
+{ %
+\startcombination[2*1] % 2 columns, 1 row
+{\externalfigure[flminside]} {{\em Av.Ipiranga:} Inside the FLM occupation} %
+{\externalfigure[mstc]} {{\em Zona Cerealista:} Empty house occupied by MSTC} %
+\stopcombination %
+} %
+}
+
+\stopenvironment

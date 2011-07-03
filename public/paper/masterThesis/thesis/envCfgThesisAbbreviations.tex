@@ -1,0 +1,15 @@
+\environment envCfgThesisModes
+
+\startenvironment envCfgThesisAbbreviations
+
+\definesynonyms	[abbreviation] [abbreviations] [\infull]
+
+\startmode[print]
+\setupsynonyms		[abbreviation] [criterium=used]
+\stopmode
+
+\startmode[draft]
+\setupsynonyms		[abbreviation] [criterium=all]
+\stopmode
+
+\stopenvironment

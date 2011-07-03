@@ -1,0 +1,90 @@
+\startenvironment envTextRTC
+
+% define shortcuts and general text segments
+
+% \nl inserts an empty line
+\define[]\nl{\emptylines[1]}
+
+% \archiveNotes inserts generic archive.org notes that shall be available in every entry
+\define[]\archiveNotes%
+{%
+	for more information take a look at/para mais informações, veja\nl%
+	\from[rtc]%
+}
+
+% \archiveDecsr inserts the generic archive.org item description layout
+\define[]\archiveDescrEn%
+{%
+	[en]\nl%
+}
+
+\define[]\archiveDescrPt%
+{%
+	[pt]\nl%
+}
+
+% easier generic url reference
+% ref
+% url
+% text
+\define[3]\myUrl%
+{%
+	\useURL [#1] [#2] [] [#3]%
+}
+
+% url reference for archive.org: audio::flac
+% track number
+% url
+\define[2]\myUrlArchiveFlac%
+{%
+	\useURL [flac#1] [#2] [] [flac]%
+}
+
+% url reference for archive.org: audio::ogg
+% track number
+% url
+\define[2]\myUrlArchiveOgg%
+{%
+	\useURL [ogg#1] [#2] [] [ogg]%
+}
+
+% url reference for archive.org: audio::mp3
+% track number
+% url
+\define[2]\myUrlArchiveMp3%
+{%
+	\useURL [mp3#1] [#2] [] [mp3]%
+}
+
+% url reference for archive.org: audio::flac 
+% track number
+% url
+\define[2]\myUrlArchive%
+{%
+	\useURL[flac#1][#2.flac][][flac]%
+	\useURL[ogg#1][#2.ogg][][ogg]%
+	\useURL[mp3#1][#2.mp3][][mp3]% 
+}
+
+\define[1]\myFromArchive%
+{%
+	[\from[flac#1]][\from[ogg#1]][\from[mp3#1]]%
+}
+
+% generate a numbered list with bold items(heads), starting from 0
+\define[]\myStartItemizeArchive%
+{%
+	\setupitemize[headstyle=bold]%
+	\startitemize[N][start=0]%
+}
+
+\define[]\myStopItemize%
+{%
+	\stopitemize%
+}
+
+% several shortcuts
+\define[]\myFLM{{\em Frente de Luta por Moradia}  [\from[flmsite]]}
+\define[]\myMNPR{{\em Movimento Nacional de População de Rua} [\from[mnpr]]}
+
+\stopenvironment

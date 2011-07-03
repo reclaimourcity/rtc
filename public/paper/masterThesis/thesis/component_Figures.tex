@@ -1,0 +1,23 @@
+\startcomponent component_Figures
+\product product_Thesis
+\project project_MasterThesis
+
+% definitions and macros
+\environment envThesisAllEnvironments
+
+\starttext
+
+\startmode[tocLayout]
+\chapter[refFig]{List of Figures}
+
+Contains the complete list of used figures, graphs and images.
+\stopmode
+
+\startmode[draft]
+\chapter[refFig]{List of Figures}
+
+\placelist[figure][criterium=previous]
+\stopmode
+\stoptext
+
+\stopcomponent

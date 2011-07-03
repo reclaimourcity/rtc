@@ -1,0 +1,32 @@
+\startenvironment envCfgThesisImages
+
+\setupexternalfigures[directory={./images}]
+
+\useexternalfigure[imgPenafortePolice1][penafortePolice01.jpg][frame=off, factor=fit]
+\useexternalfigure[imgPenafortePolice2][penafortePolice02.jpg][frame=off, factor=fit]
+
+\useexternalfigure[imgSaoPauloActionMindMap][saoPauloActionMindMap.pdf][frame=off, factor=fit]
+\useexternalfigure[imgSaoPauloAimMindMap][saoPauloAimMindMap.pdf][frame=off, factor=fit]
+\useexternalfigure[imgSaoPauloActorsMindMap][saoPauloActorsMindMap.pdf][frame=off, factor=fit]
+\useexternalfigure[imgSaoPauloPlacesMindMap][saoPauloPlacesMindMap.pdf][frame=off, factor=fit]
+\useexternalfigure[imgRedLine][roterFadenHtml.pdf][frame=off, factor=fit]
+
+\useexternalfigure[imgTheory][theoryEn.png][frame=off, factor=fit]
+
+
+\define[]\imgPenafortePoliceOne{\placefigure[here]{BelaVista: Police intervention in front of Penaforte (cc-by-sa Author)}{\externalfigure[imgPenafortePolice1]}}
+\define[]\imgPenafortePoliceTwo{\placefigure[here]{BelaVista: Police intervention in front of Penaforte (cc-by-sa Author)}{\externalfigure[imgPenafortePolice2]}}
+
+\define[]\imgSpActionMindMap{\placefigure[force]{action mind map (cc-by-sa Author)}{\externalfigure[imgSaoPauloActionMindMap]}}
+
+\define[]\imgSpAimMindMap{\placefigure[force]{aim mind map (cc-by-sa Author)}{\externalfigure[imgSaoPauloAimMindMap]}}
+
+\define[]\imgSpActorsMindMap{\placefigure[force]{actors mind map (cc-by-sa Author)}{\externalfigure[imgSaoPauloActorsMindMap]}}
+
+\define[]\imgSpPlacesMindMap{\placefigure[force]{places mind map (cc-by-sa Author)}{\externalfigure[imgSaoPauloPlacesMindMap]}}
+
+\define[]\imgThesisRedLine{\placefigure[force]{red line of the thesis (cc-by-sa Author)}{\externalfigure[imgRedLine]}}
+
+\define[]\imgThesisTheroy{\placefigure[force]{empirical-theorectical; inductive-deductive [source: author, derived from Wikipedia as cc-by-sa 3.0]}{\externalfigure[imgTheory]}}
+
+\stopenvironment

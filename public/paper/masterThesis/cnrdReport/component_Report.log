@@ -1,0 +1,183 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=cont-en 2011.4.8)  3 JUL 2011 22:16
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+ (/usr/share/texmf/web2c/natural.tcx)
+**component_Report.tex \emergencyend
+(./component_Report.tex
+
+ConTeXt  ver: 2009.11.26 16:28 MKII  fmt: 2011.4.8  int: english/english
+
+system          : cont-new loaded
+(/usr/share/texmf/tex/context/base/cont-new.tex
+systems         : beware: some patches loaded from cont-new.tex
+(/usr/share/texmf/tex/context/base/cont-new.mkii))
+system          : cont-fil loaded
+(/usr/share/texmf/tex/context/base/cont-fil.tex
+loading         : ConTeXt File Synonyms
+)
+system          : cont-sys.rme loaded
+(/etc/texmf/tex/context/user/cont-sys.rme
+(/usr/share/texmf/tex/context/base/type-tmf.tex
+(/usr/share/texmf/tex/context/base/type-tmf.mkii))
+(/usr/share/texmf/tex/context/base/type-siz.tex
+(/usr/share/texmf/tex/context/base/type-siz.mkii))
+(/usr/share/texmf/tex/context/base/type-one.tex
+(/usr/share/texmf/tex/context/base/type-one.mkii)))
+system          : component_Report.top loaded
+(./component_Report.top)
+bodyfont        : 12pt rm is loaded
+language        : patterns nl->texnansi:texnansi->1->2:2 nl->ec:ec->2->2:2 us->
+ec:ec->3->2:3 de->texnansi:texnansi->4->3:3 de->ec:ec->5->3:3 da->ec:ec->6->2:2
+ sv->ec:ec->7->2:2 gb->ec:ec->8->2:2 fr->texnansi:texnansi->9->2:2 fr->ec:ec->1
+0->2:2 es->ec:ec->11->2:2 ca->ec:ec->12->2:2 it->texnansi:texnansi->13->2:2 it-
+>ec:ec->14->2:2 la->ec:ec->15->2:2 pt->texnansi:texnansi->16->2:2 pt->ec:ec->17
+->2:2 ro->ec:ec->18->2:2 pl->pl0:pl0->19->2:2 pl->ec:ec->20->2:2 pl->qx:qx->21-
+>2:2 cs->il2:il2->22->2:2 cs->ec:ec->23->2:2 sk->il2:il2->24->2:2 sk->ec:ec->25
+->2:2 hr->ec:ec->26->2:2 sl->ec:ec->27->2:2 tr->ec:ec->28->2:2 agr->agr:agr->30
+->2:2 fi->ec:ec->31->2:2 hu->ec:ec->32->2:2 ru->t2a:t2a->34->2:2 uk->t2a:t2a->3
+5->3:3 loaded
+specials        : dvips loaded
+\openout3 = `component_Report.tui'.
+
+\openout0 = `component_Report-mpgraph.mp'.
+
+\openout0 = `mpgraph.mp'.
+
+systems         : system commands are enabled
+language        : language en is active
+specials        : loading definition file tpd
+(/usr/share/texmf/tex/context/base/spec-tpd.mkii
+specials        : loading definition file fdf
+(/usr/share/texmf/tex/context/base/spec-fdf.mkii)) (./component_Report.tuo)
+(./component_Report.tuo) (./component_Report.tuo) (./component_Report.tuo)
+(./component_Report.tuo) (./component_Report.tuo) (./component_Report.tuo)
+(./component_Report.tuo) (./component_Report.tuo) (./component_Report.tuo)
+(./component_Report.tuo)
+publications    : file component_Report.bbl not found, waiting for bibtex
+(./component_Report.tuo)
+systems         : begin file component_Report at line 1
+systems         : begin file project_MasterThesis at line 4
+(../project_MasterThesis.tex
+systems         : begin file envCfgPaperGeneral at line 4
+(../../envCfgPaperGeneral.tex
+color           : mpcmyk color space is supported
+color           : mpspot color space is supported
+color           : system rgb is global activated
+interaction     : active
+)
+systems         : end file envCfgPaperGeneral at line 4
+systems         : begin file envCfgPaperNumbering at line 5
+(../../envCfgPaperNumbering.tex)
+systems         : end file envCfgPaperNumbering at line 5
+systems         : begin file envCfgPaperToc at line 6
+(../../envCfgPaperToc.tex)
+systems         : end file envCfgPaperToc at line 6
+systems         : begin file envCfgPaperLayoutTextMargin at line 8
+(../../envCfgPaperLayoutTextMargin.tex)
+systems         : end file envCfgPaperLayoutTextMargin at line 8
+systems         : begin file envCfgPaperTables at line 10
+(../../envCfgPaperTables.tex)
+systems         : end file envCfgPaperTables at line 10
+systems         : begin file envImagesPaper at line 13
+(../../envImagesPaper.tex)
+systems         : end file envImagesPaper at line 13
+systems         : begin file envUrlPaper at line 14
+(../../envUrlPaper.tex)
+systems         : end file envUrlPaper at line 14
+systems         : begin file envCmdPaper at line 15
+(../../envCmdPaper.tex)
+systems         : end file envCmdPaper at line 15
+systems         : begin file envMacrosPaper at line 16
+(../../envMacrosPaper.tex
+system          : command \nl is already defined
+)
+systems         : end file envMacrosPaper at line 16
+systems         : begin file envTextPaper at line 17
+(../../envTextPaper.tex)
+systems         : end file envTextPaper at line 17
+systems         : begin file envConstantsPaper at line 18
+(../../envConstantsPaper.tex
+system          : command \myTermaCourse is already defined
+system          : command \myTermaInstitute is already defined
+system          : command \myTermaUniversity is already defined
+system          : command \myLicenceText is already defined
+system          : command \myLicenceImage is already defined
+)
+systems         : end file envConstantsPaper at line 18
+)
+systems         : end file project_MasterThesis at line 4
+systems         : begin file envCfgPaperLanguageEn at line 7
+(../../envCfgPaperLanguageEn.tex)
+systems         : end file envCfgPaperLanguageEn at line 7
+systems         : begin file envCnrdReportColors at line 8
+(./envCnrdReportColors.tex
+color           : system hex is loaded
+(/usr/share/texmf/tex/context/base/colo-hex.tex
+(/usr/share/texmf/tex/context/base/colo-hex.mkii
+loading         : ConTeXt Color Macros / Hexadecimal
+)))
+systems         : end file envCnrdReportColors at line 8
+systems         : begin file envCnrdReportImages at line 9
+(./envCnrdReportImages.tex)
+systems         : end file envCnrdReportImages at line 9
+fonts           : resetting map file list
+{/usr/share/texmf/fonts/map/pdftex/context/original-empty.map}
+fonts           : using map file: original-base
+{/usr/share/texmf/fonts/map/pdftex/context/original-base.map}
+fonts           : using map file: original-ams-base
+{/usr/share/texmf/fonts/map/pdftex/context/original-ams-base.map}
+fonts           : using map file: original-public-lm
+{/usr/share/texmf/fonts/map/pdftex/context/original-public-lm.map}
+fonts           : using map file: lm-ec
+{/usr/share/texmf/fonts/map/dvips/lm/lm-ec.map}
+fonts           : using map file: lm-math
+{/usr/share/texmf/fonts/map/dvips/lm/lm-math.map}
+fonts           : using map file: lm-rm
+{/usr/share/texmf/fonts/map/dvips/lm/lm-rm.map}
+fonts           : using map file: original-ams-euler
+{/usr/share/texmf/fonts/map/pdftex/context/original-ams-euler.map}
+(/usr/share/texmf/tex/context/base/sort-def.mkii)
+(/usr/share/texmf/tex/context/base/sort-lan.mkii)
+interaction     : pdftex code inserted
+[1.1]
+figures         : figure moinho.jpg can not be found
+figures         : figure police.jpg can not be found
+floatblocks     : 1 placed
+[2.1]
+figures         : figure flmoutside.jpg can not be found
+figures         : figure luz.jpg can not be found
+floatblocks     : 2 saved
+figures         : figure flminside.jpg can not be found
+figures         : figure mstc.jpg can not be found
+floatblocks     : 3 saved
+[3.1]
+floatblocks     : 2 moved
+floatblocks     : 3 moved
+[4.1]
+systems         : end file component_Report at line 81
+system          : cont-err loaded
+(/usr/share/texmf/tex/context/base/cont-err.tex
+systems         : no file 'cont-sys.tex', using 'cont-sys.rme' instead
+) ) 
+Here is how much of TeX's memory you used:
+ 1122 strings out of 456423
+ 18376 string characters out of 536185
+ 4701510 words of memory out of 7118589
+ 41570 multiletter control sequences out of 15000+50000
+ 83057 words of font info for 39 fonts, out of 3000000 for 9000
+ 396 hyphenation exceptions out of 8191
+ 41i,17n,40p,1868b,647s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1
+/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmtt8.pfb>
+
+pdfTeX warning: pdftex: no GlyphToUnicode entry has been inserted yet!
+Output written on component_Report.pdf (4 pages, 118044 bytes).
+PDF statistics:
+ 35 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

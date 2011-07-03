@@ -1,0 +1,20 @@
+\startenvironment envCfgPaperGeneral
+
+% use utf-8 encoding
+\enableregime	[utf-8]
+
+% setup fonts
+\setupbodyfont	[12pt]     
+
+% set inter-paragraph spacing
+\setupwhitespace[medium]
+
+% otherwise you get greyscale. for examples, linky are rendered in color instead of greyscale
+\setupcolors	[state=start]       
+
+% make hyperlinks active. if not active, hyperlinks are not rendered differently and wont be clickable thus non distinguishable from normal text
+\setupinteraction[state=start]
+
+\setuptolerance	[strict]
+
+\stopenvironment

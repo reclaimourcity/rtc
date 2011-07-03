@@ -1,0 +1,60 @@
+\startcomponent component_Coverpage
+
+\product product_Thesis
+\project project_MasterThesis
+
+\environment envThesisAllEnvironments
+
+\starttext
+
+% cover page uses centered text
+\startalignment[center]
+
+% text is going to be bright due to dark background
+\startcolor[gray:1]
+
+\blank[1cm]
+{\ssb \myTitle}
+\blank[2cm]
+\startlines
+{\ssa \myTermaInstitute}
+at
+{\ssa \myTermaUniversity}
+\stoplines
+\blank[2cm]
+{\bold \ssa \myTermaCourse}
+
+{\bold \ssa \myTermaModule}
+
+\blank[1.25cm]
+{\bold Handed in by}
+
+{\em \myMe}
+\blank[1.25cm]
+{\bold Matriculation No:}
+
+{\em \myMatNo}
+\blank[1.25cm]
+{\bold Supervisors}
+
+{\em \mySupervisor}
+
+{\em \myCoSupervisor}
+\blank[1.25cm]
+
+{\bold Presented on:}
+
+{\em \myDateToday}
+\blank[1.5cm]
+{\bold licensed under}
+
+{\em\myLicenceText}
+\blank[1cm]
+% cc-by-sa image
+\myLicenceImage
+
+\stopcolor
+\stopalignment
+\stoptext
+
+\stopcomponent

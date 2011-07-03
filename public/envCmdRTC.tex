@@ -1,0 +1,21 @@
+\startenvironment envCmdRTC
+
+%hanging indent for references exported from zotero
+
+\definestartstop[REF]
+ [command={%
+\setupwhitespace[1.2em]% },style={%
+           \raggedright\nohyphens%
+ },before={%
+           \setuplines[indenting={yes,-2em,first}]%
+           \setupnarrower[left=2em]%
+           \startnarrower[left]% blockindent only left
+           \startlines%
+  },after={%
+           \stoplines%
+           \stopnarrower%
+           \setuplines[indenting={no}]% must be reseted
+           \endgraf%
+ }]
+
+\stopenvironment

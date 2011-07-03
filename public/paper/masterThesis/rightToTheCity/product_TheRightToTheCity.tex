@@ -1,0 +1,69 @@
+\startproduct product_TheRightToTheCity
+\project project_MasterThesis
+
+% definitions and macros
+\environment envCfgPaperLanguageEn
+\environment envRttcUrl
+\environment envRttcText
+
+% switch background to cover page color
+\setupbackgrounds[page][background=color,backgroundcolor=gray:8]
+
+% change link color and styke for coverpage
+\setupinteraction[state=start,color=gray:1, click=yes, style=slanted]
+
+% define the layout for the cover page
+\definelayout[pageOne][margin=0mm,width=middle]
+\setuplayout[pageOne]
+
+\component component_Coverpage
+
+% new page for toc and in order to change local styles
+\page
+
+% change link color and style for table of content
+\setupinteraction[state=start,color=black, click=yes, style=normal]
+
+% switch background back to normal (white color) and fill header/footer area from now on
+\setupbackgrounds[page][background=color, backgroundcolor=white]
+\setupbackgrounds[header, footer][text][background=color,backgroundcolor=gray:8]
+\setupbackgrounds[header, footer][rightmargin][background=color,backgroundcolor=gray:5]
+
+% reset paper layout to normal style
+\setuplayout[reset]
+
+\component component_TOC
+
+% start page numbering from now on
+\page[1]
+\setuppagenumbering[state=start]
+
+% enable headers/footers from now on
+\setupfooter[state=start, color=gray:1, style=small, strut=yes]
+\setupheader[state=start, color=gray:1, style=small]
+
+\setupheadertexts
+        [  {\myTitle}]    []
+
+\setupfootertexts
+        [  {\getmarking[chapter]}]    [{page \pagenumber/\lastpagenumber } ]
+\setuppagenumbering[location=]
+
+% change link color and style for table of content
+\setupinteraction[state=start,color=darkgreen, click=yes, style=slanted]
+
+\component component_Objectives
+\component component_Introduction
+\component component_TheRightToTheCity
+\component component_TheDecipheringOfGlobalCities
+\component component_WaterfrontsEverywhere
+\component component_TheWaterfrontInDevelopment
+\component component_WhatIsAWorldcityAnyway
+\component component_AccumulationOfDispossession
+\component component_ReturningToLefebvre
+\component component_Conclusion
+\component component_References
+\component component_Links
+
+
+\stopproduct

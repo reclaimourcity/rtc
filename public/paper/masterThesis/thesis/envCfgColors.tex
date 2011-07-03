@@ -1,0 +1,22 @@
+\startenvironment envCfgColors
+
+\setupcolor[hex]
+\definecolor[mmBlue][h=00c3ff]
+\definecolor[mmMagenta][h=ff00bb]
+\definecolor[mmOrange][h=ff6e00]
+\definecolor[mmGreen][h=00ff24]
+\definecolor[mmGreenDark][h=015f41] % r=1 g=95 b=65<
+
+\define[1]\magenta{\color[mmMagenta]{#1}}
+\define[1]\magentaBold{\color[mmMagenta]{\bf{#1}}}
+
+\define[1]\orange{\color[mmOrange]{#1}}
+\define[1]\orangeBold{\color[mmOrange]{\bf{#1}}}
+
+\define[1]\green{\color[mmGreen]{#1}}
+\define[1]\greenBold{\color[mmGreen]{\bf{#1}}}
+
+\define[1]\blue{\color[mmBlue]{#1}}
+\define[1]\blueBold{\color[mmBlue]{\bf{#1}}}
+
+\stopenvironment

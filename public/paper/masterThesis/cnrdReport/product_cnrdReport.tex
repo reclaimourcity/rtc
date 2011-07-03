@@ -1,0 +1,23 @@
+\startproduct product_cnrdReport
+\project project_MasterThesis
+
+\environment envCnrdReportColors
+\environment envCnrdReportImages
+
+% define the layout for the dokument
+\definelayout[cnrd][margin=13mm,width=165mm]
+\setuplayout[cnrd]
+
+% enable headers/footers from now on
+\setupheader[state=start, style=small]
+
+
+\setupheadertexts 	[{\color[turquoise]{{\bf CNRD} Center  for Natural Resources and Development}}]
+				[{\color[turquoise]{Report of activities 2010, scholarship holders}}] 
+
+% change link color and style for table of content
+\setupinteraction[state=start, color=blue, click=yes, style=slanted]
+
+\component component_Report
+
+\stopproduct

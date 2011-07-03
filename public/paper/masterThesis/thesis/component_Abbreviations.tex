@@ -1,0 +1,25 @@
+\startcomponent component_Abbreviations
+\product product_Thesis
+\project project_MasterThesis
+
+% definitions and macros
+\environment envThesisAllEnvironments
+\environment envCfgThesisAbbreviations
+
+\starttext
+
+\startmode[tocLayout]
+\chapter[refAbb]{Abbreviations}
+
+Contains all abbreviations.
+\stopmode
+
+\startmode[draft]
+\chapter[refAbb]{Abbreviations}
+
+\placelistofabbreviations
+
+\stopmode
+\stoptext
+
+\stopcomponent

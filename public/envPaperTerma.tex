@@ -1,0 +1,60 @@
+\startenvironment envPaperTerma
+
+% pagelayout
+\setuppapersize[A4][A4] % this is default and may be omitted
+\setuplayout[	backspace=20mm,
+			leftmargindistance=20mm,rightmargindistance=20mm,
+			width=170mm,
+			topspace=20mm, top=0mm,
+			height= 257mm,
+			header=5mm,
+			footer=5mm,
+			footerdistance=2.5mm,
+			headerdistance=2.5mm]
+
+% no numbering of sections
+\setuphead[section][number=no]
+
+% enable clickable toc
+\setupcombinedlist[content][interaction=all]
+
+% use utf-8 encoding
+\enableregime	[utf-8]
+
+% set language of this text to english
+\mainlanguage	[en]
+
+% change the label of \completecontent and \completeindex for english text language
+\setupheadtext[en][content=Table of Contents]
+
+\setupcombinedlist[content][alternative=c]
+\setuplist[chapter][width=5mm,style=bold]
+\setuplist[section][width=10mm,style=slanted]
+
+
+% change the label of the index page for english language
+% \setupheadtext[en][index=Figures]
+
+% one wide text column and a small index/keyword column
+\defineparagraphs[TwoColKey][n=2]
+\setupparagraphs[TwoColKey][1][width=14cm]
+
+\define[]\setupDescrTable{%
+%
+\setupTABLE[c][each][frame=off, distance=.2em, background=color, backgroundcolor=gray:3, offset=.3cm]%
+\setupTABLE[r][each][align=normal, style=slanted, split=yes]%
+\setupTABLE[r][first][align=center, style=slanted]%
+%
+}
+
+\define[]\setupBoxTable{
+%
+\setupTABLE[c][each][frame=off, distance=.5em, background=color, backgroundcolor=gray:4, align=normal]%
+%
+}
+
+\defineframed[boxframed][background=color,backgroundcolor=gray:1,frame=off, align={normal,nothyphenated,verytolerant}, stretch=yes, width=local]
+
+\defineframed[definitionframed][background=color,backgroundcolor=gray:4,frame=off, align={normal,nothyphenated,verytolerant}, stretch=yes, width=local]
+
+\stopenvironment

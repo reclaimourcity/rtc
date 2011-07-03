@@ -1,0 +1,27 @@
+\startenvironment envDokumentEn
+
+% setup fonts
+\setupbodyfont	[12pt]     
+\enableregime	[utf-8]
+
+% otherwise you get greyscale. for examples, linky are rendered in color instead of greyscale
+\setupcolors	[state=start]       
+
+% setup language
+\mainlanguage	[en]
+
+% setup page stuff
+\setuppagenumbering[state=stop]
+
+% make hyperlinks active. if not active, hyperlinks are not rendered differently and wont be clickable thus non distinguishable from normal text
+\setupinteraction[state=start]
+
+% set inter-paragraph spacing
+\setupwhitespace[medium]
+
+% enable clickable toc
+\setupcombinedlist[content][interaction=all]\
+
+\setuptolerance	[strict]
+
+\stopenvironment

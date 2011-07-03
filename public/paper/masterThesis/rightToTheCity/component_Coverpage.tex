@@ -1,0 +1,52 @@
+\startcomponent component_Coverpage
+
+\product product_TheRightToTheCity
+\project project_MasterThesis
+
+\environment envRttcText
+
+\starttext
+
+% cover page uses centered text
+\startalignment[center]
+
+% text is going to be bright due to dark background
+\startcolor[gray:1]
+
+\blank[1cm]
+{\ssb \myTitle}
+\blank[2cm]
+\startlines
+{\ssa \myTermaInstitute}
+at
+{\ssa \myTermaUniversity}
+\stoplines
+\blank[2cm]
+{\bold \ssa \myTermaCourse}
+
+\myTermaModule
+\blank[1.5cm]
+{\bold lectured by}
+
+{\em \myProf}
+\blank[2.5cm]
+{\bold written by}
+
+{\em \myMe}
+\blank[1.5cm]
+{\bold released on}
+
+{\em \myDateToday}
+\blank[1.5cm]
+{\bold licensed under}
+
+{\em\myLicenceText}
+\blank[1cm]
+% cc-by-sa image
+\myLicenceImage
+
+\stopcolor
+\stopalignment
+\stoptext
+
+\stopcomponent
