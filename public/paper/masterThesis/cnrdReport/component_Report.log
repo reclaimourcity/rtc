@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=cont-en 2011.4.8)  3 JUL 2011 22:16
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=cont-en 2011.4.8)  4 JUL 2011 10:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -140,16 +140,20 @@ fonts           : using map file: original-ams-euler
 (/usr/share/texmf/tex/context/base/sort-def.mkii)
 (/usr/share/texmf/tex/context/base/sort-lan.mkii)
 interaction     : pdftex code inserted
-[1.1]
-figures         : figure moinho.jpg can not be found
-figures         : figure police.jpg can not be found
+[1.1] <./images/moinho.jpg>
+figures         : dimensions of moinho.jpg loaded from figurefile itself
+(./component_Report.tuo) <./images/police.jpg>
+figures         : dimensions of police.jpg loaded from figurefile itself
 floatblocks     : 1 placed
-[2.1]
-figures         : figure flmoutside.jpg can not be found
-figures         : figure luz.jpg can not be found
+[2.1] <./images/flmoutside.jpg>
+figures         : dimensions of flmoutside.jpg loaded from figurefile itself
+ <./images/luz.jpg>
+figures         : dimensions of luz.jpg loaded from figurefile itself
 floatblocks     : 2 saved
-figures         : figure flminside.jpg can not be found
-figures         : figure mstc.jpg can not be found
+ <./images/flminside.jpg>
+figures         : dimensions of flminside.jpg loaded from figurefile itself
+ <./images/mstc.jpg>
+figures         : dimensions of mstc.jpg loaded from figurefile itself
 floatblocks     : 3 saved
 [3.1]
 floatblocks     : 2 moved
@@ -161,23 +165,22 @@ system          : cont-err loaded
 systems         : no file 'cont-sys.tex', using 'cont-sys.rme' instead
 ) ) 
 Here is how much of TeX's memory you used:
- 1122 strings out of 456423
- 18376 string characters out of 536185
+ 1138 strings out of 456423
+ 18692 string characters out of 536185
  4701510 words of memory out of 7118589
- 41570 multiletter control sequences out of 15000+50000
- 83057 words of font info for 39 fonts, out of 3000000 for 9000
+ 41586 multiletter control sequences out of 15000+50000
+ 82418 words of font info for 37 fonts, out of 3000000 for 9000
  396 hyphenation exceptions out of 8191
- 41i,17n,40p,1868b,647s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,17n,40p,1868b,758s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1
 /public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmtt8.pfb>
+hare/texmf/fonts/type1/public/lm/lmro12.pfb>
 
 pdfTeX warning: pdftex: no GlyphToUnicode entry has been inserted yet!
-Output written on component_Report.pdf (4 pages, 118044 bytes).
+Output written on component_Report.pdf (4 pages, 11551025 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 37 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

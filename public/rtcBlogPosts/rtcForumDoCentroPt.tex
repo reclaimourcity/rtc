@@ -1,0 +1,116 @@
+% setup fonts
+\setupbodyfont	[12pt]     
+\enableregime	[utf-8]
+
+% otherwise you get greyscale. for examples, linky are rendered in color instead of greyscale
+\setupcolors	[state=start]       
+
+% setup language
+\mainlanguage	[pt]
+
+% setup page stuff
+\setuppagenumbering[state=stop]
+
+% setup used urls
+\useURL [cmsp]		[http://www.camara.sp.gov.br/cr0309_net/forms/frmPrincipal.aspx]	[][Câmara Municipal]
+\useURL [subse]		[http://www.prefeitura.sp.gov.br/cidade/secretarias/subprefeituras/se/]	[][Subprefeitura Sé]
+\useURL [polis]		[http://www.polis.org.br/]									[][Instituto Pólis]
+\useURL [waste]		[http://www.polis.org.br/publicacoes_interno.asp?codigo=257]		[][Fórum Lixo e Cidadania]
+\useURL [mnpr]		[http://falarua.org/]										[][movimento nacional]
+\useURL [archive]	[http://www.archive.org/details/ForumDoCentro]					[][archive.org]
+\useURL [commons]	[http://creativecommons.org/publicdomain/zero/1.0/]				[][commons]
+
+\useURL [flac1]		[http://www.archive.org/download/ForumDoCentro/01__mediacoveragepoprua__forumcentro.flac]		[][flac]
+\useURL [mp31]		[http://www.archive.org/download/ForumDoCentro/01__mediacoveragepoprua__forumcentro.mp3]		[][mp3]
+\useURL [ogg1]		[http://www.archive.org/download/ForumDoCentro/01__mediacoveragepoprua__forumcentro.ogg]		[][ogg]
+\useURL [flac2]		[http://www.archive.org/download/ForumDoCentro/02__presentationporbspoprua__forumcentro.flac]	[][flac]
+\useURL [mp32]		[http://www.archive.org/download/ForumDoCentro/02__presentationporbspoprua__forumcentro.mp3]	[][mp3]
+\useURL [ogg2]		[http://www.archive.org/download/ForumDoCentro/02__presentationporbspoprua__forumcentro.ogg]	[][ogg]
+\useURL [flac3]		[http://www.archive.org/download/ForumDoCentro/03__noticiaspoprua__forumcentro.flac]			[][flac]
+\useURL [mp33]		[http://www.archive.org/download/ForumDoCentro/03__noticiaspoprua__forumcentro.mp3]			[][mp3]
+\useURL [ogg3]		[http://www.archive.org/download/ForumDoCentro/03__noticiaspoprua__forumcentro.ogg]			[][ogg]
+\useURL [flac4]		[http://www.archive.org/download/ForumDoCentro/04__commentariopoprua__forumcentro.flac]		[][flac]
+\useURL [mp34]		[http://www.archive.org/download/ForumDoCentro/04__commentariopoprua__forumcentro.mp3]		[][mp3]
+\useURL [ogg4]		[http://www.archive.org/download/ForumDoCentro/04__commentariopoprua__forumcentro.ogg]		[][ogg]
+\useURL [flac5]		[http://www.archive.org/download/ForumDoCentro/05__banheirospoprua__forumcentro.flac]			[][flac]
+\useURL [mp35]		[http://www.archive.org/download/ForumDoCentro/05__banheirospoprua__forumcentro.mp3]			[][mp3]
+\useURL [ogg5]		[http://www.archive.org/download/ForumDoCentro/05__banheirospoprua__forumcentro.ogg]			[][ogg]
+\useURL [flac6]		[http://www.archive.org/download/ForumDoCentro/06__mapeamentopoprua__forumcentro.flac]		[][flac]
+\useURL [mp36]		[http://www.archive.org/download/ForumDoCentro/06__mapeamentopoprua__forumcentro.mp3]		[][mp3]
+\useURL [ogg6]		[http://www.archive.org/download/ForumDoCentro/06__mapeamentopoprua__forumcentro.ogg]		[][ogg]
+\useURL [flacall]		[http://www.archive.org/download/ForumDoCentro/20100929_forumdocentro_org.flac]				[][flac]
+\useURL [mp3all]	[http://www.archive.org/download/ForumDoCentro/20100929_forumdocentro_org.mp3]				[][mp3]
+\useURL [oggall]		[http://www.archive.org/download/ForumDoCentro/20100929_forumdocentro_org.ogg]				[][ogg]
+
+% make hyperlinks active. if not active, hyperlinks are not rendered differently and wont be clickable thus non distinguishable from normal text
+\setupinteraction[state=start]
+
+% set inter-paragraph spacing
+\setupwhitespace[medium]
+
+%hanging indent for references exported from zotero
+
+\definestartstop[REF]
+ [command={%
+\setupwhitespace[1.2em]% },style={%
+           \raggedright\nohyphens%
+ },before={%
+           \setuplines[indenting={yes,-2em,first}]%
+           \setupnarrower[left=2em]%
+           \startnarrower[left]% blockindent only left
+           \startlines%
+  },after={%
+           \stoplines%
+           \stopnarrower%
+           \setuplines[indenting={no}]% must be reseted
+           \endgraf%
+ }]
+
+\starttext
+No dia 29 de Setembro aconteceu a sétima reunião do {\em Fórum do Centro de São Paulo} na \from[cmsp] em São Paulo. O fórum foi criado (adicional aos outros fóruns já existente) por cidadãos/cidadães do centro para discutir e afetar o desenvolvimento da área. Vários grupos de trabalhos foram criados que tratam assuntos como lixo/residuais solidas ou a situação da população de rua na área central da cidade. O trabalho deles está focando claramente nas instituições públicas responsáveis, aqui na aparência da \from[subse].
+
+Durante da reunião foi óbvio que muito conhecimento ainda está faltando nas áreas do trabalho e que informações já existente têm que ser revistados antes, como uma revistá do \from[polis] sobre o \from[waste] de 2007. Com referência ás pessoas em situação de rua foi decidido que um mapeamento dos espaços que servem as será feito para começar a entender a (complexidade da) situação. 
+
+A reunião não foi gravado inteiramente mas para um grande parte. A gravação inteira está disponível em qualidade original. Todas as falas e presentações relacionados ás pessoas em situação da rua, que foram feitos por o grupo de trabalho correspondente, moradores de rua ou integrantes do \from[mnpr] ({\em MNPR}) e da audiência, estão disponível distintos.
+
+Todas as gravações ficam disponível no site \from[archive] e são dedicados aos \from[commons].
+\startlines
+{\bf 00. Fórum do Centro} [\from[flacall]][\from[oggall]][\from[mp3all]]
+a gravação inteira, áudio original
+
+{\bf 01. Grupo de Trabalho - Pessoas em Situação de Rua} [\from[flac1]][\from[ogg1]][\from[mp31]] 
+mídia cobertura dos últimos meses
+
+{\bf 02. Da Rua} [\from[flac2]][\from[ogg2]][\from[mp32]]
+informações sobre as situações mais graves na rua e a luta das pessoas
+
+{\bf 03. Da Rua} [\from[flac3]][\from[ogg3]][\from[mp33]]
+informações sobre um grupo de pessoas em situação de rua que conseguiam a iniciar um próprio colectivo de fotógraf@s, o {\em Trecho 2.8}
+
+{\bf 04. Audiência} [\from[flac4]][\from[ogg4]][\from[mp34]]
+um comentário sobre o coletivo de fotógraf@s
+
+{\bf 05. Audiência} [\from[flac5]][\from[ogg5]][\from[mp35]]
+um comentário sobre o bom tratamento de banheiros públicos por a população de rua
+
+{\bf 06. Fórum do Centro} [\from[flac6]][\from[ogg6]][\from[mp36]]
+uma sugestão a mapear os espaços institucionais que servem as pessoas em situação de rua
+\stoplines
+\startREF
+{\bf Mídia}
+
+r3cl41m, 2010. {\em Fórum do Centro}, São Paulo. Available at: \goto{\hyphenatedurl{http://www.archive.org/details/ForumDoCentro}} [url(http://www.archive.org/details/ForumDoCentro)] [Accessed October 6, 2010].
+
+{\bf Links}
+
+Câmara Municipal de São Paulo, 2010. Câmara Municipal de São Paulo. {\em Câmara Municipal de São Paulo}. Available at: \goto{\hyphenatedurl{http://www.camara.sp.gov.br/cr0309_net/forms/frmPrincipal.aspx}} [url(http://www.camara.sp.gov.br/cr0309_net/forms/frmPrincipal.aspx)] [Accessed October 6, 2010].
+
+Grimberg, E., 2007. Coleta seletiva com inclusão dos catadores - Fórum Lixo e Cidadania da Cidade de São Paulo Experiência e desafios. {\em Revista Pólis}, (49), 1-149. Available at: \goto{\hyphenatedurl{http://www.polis.org.br/obras/arquivo_257.pdf}} [url(http://www.polis.org.br/obras/arquivo_257.pdf)] [Accessed October 5, 2010].
+
+Instituto Pólis, 2010. Instituto Pólis. {\em Instituto Pólis}. Available at: \goto{\hyphenatedurl{http://www.polis.org.br/}} [url(http://www.polis.org.br/)] [Accessed October 6, 2010].
+
+MNPR, FalaRua. {\em FalaRua}. Available at: \goto{\hyphenatedurl{http://www.falarua.org/}} [url(http://www.falarua.org/)] [Accessed August 23, 2010].
+
+Prefeitura da Cidade de São Paulo, 2010. Subprefeitura Sé - Portal da Prefeitura da Cidade de São Paulo. {\em Portal da Prefeitura da Cidade de São Paulo}. Available at: \goto{\hyphenatedurl{http://www.prefeitura.sp.gov.br/cidade/secretarias/subprefeituras/se/}} [url(http://www.prefeitura.sp.gov.br/cidade/secretarias/subprefeituras/se/)] [Accessed October 6, 2010].
+\stopREF
+\stoptext
