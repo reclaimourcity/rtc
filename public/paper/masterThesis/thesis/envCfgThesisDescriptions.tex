@@ -22,7 +22,6 @@
         	frame=off
 ]
 
-
 \definetextbackground[ADefinition]
 [
         	location=paragraph,
@@ -41,11 +40,30 @@
 
 \definetextbackground[AMark]
 [
-        	location=text,
+	location=text,
        	background=color,
-	backgroundcolor=orange,
+	backgroundcolor=green:3,
         	frame=off
 ]
+
+\definetextbackground[ARemarkBack]
+[
+	location=text,
+       	background=color,
+	backgroundcolor=magenta:7,
+        	frame=off
+]
+
+\definedescription[ARemark][
+	headstyle=slanted,
+	style={\tt},
+	align=normal,
+	location=inright,
+	width=broad,
+	margin=, 
+	before={\starttextbackground[ARemarkBack]}, 
+	after={\stoptextbackground}, 
+	color=gray:7]
 
 
 \definedescription[TextQuote][
@@ -73,7 +91,7 @@
 \definedescription[Citation][
 	headstyle=slanted,
 	style={\tt},
-	align=flusright,
+	align=flushright,
 	%location=serried,
 	width=fit,
 	margin=1cm, 
