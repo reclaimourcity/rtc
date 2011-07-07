@@ -1,3 +1,11 @@
-This repositoy contains a regular backup of all papers and the thesis that I am currently writing for my masters degree. All documents are written in ConTexT, a Tex derivate. I tried to separate templates and commands from content in order to provide generic templates that could be used for other projects as well. This is still work in progress and changes in srucutre may occure frequently. 
+This repository contains a regular backup of all papers and the thesis that I am currently writing for my masters degree. All documents are written in ConTexT, a Tex derivative. I tried to separate templates and commands from content in order to provide generic templates that could be used for other projects as well. This is still work in progress and changes in structure may occur frequently. 
 
-All documents are available under creative commons share alike 3.0 unported licence - cc-by-sa 3.0
+In order to compile the thesis document, clone the complete repository and run the project file 
+
+* product_Thesis.tex
+
+through your ConTexT compiler. The thesis product file which includes all chapters and the individual chapter and section files can be found under
+
+* https://github.com/reclaimourcity/rtc/blob/master/public/paper/masterThesis/thesis/
+
+All documents are available under creative commons share alike 3.0 unported licence - cc-by-sa 3.0 .

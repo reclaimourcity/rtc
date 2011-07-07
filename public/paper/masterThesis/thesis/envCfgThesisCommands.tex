@@ -40,4 +40,37 @@
 
 \define[]\spaceHalf{\blank[0.5cm]}
 
+\define[1]\roundBoxedMax{%
+\framed
+[
+	frame=on, 
+	corner=0, 
+	width=local,
+	align={width, verytolerant, nothyphenated},
+	frameoffset=1pt,
+   	framecolor=magenta:7,
+	background=color,
+   	backgroundcolor=black, 
+	backgroundoffset=1pt, 
+   	foreground=color,
+	foregroundcolor=white,
+	rulethickness=3pt,
+	%offset=4pt,
+	framedepth=2pt,
+	backgrounddepth=2pt,
+]
+{ #1 }
+}
+
+\def\textBoxedRoundMax{\dosingleempty\doTextBoxedRoundMax}
+
+\def\doTextBoxedRoundMax[#1]#2%
+{%
+	\iffirstargument
+		\roundBoxedMax{#2} \blank[#1cm]
+	\else
+		\roundBoxedMax{#2}
+	\fi 
+}
+
 \stopenvironment
