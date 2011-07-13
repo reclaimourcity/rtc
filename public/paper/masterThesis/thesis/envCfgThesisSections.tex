@@ -3,9 +3,10 @@
 \startmode[tocLayout]
 
 \setuphead[chapter][continue=yes, page=no]
-%\setuphead[section][align=flushleft, number=yes, textstyle=bold, textcommand=\uppercase, color=magenta:8, continue=yes]
+
 \setuphead[section][align=flushleft, number=yes, textstyle=bold, textcommand=, color=magenta:8, continue=yes] 
-\setuphead[subsection][align=flushleft, style=normal, number=yes, textstyle=bold, textcommand=, continue=yes] 
+
+\setuphead[subsection][align=flushleft, style=normal, number=yes, textstyle=bold, textcommand=\normal, continue=yes] 
 
 \stopmode
 
@@ -14,11 +15,10 @@
 \def\mySubSection#1#2{\inrightmargin{#1 #2}}
 
 \setuphead[chapter][command=\myChapter]
-%\setuphead[section][align=flushright, number=yes, textstyle=bold, textcommand=\uppercase, color=magenta:8]
-\setuphead[section][align=flushright, number=yes, textstyle=bold, textcommand=, color=magenta:8] 
-% \setuphead[subsection][align={flushleft, nothyphenated, verytolerant}, style=small, number=no, textstyle=bold, textcommand=, command=\mySubSection] 
 
-\setuphead[subsection][align={flushright, nothyphenated, verytolerant}, style=small, number=no, textstyle=bold, textcommand=\em, command=] 
+\setuphead[section][align=flushright, number=yes, textstyle=bold, textcommand=, color=magenta:8] 
+
+\setuphead[subsection][align={flushright, nothyphenated, verytolerant}, style=\tfa, number=no, textstyle=bold, textcommand=\em, command=] 
 
 
 \stopmode
