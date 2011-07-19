@@ -11,9 +11,17 @@
 % website quote, author and year
 \define[2]\aQuoteW{\color[magenta:8]{\tt{\small{(#1, #2, web)}}}}
 
+% source quote, just the year
+\define[1]\aQuoteY{\color[magenta:8]{\tt{\small{(#1)}}}}
+
 % personal information quotes, just year
 \define[1]\aQuoteP{\color[magenta:8]{\tt{\small{(own Source, #1)}}}}
 
+% the quote of authors within the text flow
+\define[1]\aQuoteInTextA{\color[magenta:8]{\tt{\small{#1}}}}
+
+% the quote of a title within the text flow
+\define[1]\aQuoteInTextT{\color[magenta:8]{\tt{\small{\quote{#1}}}}}
 
 \define[1]\cited{\quote{\em#1}}
 \define[1]\bracket{ [{\tt #1}] }
