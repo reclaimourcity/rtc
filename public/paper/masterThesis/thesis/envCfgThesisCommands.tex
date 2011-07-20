@@ -25,10 +25,30 @@
 
 \define[1]\cited{\quote{\em#1}}
 \define[1]\bracket{ [{\tt{\small#1}}] }
+\define[2]\abbrNew{{\tt#1}\bracket{#2}\abbreviation{#2}{#1}}
 
-% \define[1]\aLink{\from[#1]}
-\define[1]\aLink{\from[#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
+\define[1]\abbr{{\tt#1}}	%here we could probably link to the full abbreviation?
+\define[1]\abbrFull{{\tt\infull{#1}}}
+
 \define[1]\aLocation{\from[#1]\footnote[#1]{location: \goto{\url[#1]}[url(#1)]}}
+
+% just display the link in the text and generate a footnote, hence link must have been registered already
+\define[1]\aLink{\from[#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
+
+% register a new link, display it in the text and generate a footnote
+\define[1]\aLinkNew{\useURL[#1][#1][][#1]\from[#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
+
+% register a new link, display a generic "link" surrounded by brackets in the text and generate a footnote
+\define[1]\aLinkNewG{\useURL[#1][#1][][link]\small\bracket{\from[#1]}\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
+
+% display a generic "link" surrounded by brackets in the text and generate a footnote, thus link must have been registered already
+\define[1]\aLinkG{\small\bracket{\from[#1]}\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
+
+% just generate a foornote. link ist not displayed in text but only in footnote, hence it must have been registered already!
+\define[1]\aLinkF{\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
+
+% register a link url and generate a footnote
+\define[1]\aLinkNewF{\useURL[#1][#1][][#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
 
 \define[1]\aLinkE{\inframed[frame=off, background=color, backgroundcolor=green:4]{\bf#1 }}
 \define[1]\aLocationE{\inframed[frame=off, background=color, backgroundcolor=blue:4]{\bf#1 }}

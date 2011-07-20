@@ -1,7 +1,20 @@
+\environment envCfgThesisModes
+
 \startenvironment envCfgThesisFootnotes
+
+\startmode[draft]
+
+% footnote location not on every page but at a defined position at command \placefootnotes
+%\setupfootnotes[location=text]
+
+\stopmode
+
+\startmode[print]
 
 % footnote location not on every page but at a defined position at command \placefootnotes
 \setupfootnotes[location=text]
+
+\stopmode
 
 
 \stopenvironment
