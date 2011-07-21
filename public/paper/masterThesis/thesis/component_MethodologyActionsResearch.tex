@@ -7,6 +7,18 @@
 
 \define[]\subsectionActionsResearch {\subsection[methododology::actions::research]{Action//Activist//Research}}
 
+\defineregister[MAR][MARS]
+\setupregister[MAR][coupling=yes, indicator=yes, referencing=on, interaction={pagenumber, text}, alternative=A, n=2, balance=yes]
+
+\define[1]\aKeyMarVi{\MAR{#1}{\color[magenta:8]{\em#1}}}
+\define[1]\aKeyMarInVi{\MAR{#1}}
+
+\define[2]\aKeyMarViSee{{\seeMAR{#1}{#2}\color[magenta:8]{\em#1}}}
+\define[2]\aKeyMarInViSee{\seeMAR{#1}{#2}}
+
+\definesynonyms[translation][translations][\infull]
+\setupsynonyms[style=cap]
+
 %\enablemode[draft]
 %\disablemode[tocLayout]
 
@@ -28,30 +40,94 @@ This section describes the concept of Action Research applied as theoretical and
 action, activist, action research, activist research, framework, participatory, transformation
 \stopKeywords
 
-I determined \abbrNew{Action Research}{AR} as the overall methodological framework for this thesis. 
+I determined \aKeyMarInVi{Action Research}\abbrNew{Action Research}{AR} as the overall methodological framework for this thesis. 
 
-In a sense, the word \abbrFull{AR} by itself seems already matching the way I intend to do research. This may be a relatively weak justification but nonetheless it nearly hits the mark. \abbr{AR} is research that emerges from within the movement, from within a situation, having an active role in the movement, in the situation and in its intended transformation \aQuoteB{}{}{}. 
-
-\aKeyword{Workers Inquiriy}, the subjective workers view on and analysis of the situation of being exploited and the knowledge about their needs and the necessary transformation according to those needs, is one instance of \abbrFull{AR} that emerged from within a movement, conducted by the activists themselves. In Italy for example, visible in the movement of the \toTranslate{Operaismo} that originated from the debates in the journal \quote{Quaderni Rossi} in the early sixties of the 20th century \aQuoteW{Wildcat}{1964} \aLinkNewF{http://www.wildcat-www.de/wildcat/64/w64opera.htm} and which lead to the workers struggle at the end of this decade.
+In a sense, the word \abbrFull{AR} by itself seems already matching the way I intend to do research. This may be a relatively weak justification but nonetheless it nearly hits the mark. \abbr{AR} is research that emerges from within the movement, from within a struggle, playing an active role in the movement, in the situation and in its intended transformation \aQuoteB{Morell}{2009}{40}. 
 
 \spaceHalf
 
-\startCitation
-[...] sie waren durch ihre Untersuchungen auf kommende Kämpfe vorbereitet, hatten die Probleme innerhalb der Fabrik analysiert, hatten die Arbeiterdiskussion verfolgt, um die Arbeiterforderungen auf die Flugblätter schreiben zu können und auf Versammlungen als politische Linie durchzusetzen. Sie hatten gelernt, »daß es schon Kämpfe gibt, bevor sie offen ausbrechen \aQuoteW{Wildcat}{1964}
+\inright{workers inquiry}
+\aKeyMarVi{Workers Inquiry}, the subjective workers view on and analysis of the situation in the fabric, of being exploited, and their knowledge about needs and the necessary transformation according to those needs, is one instance of \abbrFull{AR} that emerged from within a movement, conducted by the activists themselves. In Italy for example, visible in the \aKeyMarInVi{Operaismo}\toTranslate[Workerism]{Operaismo} movement that originated from debates in the journal \aKeyMarInVi{Quaderni Rossi}\toTranslate[Red Notebook]{Quaderni Rossi} in the early sixties of the 20th century \aQuoteW{Wildcat}{1995} \aLinkNewF{http://www.wildcat-www.de/wildcat/64/w64opera.htm} and which led to the workers' struggle at the end of that decade.
+
+\spaceHalf
+
+[...]\startCitation
+sie waren durch ihre Untersuchungen auf kommende Kämpfe vorbereitet, hatten die Probleme innerhalb der Fabrik analysiert, hatten die Arbeiterdiskussion verfolgt, um die Arbeiterforderungen auf die Flugblätter schreiben zu können und auf Versammlungen als politische Linie durchzusetzen. Sie hatten gelernt, »daß es schon Kämpfe gibt, bevor sie offen ausbrechen«. \aQuoteW{Wildcat}{1995}
 \stopCitation
 
 \spaceHalf
 
-But not just \aKeyword{Workers Inquiriy} can , if one looks at social movement and collectives in general, one can see that all of them articulate their own knowledge and analysis of their reality in order to take the next step to overcome it. 
+If one thus looks at social movements and collectives and their organized struggle, one can perceive the production and articulation of their own knowledge and analysis referred of their reality, in order to develop the necessary step(s) to transform it. Here, knowledge emerges from within the struggle and is supposed to facilitate it \aQuoteW{Barker, Cox}{2001}.
 
-Lets take 
+\spaceHalf
+
+\inright{academic versus movement knowledge}
+We then see the difference of knowledge produced: \aKeyMarVi{academic knowledge} means theorizing about a situation by trying to derive generalized and abstract assumptions, analysed from a claimed neutral observant perspective; \aKeyMarVi{movement knowledge} of struggle, formed by the direct necessity to change a situation that constraints the individual well being and freedom, thus is formulated from a subjective position according to personal or collective needs, more practical in nature and destined to be applied for a concrete transformation \aQuoteW{Gramsci in Barker and Cox}{2001}.
+
+\spaceHalf
+
+\startCitation
+In this perspective, movement theorizing is an aspect of the work that people do as they try to create institutions (movements) that will enable them (indirectly, through a change in the social order) to meet needs that are not currently being met.\aQuoteW{Barker, Cox}{2001}.
+\stopCitation
+
+\spaceHalf
+
+\startAReminder
+hier können noch andere beispiele rein: Transborder Immigrant Tool, Feminist Theory, Interface Journal
+
+außerdem ein mapping der bewegungen in São Paulo: Rede Extrema Sul, MNPR, MNCR, MTST, MST, Ay Carmela, Indymedia, 
+
+Außerdem wäre noch eine mapping von Tools nötig
+Flickr + Fotos, Journale + Zeitschriften, Webseiten + Blogs + Portale, Zines + Flyer + Zeitschriften, Software, Videos, eigenpersonale Medien also, 
+
+\stopAReminder
+
+\spaceHalf
+
+I wanted to draw some attention to those examples because I perceive \abbr{AR} as a valid approach of conducting research, even if this research originates from the people and their realities and struggle, or better, exactly for that reason. The knowledge produced there is the result of a intellectual work, which has for me the same significance as knowledge produced in journalistic work or the academic space. 
+
+Looking at the time in São Paulo, I would say that \abbr{AR} has been the consequential way of being together with the people from the streets, collaborating with them and participating in their actions. This was possible because I left the academic space I am bounded to \bracket{due to the fact I write this thesis in an academic framework} during my time in the city.
+
+I also choose \abbr{AR}, because I think that the knowledge and conceptualisation of the situation on the streets, produced by the very people from the streets, is an enrichment for academic work in the sense that it could engage people to become more active, contest the status the academic space represents and by that introduce other ways of thinking, theorizing and adopting it. Therefore I make plenty of use of the information provided by the people, along with my personal and collective experiences and academic theories.
+
+Certainly, the form of knowledge creation, distribution and adoption is different from the norm of academic knowledge, but \aQuoteInTextA{Barker and Cox} nicely describe this difference as complementary rather then contradictory when they write that theorizing in struggle
+
+\spaceHalf
+
+\startCitation
+can be usefully understood as theoretical because it is not simply a product of \quote{the situation} or \quote{folk culture}, but is rather a process of ongoing intellectual engagement, whose results [...] shift over time. [...] [it] is grounded in the process of producing \quote{social movements} against opposition. It is always to some extent knowledge-in-struggle, and its survival and development is always contested and in process of formation. Its frequently partial, unsystematic and provisional character does not make it any the less worth our attention, though it may go some way towards explaining why academic social movements theory is too often content with taking the 'cream off the top', and disregarding - or failing to notice - everything that has to happen before institutionalized social movement theorizing appears in forms that can be easily appropriated. \aQuoteW{Barker and Cox}{2001}
+\stopCitation
+
+\spaceHalf
+
+Continuing with the justification of choosing \abbr{AR} as main methodological framework for this thesis, I found the work of \aQuoteInTextA{Morell} quite helpful. \aQuoteInTextA{Morell} conceptualized different tendencies in his article \aQuoteInTextT{Action research: mapping the nexus of research and political action}\aQuoteY{2009} that can be related to \abbrFull{AR} and of whom some have been briefly described right now. In his mapping, five main tendencies are presented
+
+\startitemize
+\item {\ss participative-collective methods} 
+\item {\ss producing alternative content} alternative content can be any form of publication and media that transport knowledge 
+\item {\ss developing strategic thinking for broad political processes }
+\item {\ss building relationships and networking connections}
+\item {\ss opening knowledge}
+\stopitemize
+
+Comparing those tendencies to my research, three of them are very present because they reflect my attitude on the form of my research
+
+\startitemize
+\item participative observing and participating observer
+\item open knowledge
+\item building solidarity and connections
+\item to a certain extend producing alternative content
+\stopitemize
 
 
 
+\startAReminder
 
-One justification of AR is that one must be there on the local level, one must see and experience the local space in order to understand the situation (see Tsing, Friction).
+One justification of AR is that one must be there on the local level, one must see and experience the local space in order to understand the situation (see Tsing, Friction)
 
-Even though \abbr{AR} may seem 
+This knowledge tries to answer questions such as - What do we want? Who are we? What do we need to do?
+
+\stopAReminder
 
 \abbr{AR} is said to be favourable for research that intends to work for a social transformation of an inequitable situation \aQuoteB{}{}{}. 
 
@@ -61,7 +137,17 @@ Hence, \abbrFull{AR} is a organic framework consisting of various concrete metho
 
 One attribute of \abbr{AR} is its participative research approach \aQuoteB{}{}{}. 
 
+\startAReminder
 
+im empierischen teil kann ich mit einer karte der bewegungen und orte in são paulo beginnen
+
+\stopAReminder
+
+\subject{translations}
+\placeTransLa
+
+\subject{keywords}
+\placeMAR
 
 \stopmode
 

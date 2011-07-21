@@ -1,4 +1,5 @@
 \environment envCfgThesisDescriptions
+\environment envCfgThesisSynonyms
 
 \startenvironment envCfgThesisCommands
 
@@ -24,11 +25,13 @@
 \define[1]\aQuoteInTextT{\color[magenta:8]{\tt{\small{\quote{#1}}}}}
 
 \define[1]\cited{\quote{\em#1}}
-\define[1]\bracket{ [{\tt{\small#1}}] }
-\define[2]\abbrNew{{\tt#1}\bracket{#2}\abbreviation{#2}{#1}}
+\define[1]\bracket{ [{\ss{\small#1}}]}
 
-\define[1]\abbr{{\tt#1}}	%here we could probably link to the full abbreviation?
-\define[1]\abbrFull{{\tt\infull{#1}}}
+\define[2]\abbrNew{\color[magenta:8]{\em#1}\bracket{#2}\abbreviation{#2}{#1}}
+\define[2]\abbrNewInVi{\abbreviation{#2}{#1}}
+
+\define[1]\abbr{\color[magenta:8]{\em#1}}	%here we could probably link to the full abbreviation?
+\define[1]\abbrFull{\color[magenta:8]{\em\infull{#1}}}
 
 \define[1]\aLocation{\from[#1]\footnote[#1]{location: \goto{\url[#1]}[url(#1)]}}
 
@@ -52,7 +55,21 @@
 
 \define[1]\aLinkE{\inframed[frame=off, background=color, backgroundcolor=green:4]{\bf#1 }}
 \define[1]\aLocationE{\inframed[frame=off, background=color, backgroundcolor=blue:4]{\bf#1 }}
-\define[1]\toTranslate{\inframed[frame=off, background=color, backgroundcolor=red:4]{\bf#1 }}
+
+%\define[1]\toTranslate{\inframed[frame=off, background=color, backgroundcolor=red:4]{\bf#1 }}
+
+\def\toTranslate{\dosingleempty\doTranslate}
+
+\def\doTranslate[#1]#2%
+{%
+	\iffirstargument
+		\TransLa{{\ss#2}\bracket{#1}}
+		\color[magenta:8]{\em#2}\bracket{#1}
+	\else
+		\coupledTransLa{{\ss#1} <> translation missing}
+		\color[magenta:8]{\em#1}\bracket{translation missing}
+	\fi 
+}
 
 \define[1]\toMark{\startAMark{\bf#1}\stopAMark}
 \define[1]\aKeyword{{\bf\em #1}}

@@ -1,8 +1,11 @@
 \environment envCfgThesisModes
 
-\startenvironment envCfgThesisAbbreviations
+\startenvironment envCfgThesisSynonyms
 
 \definesynonyms	[abbreviation] [abbreviations] [\infull]
+
+\defineregister		[TransLa][TransLas]
+\setupregister		[TransLa][coupling=yes, interaction={pagenumber, text}, referencing=on, n=1]
 
 \startmode[print]
 \setupsynonyms		[abbreviation] [criterium=used]
