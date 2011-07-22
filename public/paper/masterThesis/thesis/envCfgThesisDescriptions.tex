@@ -46,6 +46,27 @@
         	frame=off
 ]
 
+\definetextbackground[AWordMapBack]
+[
+	location=text,
+       	background=color,
+	backgroundcolor=black,
+	color=magenta:7,
+        	frame=off
+]
+
+\definedescription[AWordMap]
+[
+	headstyle=,
+	style=,
+	align=normal,
+	location=text,
+	width=broad,
+	margin=, 
+	before={\starttextbackground[AWordMapBack]}, 
+	after={\stoptextbackground}
+]
+
 \definetextbackground[ARemarkBack]
 [
 	location=text,
@@ -64,7 +85,7 @@
 	width=broad,
 	margin=, 
 	before={\starttextbackground[ARemarkBack]}, 
-	after={\stoptextbackground},
+	after={\stoptextbackground}
 ]
 
 

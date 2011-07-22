@@ -48,12 +48,25 @@
 \define[1]\aLinkG{\small\bracket{\from[#1]}\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
 
 % just generate a foornote. link ist not displayed in text but only in footnote, hence it must have been registered already!
-\define[1]\aLinkF{\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
+\def\doLinkF[#1]#2%
+{%
+	\iffirstargument
+		 \goto{#1}[url(#2)]
+		\footnote[#1]{website: \goto{\url[#2]}[url(#2)]}
+	\else
+		#1
+		\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}
+	\fi
+}
+\define\aLinkF{\dosingleempty\doLinkF}
+
 
 % register a link url and generate a footnote
 \define[1]\aLinkNewF{\useURL[#1][#1][][#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
 
 \define[1]\aLinkE{\inframed[frame=off, background=color, backgroundcolor=green:4]{\bf#1 }}
+
+
 \define[1]\aLocationE{\inframed[frame=off, background=color, backgroundcolor=blue:4]{\bf#1 }}
 
 %\define[1]\toTranslate{\inframed[frame=off, background=color, backgroundcolor=red:4]{\bf#1 }}
