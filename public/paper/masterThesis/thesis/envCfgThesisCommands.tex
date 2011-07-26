@@ -69,14 +69,12 @@
 
 \define[1]\aLocationE{\inframed[frame=off, background=color, backgroundcolor=blue:4]{\bf#1 }}
 
-%\define[1]\toTranslate{\inframed[frame=off, background=color, backgroundcolor=red:4]{\bf#1 }}
-
 \def\toTranslate{\dosingleempty\doTranslate}
 
 \def\doTranslate[#1]#2%
 {%
 	\iffirstargument
-		\TransLa{{\ss#2}\bracket{#1}}
+		\RegTransLa{{\ss#2}\bracket{#1}}
 		\color[magenta:8]{\em#2}\bracket{#1}
 	\else
 		\coupledTransLa{{\ss#1} <> translation missing}
@@ -98,8 +96,38 @@
 
 \define[]\spaceHalf{\blank[0.5cm]}
 
-\define[1]\roundBoxedMax{%
-\framed
+\defineframed[definitionFramed]
+[
+	frame=on, 
+	corner=0, 
+	width=local,
+	align={width, verytolerant, nothyphenated},
+	frameoffset=1pt,
+   	framecolor=green,
+	background=color,
+   	backgroundcolor=black, 
+	backgroundoffset=1pt, 
+   	foreground=color,
+	foregroundcolor=white,
+	rulethickness=3pt,
+	framedepth=2pt,
+	backgrounddepth=2pt,
+]
+
+%\define[1]\aDefinition{\regDefinition{#1}}
+
+\def\textBoxedRoundMaxDef{\dosingleempty\doTextBoxedRoundMaxDef}
+
+\def\doTextBoxedRoundMaxDef[#1]#2%
+{%
+	\iffirstargument
+		\definitionFramed{#2} \blank[#1cm]
+	\else
+		\definitionFramed{#2}
+	\fi 
+}
+
+\defineframed[questionFramed]
 [
 	frame=on, 
 	corner=0, 
@@ -113,21 +141,18 @@
    	foreground=color,
 	foregroundcolor=white,
 	rulethickness=3pt,
-	%offset=4pt,
 	framedepth=2pt,
 	backgrounddepth=2pt,
 ]
-{ #1 }
-}
 
 \def\textBoxedRoundMax{\dosingleempty\doTextBoxedRoundMax}
 
 \def\doTextBoxedRoundMax[#1]#2%
 {%
 	\iffirstargument
-		\roundBoxedMax{#2} \blank[#1cm]
+		\questionFramed{#2} \blank[#1cm]
 	\else
-		\roundBoxedMax{#2}
+		\questionFramed{#2}
 	\fi 
 }
 
