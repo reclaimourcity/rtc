@@ -8,15 +8,21 @@
 \define[]\subsectionActionsResearch {\subsection[methododology::actions::research]{Action//Activist//Research}}
 
 \defineregister[MAR][MARS]
-\setupregister[MAR][coupling=yes, indicator=yes, referencing=on, interaction={pagenumber, text}, alternative=A, n=2, balance=yes]
+\setupregister[MAR][alternative=A, n=2, expansion=yes]
+
+%\setupregister[MAR][ alternative=A, n=2, balance=yes, coupling=yes, indicator=yes, referencing=on, interaction={pagenumber, text}, pagestyle=normal, expansion=yes]
 
 \def\aKeyMarVi{\dosingleempty\doAKeyMarVi}
+\def\doAddToIndex#1#2{\MAR{#1}{\color[magenta:8]{\em#2}}}
+
 \def\doAKeyMarVi[#1]#2%
 {%
 	\iffirstargument
-		\MAR{#2}{\color[magenta:8]{\em#1}}
+		\doAddToIndex{#2}{#1}
+		%\MAR{#2}{\color[magenta:8]{\em#1}}
 	\else
-		\MAR{#2}{\color[magenta:8]{\em#2}}
+		\doAddToIndex{#2}{#2}
+		%\MAR{#2}{\color[magenta:8]{\em#2}}
 	\fi
 }
 \define[1]\aKeyMarInVi{\MAR{#1}}
@@ -55,9 +61,13 @@ This section describes the concept of Action Research applied as theoretical and
 action, activist, action research, activist research, framework, participatory, transformation
 \stopKeywords
 
-I determined \aKeyMarInVi{Action Research}\abbrNew{Action Research}{AR} as the overall methodological framework for this thesis. This choice has been sudden in a sense that I honestly didn't know anything about \abbr{AR} prior to the thesis research actions. Neither in university nor for activist purposes. It is also just now, while writing this methodology chapter, that I understand more comprehensively what \abbr{AR} represents and what it could include. I currently would say that my personal practice intuitively included many of the approaches \abbr{AR} can be chosen to be composed of. However, as it is the first time that I get in touch with \abbrFull{AR} as an approach to research, I can already say that I did not and could not fully assimilate it. This holds also partly true  for the thesis self conception or my personal practice and conviction, which is to a large extend the foundation of this thesis understanding of \abbr{AR}.
+I determined \aKeyMarInVi{Action Research}\abbrNew{Action Research}{AR} as the overall methodological framework for this thesis. This choice has been sudden in a sense that I honestly didn't know anything about \abbr{AR} prior to the thesis research actions. Neither for academic nor for activist purposes. It is also just now, while writing this methodology chapter, that I understand more comprehensively what \abbr{AR} represents and what it could include. I want to provide room for those aspect in this chapter. 
 
-So, what is hidden behind the term \abbrFull{AR}? In a sense, the word \abbrFull{AR} by itself seems already matching the way I intend to do research. This may be a relatively weak justification but nonetheless it nearly hits the mark. \inright{the thesis notion of \abbrFull{AR}} is research that emerges from within a \aKeyMarVi{social movement}, from within the struggle against the peoples oppression and discrimination, by playing an active role in the \aKeyMarVi{movement theorizing}, in the movements analysis of the reality it is embedded in and in the intended transformation of this reality \aQuoteB{Morell}{2009}{40}. 
+By gaining a more comprehensive idea of \abbr{AR} I am also concretely confronted for the first time with the question \quote{How is knowledge created and disseminated}, a question asked in the study of knowledge, the so called \aKeyMarVi{Epistemology} \aLinkNewF{http://plato.stanford.edu/entries/epistemology/} \footnote{In German: Erkenntnisstheorie}. I also want to dedicate some room for this question and its effects on the thesis knowledge production.
+
+I currently would say that my personal practice intuitively included some of the approaches \abbr{AR} can be chosen to be composed of. However, as it is the first time that I get in touch with \abbrFull{AR} as an approach to research, I can already say that I did not and could not fully assimilate it. This holds also partly true  for the thesis self conception or my personal practice and conviction, which is to a large extend the foundation of this thesis understanding of \abbr{AR}.
+
+So, what is hidden behind the term \abbrFull{AR}? In a sense, the word \abbrFull{AR} by itself seems already matching the way I intend to do research. This may be a relatively weak justification but nonetheless it nearly hits the mark. \inright{the thesis notion of \abbrFull{AR}} is research that emerges from within a \aKeyMarVi{social movement}, from within the struggle against the peoples oppression and discrimination, by playing an active role in the \aKeyMarVi[movement theorizing]{theorizing+movement}, in the movements analysis of the reality it is embedded in and in the intended transformation of this reality \aQuoteB{Morell}{2009}{40}. 
 
 \spaceHalf
 
@@ -71,7 +81,7 @@ social movements are not necessarily mass movements for me, and in the context o
 \spaceHalf
 
 \inright{workers inquiry}
-In practice, one instance of movement theorizing through \abbr{AR} is \aKeyMarVi{workers inquiry}, the subjective workers view on and analysis of the situation of the workers in the fabric, of being exploited and alienated, their knowledge about their needs and the necessary transformation according to those needs. \aKeyMarVi{workers inquiry} emerged from within a movement, conducted by the activists, the workers, themselves. In Italy for example, visible in the \aKeyMarInVi{Operaismo}\toTranslate[Workerism]{Operaismo} movement that originated from debates in the journal \aKeyMarInVi{Quaderni Rossi}\toTranslate[Red Notebook]{Quaderni Rossi} in the early sixties of the 20th century, which finally led to the Italian workers' struggle at the end of that decade \aQuoteW{Wildcat}{1995} \aLinkNewF{http://www.wildcat-www.de/wildcat/64/w64opera.htm}.
+In practice, one instance of \aKeyMarVi[movement theorizing]{theorizing+movement} through \abbr{AR} is \aKeyMarVi{workers inquiry}, the subjective workers view on and analysis of the situation of the workers in the fabric, of being exploited and alienated, their knowledge about their needs and the necessary transformation according to those needs. \aKeyMarVi{workers inquiry} emerged from within a movement, conducted by the activists, the workers, themselves. In Italy for example, visible in the \aKeyMarInVi{Operaismo}\toTranslate[Workerism]{Operaismo} movement that originated from debates in the journal \aKeyMarInVi{Quaderni Rossi}\toTranslate[Red Notebook]{Quaderni Rossi} in the early sixties of the 20th century, which finally led to the Italian workers' struggle at the end of that decade \aQuoteW{Wildcat}{1995} \aLinkNewF{http://www.wildcat-www.de/wildcat/64/w64opera.htm}.
 
 \spaceHalf
 
@@ -91,9 +101,9 @@ Flickr + Fotos, Journale + Zeitschriften, Webseiten + Blogs + Portale, Zines + F
 
 \stopAReminder
 
-\spaceHalf
+\subject{Many forms of knowing}
 
-If one thus looks at social movements and collectives and their organized struggle, one can perceive the production and articulation of own content and analysis of the particular reality, in order to develop the necessary step(s) to transform and overcome it. Here, knowledge emerges from within the struggle and is supposed to facilitate it \aQuoteW{Barker, Cox}{2001}.
+If I take a look at social movements and collectives and their organized struggle, I can perceive the production and articulation of own content and analysis of the particular reality, in order to develop the necessary step(s) to transform and overcome it. Here, knowledge emerges from within the struggle and is supposed to facilitate it \aQuoteW{Barker, Cox}{2001}.
 
 \spaceHalf
 
@@ -110,7 +120,7 @@ Different notions of theorizing, knowledge and content can be distinguished here
 \textBoxedRoundMaxDef
 {
 \inright{academic theorizing and empirical research}
-\ss{\aKeyMarVi{Academic Theorizing} assumes that knowledge can be created independent of the existing social order, that it is therefore not biased by its producer, its point of view and the existing social context \aQuoteB{Sprague and Kobrynowicz}{2004}{31}, that it is formulated based on the neutral and systematic observation of facts and real world situations, an observation where the academic observer and his/her subject of observation are distinct\aQuoteB{Juris}{2007}{171}. This distinction also reproduces the social order, theorizing remains merely a theorizing about the subject of research which reinforces the distinction between the privileged \bracket{scholar} and the oppressed \bracket{subject of research}. Observed and described facts and evidences are supposed to be reproducible in order to be analysable and explicable \aQuoteB{Sprague and Kobrynowicz}{2004}{26}, only so they are considered valid for academic theorizing and can become relevant for the derivation of corresponding generalized theories and \quote{generic propositions} \aQuoteW{Barker and Cox}{2001}. }
+\ss{\aKeyMarVi[Academic Theorizing]{theorizing+academic} assumes that knowledge can be created independent of the existing social order, that it is therefore not biased by its producer, its point of view and the existing social context \aQuoteB{Sprague and Kobrynowicz}{2004}{31}, that it is formulated based on the neutral and systematic observation of facts and real world situations, an observation where the academic observer and his/her subject of observation are distinct\aQuoteB{Juris}{2007}{171}. This distinction also reproduces the social order, theorizing remains merely a theorizing about the subject of research which reinforces the distinction between the privileged \bracket{scholar} and the oppressed \bracket{subject of research}. Observed and described facts and evidences are supposed to be reproducible in order to be analysable and explicable \aQuoteB{Sprague and Kobrynowicz}{2004}{26}, only so they are considered valid for academic theorizing and can become relevant for the derivation of corresponding generalized theories and \quote{generic propositions} \aQuoteW{Barker and Cox}{2001}. }
 }
 
 \spaceHalf
@@ -118,12 +128,12 @@ Different notions of theorizing, knowledge and content can be distinguished here
 \textBoxedRoundMaxDef
 {
 \inright{movement theorizing and action research}
-\ss{\aKeyMarVi{Movement Theorizing} is concerned with a concrete struggle, formulated by the direct necessity of the people to change a situation that constraints their individual well being and freedom \aQuoteW{Gramsci in Barker and Cox}{2001}. \aKeyMarVi{Movement Theorizing} incorporates the existing social order \aQuoteB{Sprague and Kobrynowicz}{2004}{31}. It is formulated from a subjective position according to personal or collective needs, formulated through praxis and actions, from a pragmatic and directly affected viewpoint \aQuoteW{Barker and Cox}{2001}, destined to transform and overcome the current structures of oppression \aQuoteB{Sprague and Kobrynowicz}{2004}{35}. \aKeyMarVi{Movement Theorizing} is in movement, continuously adjusting to the changes of the environment it is emerging from, to the impacts of the struggle it facilitates \aQuoteW{Barker and Cox}{2001}. It comes from below and is inconvenient for those that are interested in keeping the world as it is \aQuote{Fox and Fominaya}{2009}{1}. It does not break down its environment into atomic units, stripped off their context, then analysed statically, but draws upon a flora of actions and situations, each of them able to change the direction \aKeyMarVi{Movement Theorizing} is pursuing \aQuoteB{Routeledge}{1996a}{516}.}
+\ss{\aKeyMarVi[Movement Theorizing]{theorizing+movement} is concerned with a concrete struggle, formulated by the direct necessity of the people to change a situation that constraints their individual well being and freedom \aQuoteW{Gramsci in Barker and Cox}{2001}. \aKeyMarVi[Movement Theorizing]{theorizing+movement} incorporates the existing social order \aQuoteB{Sprague and Kobrynowicz}{2004}{31}. It is formulated from a subjective position according to personal or collective needs, formulated through praxis and actions, from a pragmatic and directly affected viewpoint \aQuoteW{Barker and Cox}{2001}, destined to transform and overcome the current structures of oppression \aQuoteB{Sprague and Kobrynowicz}{2004}{35}. \aKeyMarVi[Movement Theorizing]{theorizing+movement} is in movement, continuously adjusting to the changes of the environment it is emerging from, to the impacts of the struggle it facilitates \aQuoteW{Barker and Cox}{2001}. It comes from below and is inconvenient for those that are interested in keeping the world as it is \aQuote{Fox and Fominaya}{2009}{1}. It does not break down its environment into atomic units, stripped off their context, then analysed statically, but draws upon a flora of actions and situations, each of them able to change the direction \aKeyMarVi[Movement Theorizing]{theorizing+movement} is pursuing \aQuoteB{Routeledge}{1996a}{516}.}
 }
 
 \spaceHalf
 
-I wanted to draw some attention to those examples because I perceive \abbr{AR} as a valid and emancipated approach for conducting research and theorizing. My conception of \abbrFull{AR} \bracket{and those of the given examples} originate from the people and their particular realities and struggles. The produced knowledge and content is the result of peoples intellectual work, which has for me the same significance as knowledge produced in the academic space \bracket{or in journalism for instance}. \inright{partial knowledge} Knowledge is \aKeyMarVi[partial]{partial knowledge}, not absolute, no matter from where it originates, because it is created out of a particular situation, out of a particular social order with its social relations, with a particular focus and perspective, from a particular  \aKeyMarVi[standpoint]{standpoint theory}\footnote
+I wanted to draw some attention to those examples because I perceive \abbr{AR} as a valid and emancipated approach for conducting research and theorizing. My conception of \abbrFull{AR} \bracket{and those of the given examples} originate from the people and their particular realities and struggles. The produced knowledge and content is the result of peoples intellectual work, which has for me the same significance as knowledge produced in the academic space \bracket{or in journalism for instance}. \inright{partial knowledge} Knowledge is \aKeyMarVi[partial]{partial knowledge}, not absolute, no matter from where it originates, because it is created out of a particular situation, out of a particular social order with its social relations, with a particular focus and perspective, from a particular  \aKeyMarVi[standpoint]{standpoint+theory}\footnote
 {
 the concept situated and partial knowledge is an articulation from the feminist standpoint that has been explicitly articulated in \aQuoteInTextT{Situated Knowledges: The Science Question in Feminism and the Privilege of Partial Perspective} by \aQuoteInTextA{Donna Haraway} and \aQuoteInTextT{A Feminist Standpoint: Developing the Ground for a Specifically Feminist Historical Materialism} by \aQuoteInTextA{Nancy Hartsock}.
 }
@@ -147,7 +157,9 @@ Looking at the time in São Paulo, I would say that \abbr{AR} has been the conse
 
 I also choose \abbr{AR}, because I think that the knowledge and conceptualisation of the situation on the streets, formulated by the very people from the streets, is an enrichment for academic work in the sense that it could engage people to become more active, contest the status the academic space represents and by that introduce other ways of thinking, theorizing and adopting it. Such an engagement back on the streets, in social life, for an emancipatory transformation, shows that the private is politically, that research is political. The socially constructed spaces of academia and those spaces it aims to explain and conceptualize are supposed to be de-constructed in order to really facilitate a transformation \aQuoteB{Routeledge}{1996b}{400} and not to just reproduce the current status \bracket{which is build upon capitalism, race, gender, patriarchy, violence, power}. Therefore I make plenty of use of the information and content provided and created by the people, along with my personal and collective experiences and general theories.
 
-\placefigure[location=text]{Five main tendencies Action Research is aiming for, according to \aQuoteB{Morell}{2009}{23,24}}
+\subject{Tendencies of Action Research}
+
+\placefigure[location=local]{Five main tendencies Action Research is aiming for, according to \aQuoteB{Morell}{2009}{23,24}}
 {
 \starttyping
 				/BTEX\tfa{Developing Strategic Thinking}/ETEX
@@ -166,11 +178,11 @@ I also choose \abbr{AR}, because I think that the knowledge and conceptualisatio
 	
 \stoptyping
 }
-
 Continuing with the justification of choosing \abbr{AR} as main methodological framework for this thesis, I found the work of \aQuoteInTextA{Morell} quite helpful. \aQuoteInTextA{Morell} conceptualized in her article \aQuoteInTextT{Action research: mapping the nexus of research and political action}\aQuoteY{2009} different tendencies that are aimed to be achieved when conducting \abbrFull{AR} and of whom some have been briefly described already. She is arguing explicitly from the perspective of social movement activism and theorizing, there mainly from the global justice and resistance movements standpoint \aQuoteB{Morell}{2009}{21-23}, thus not from an explicit ethnographic or anthropologist standpoint but from an activist standpoint, from within the movement. 
 
 In short, the five main \aKeyMarVi[tendencies]{tendencies in AR} \inright{tendencies of aims in \abbrFull{AR}} that she distinguishes as aims of \abbrFull{AR} are
 
+\page
 \placefigure[location=here]{Five main tendencies Action Research is aiming for, according to \aQuoteB{Morell}{2009}{23-24, 39-41}}
 {
 \textBoxedRoundMaxDef[0.5]
@@ -200,50 +212,80 @@ Those tendencies show that \abbrFull{AR} is a organic framework consisting of va
 
 \spaceHalf
 
-\inright{starting to define objectives}
-In this thesis, not all of those suggested tendencies are present nor do they proclaim equal shares. The experience gained in São Paulo is drawn on certain tendencies that I gather under the term of \abbrFull{AR}. I want to lay out those aspects next in order to derive the final objectives of this thesis, that will allow a concrete positioning, a concrete statement about the intention, expectation and realization of this thesis.
+\inright{starting to frame objectives}
+In this thesis, not all of those suggested tendencies are present nor do they proclaim equal shares. The experience gained in São Paulo is drawn on certain practices that I gather under the term of \abbrFull{AR}. I want to lay out those practices next in order to derive the final objectives of this thesis, that will allow a concrete positioning, a concrete statement about the intention, expectation and realization of this thesis.
 
-\spaceHalf
+\subject{participative//collaborative}
 
-\inright{participative//collaborative}
-\startAReminder
-hier kommt der ablauf rein aber auch die festlegung welche themen eigentlich angesprochen werden, also vorallem die stadt und nicht analyse der menschen
-\stopAReminder
+From my point of view, the participative and collaborative character of this thesis is my most import perspective. As mentioned \refMissingSrc{elsewhere}, I intend a transparent, non-hierarchical and non-authoritative research action, not observed through the lens of a scholar but from the standpoint of the people I stayed with, which is or has become my standpoint as well.
 
-\spaceHalf
+I experienced, observed and absorbed those situation the people shared with me, that I entered into myself, but I also participated and collaborated by being on the street, through discussions, through sharing and by spending time together.
 
-\inright{opening knowledge means transparency and free access...}
-The \refMissingSrc{self-conception} already determined that the process and outcome of this thesis is supposed to be transparent and freely accessible. Thus  \aKeyMarVi{opening knowledge} is a major objective and has been tackled by making all produced content \aKeyMarVi[instantly accessible]{knowledge - instant access}, for example on the web. Further on, the progress of the thesis can be tracked online as well. Making the progress \aKeyMarVi[transparent ]{knowledge - transparency} may also help others to understand under which conditions research was intended, what worked out, what had been adjusted, what was impossible to do and what was grounded on wrong preconceptions. 
+I perceived an omnipresence of chaos in the city, a hyper fast city where many things happen unexpectedly, where we often changed mind and plans from one moment to the other, where a constant presence of repression exist. This repression is manifold, a certain kind of architectural repression designed for excluding people, violence by police, state and institutional agents, violence by the people on the street, repression by the transformation of the city and the resulting exclusion of parts of society.
+
+The situations the people experience day by day lead to other organizational forms and actions of the people, in order to transform their situations and often to just survive. This what I excerpt from the time in São Paulo are the pace and exclusion the cities urban transformation creates, and the counter strategies and actions put into practice by the people affected by those conditions.
+
+So to say, our collaborative and participative actions allowed me to learn how to read the city from below, how the lived space that Henri Levebfre is talking about, can be perceived, thus that space that extends over the concrete urban space that we see, touch and feel everyday and over the symbolical urban space that recalls memories or feelings. 
+
+\subject{opening knowledge}
+
+\inright{... transparency and free access}
+In the thesis \refMissingSrc{self-conception} I already determined that the process and outcome of this thesis is supposed to be transparent and freely accessible. Thus  \aKeyMarVi{opening knowledge} is a major objective and will respected by making all produced content \aKeyMarVi[instantly accessible]{knowledge+instant access}, for example on the web. Further on, the progress of the thesis can be tracked online as well. Making the progress \aKeyMarVi[transparent ]{knowledge+transparency} may also help others to understand under which conditions research was intended, what worked out, what had been adjusted, what was impossible to do and what was grounded on wrong preconceptions. 
 
 \spaceHalf
 
 \inright{... no intellectual property rights and open review}
-Opening knowledge in this context also means that no one \aKeyMarVi[possesses ]{knowledge - expropriated} the right to own and monetize the formulated knowledge, the thesis and the produced content. These information are supposed to benefit all and to allow reproduction and reuse under similar terms. This could also lead to a facilitation of the formulation of \aKeyMarVi[critique]{knowledge - critique} and \aKeyMarVi[reflection ]{knowledge - reflection} because one must not be privileged to access knowledge or to return a critique.
+Opening knowledge also means that no one \aKeyMarVi[possesses ]{knowledge+expropriated} the right to own and monetize the formulated knowledge, the thesis and the produced content. These information are supposed to benefit all and to allow reproduction and reuse under similar terms. This state can be achieved by using a open licence. Free access and room for reuse could also facilitate the formulation of \aKeyMarVi[critique]{knowledge+critique} and \aKeyMarVi[reflection ]{knowledge+reflection} because one must not be privileged to access the content or to issue a critique.
 
 \spaceHalf
 
-\inright{... international exchange, translations and free sources}
-Another important point is the fact that I went abroad for this thesis. Back at home, only opening knowledge, \aKeyMarVi[sharing]{knowledge - shared} it freely, has the potential that those with whom I stayed together can spot, utilize and criticise it. Opening knowledge means also \aKeyMarVi[translating]{knowledge - translations} into Portuguese but also to use a language that is understandable \bracket{which may the hardest part}. It also means that all \bracket{or the majority at least} external references I use, cite and refer to, must be \aKeyMarVi[accessible]{knowledge - open sources} to allow to inspect them as well and to autonomously make up one's own mind instead of relying on my \bracket{biased} interpretations.
+\inright{... location independent access and translations}
+Another important point is the fact that I went abroad for this thesis. Back at home, a huge geographical distance exist and only opening knowledge and \aKeyMarVi[sharing]{knowledge+shared} it freely, has the potential that those with whom I stayed together can spot, utilize and criticise it. Opening knowledge means also \aKeyMarVi[translating]{knowledge+translations} English text to Portuguese or even German, but also to use a language that is understandable \bracket{which may the hardest part}. Language is crucial because when we where together, we mainly spoke Portuguese and not English or German. Translations are not only necessary with respect to the thesis writing but also with respect to the documentation of the thesis process.
+
+\inright{... free and accessible sources and references}
+Opening knowledge also means that all \bracket{or at least the majority} external references I use, cite and refer to, must be freely \aKeyMarVi[accessible]{knowledge+open sources} as well to allow to inspect them and to independently make up one's own mind about their content and statement instead of relying on my \bracket{probably biased} interpretations.
+
+\subject{Alternative Content}
+
+\inright{...immanent}
+The production of \aKeyMarVi{alternative content} is an \aKeyMarVi[immanent attribute]{thesis+attributes} of this thesis, even though it is not its \aKeyMarVi[main perspective]{thesis+objectives}. I understand alternative content as distribution of own positions and \aKeyMarVi[standpoints]{standpoint}. Besides those people that are primarily interested in this content, the movement(s) that produce the content for instance, other people shall be reached by its distribution as well. Alternative content may have diverse forms of expression, different from conventional forms such as an academic thesis or research paper.
+
+In São Paulo, the movements and collectives I stayed with produce their own content and thereby express their own standpoints. People from the streets write for \aKeyMarVi{street journals}, \aKeyMarVi{media collectives} from the streets produce their own \aKeyMarVi{films} and \aKeyMarVi{photos} and transport their own \aKeyMarVi{narratives} about the city, about the \aKeyMarVi{social processes} and \aKeyMarVi{urban transformations} that affect them. Other collectives write their own \aKeyMarVi{dossiers} and express their claims and analysis for their struggle.
 
 \spaceHalf
 
-\inright{producing alternative content...}
-The production of alternative content is an immanent objective to this thesis, even though it is not its main perspective. If alternative content is understood as movement content that formulates own standpoints, apart from academic papers and publishing, in flyers, zines, videos or music, I would partly consider this thesis still as alternative. From my perspective, this thesis is a means of the struggle of the movement, thus it shall benefit movement theorizing in the sense that it provides access to \bracket{academic} knowledge that is normally not accessible to non-academics.
-
-Access to academic theorizing can help to further strengthen own positions as argued \refMissingSrc{elsewhere} by understanding which discourses are actually hold by those that are opposed, on which arguments those discourses are drawn on. An example could be participation and right to city issues that are already visible in many movement and official discourses in São Paulo, as we will see later on.  
-
-Another aspect, the thesis form, is certainly more rooted in the usual academic frame. At the end it will become a master thesis. However, the online publication of the thesis process and the final results for example are forms of alternative content because there, all kinds of media are gathered and are open accessible, such as videos, diaries or photos. They will find their way into the written thesis to a certain extend as well. Here, no limits in the creation of alternative content are set, just as well as in the usage of existing content such as journals published by street people, handouts or readers. 
-
-By perceiving this thesis as part of the struggle of the people, a further intention would be to inject movement content in academic discourse. It has been already argued \refMissingSrc{elsewhere} that movement theorizing is not less relevant than academic theorizing and that the produced content could help to overcome or converge the borderlines between those very different spaces.
+\inright{...this thesis as alternative content?}
+How would this thesis then fit into such an environment? Its form is certainly more rooted in the common academic frame because at the end it will become a master thesis. However, through its intended \aKeyMarVi{standpoint} and formulation of \aKeyMarVi[partial  knowledge]{knowledge+partial} it is supposed to express narratives that happen on the streets, in the depths of the city. In that sense it represents an alternative form of content.
 
 \spaceHalf
 
-\inright{building relations...}
-Especially during the stay in São Paulo, different personal relations have been build. Actually it would have been impossible to write this thesis without personal relations. It has been difficult and was a long lasting process to establish them on a friendship base. 
+\inright{...academic knowledge made accessible to the people}
+From my perspective, this thesis is a also medium of the struggle of the people, thus it shall benefit \aKeyMarVi[movement theorizing]{theorizing+movement} in the sense that it provides access to \aKeyMarVi[academic knowledge]{knowledge+academic} that is normally not accessible to non-academics. Access to \aKeyMarVi[academic theorizing]{theorizing+academic} can help to further strengthen own positions as argued \refMissingSrc{elsewhere} by understanding from which standpoint discourses and discussions are actually mediated by those that are opposed by the movements, on which arguments this discourses are based on. One example is \aKeyMarVi{citizen participation} and \aKeyMarVi{the right to city}, issues that are already visible in \aKeyMarVi[movement theorizing]{theorizing+movement} and state-led discourses in São Paulo, as we will see later on. 
 
-In fact, reflecting about the time in the city, personal relations led to contact with various movements and collectives. There has been no single movement nor a single person I collaborated with but a wide variety all grounded on the streets. Therefore I cannot claim that a certain movements position is reflected by this thesis. Movements and collectives where often also bound to particular spaces in the city. Thus besides relations to people and their movements, relations to people and their spaces has been established as well. This interrelation to spaces in the city is one important aspect for the organization of the people. Among others I experienced movements and collectives such as \refMissingSrc{MNPR} or \refMissingSrc{aRuaca} but had several references points in the city as well, at \refMissingSrc{OCAS} or \refMissingSrc{AyCarmela} for instance. 
+\spaceHalf
 
-Further networking beyond the time of the thesis is intended, especially for the distribution of knowledge about the situation in São Paulo but also for the expression of solidarity. The question of networking remains to be seen, its an aim for the time after the thesis complete finalization. We could then think about conducing self-organized information events or such alike.
+\inright{...movement content injected in academia}
+By perceiving this thesis as part of the struggle of the people, a further intention is to \aKeyMarVi[inject movement content]{knowledge+injected} in academic space. It has been already argued \refMissingSrc{elsewhere} that \aKeyMarVi[movement theorizing]{theorizing+movement} is not less relevant than \aKeyMarVi[[academic theorizing]{theorizing+academic} and that the produced content could help to overcome or converge the borderlines between those two very different spaces. 
+
+\subject{Building Relations}
+
+\inright{...personal relations}
+Especially during my stay in São Paulo, new \aKeyMarVi{personal relations} have been established. Actually, it would have been impossible to write this thesis without personal relations. It was a long lasting process to establish them on a friendship base. 
+
+\spaceHalf
+
+\inright{...movement relations}
+In fact, reflecting about the time in the city, personal relations led to contact with various \aKeyMarVi{social movements} and \aKeyMarVi{collectives}. There was not a single movement nor a single person I collaborated with but with a spectrum of people most of them affiliated with the streets. Therefore I cannot claim that a certain movement positions are reflected by this thesis, nor a certain individual one. With all of them I experienced different situations: with \Matheus I spend two days and nights in the centre of São Paulo, together with \Juvenil I hung around at \aNewLocation[Praça República]{}, with the \refMissingSrc{aRuaca} media collective we visited one of the newly occupied buildings at the centre for conducing an interview with the people there, \Valter showed me the \refMissing{Psycho Drama} improvisation theatre he is taking part, we met at \refMissingSrc{AyCarmela}, \refMissingSrc{OCAS}, in a \aNewLocation[park in Braś]{}, always perceiving the city from below, from the streets.
+
+\spaceHalf
+
+\inright{...relations between people and spaces}
+People, movements and collectives where often bound to particular \aKeyMarVi{spaces} in the city. Thus besides relations to people and their movements, relations to people and their spaces has been established as well. This interrelation of spaces in the city with people of the city is one important aspect for the organization of the people and their struggle that I shall take in mind when narrating experiences from São Paulo.
+
+\spaceHalf
+
+\inright{...relations beyond the thesis}
+Leaving the local level for a while, \aKeyMarVi{networking} beyond the time of the thesis is intended as one concrete \aKeyMarVi[objective]{objective}. One could distribute knowledge and content from São Paulo, from the people and the movements, probably in form of self-organized information events for example or by constructing concrete \aKeyMarVi{solidarity networks} for the constant flow of information and the exchange and documentation of ideas \bracket{which is already done to a certain extend by Facebook anyway}. It has to be discussed with the people if such an proposal is acceptable and imaginable or if other forms of intercontinental relations can be established, if at all. Hence, the question of networking remains to be seen, as it is an objective for the time after the thesis finalization, as it depends on the collaboration and participation of the people in all states of its realization. 
 
 \spaceHalf
 
@@ -262,44 +304,9 @@ Further networking beyond the time of the thesis is intended, especially for the
 \stoptyping
 }
 
-\startAReminder
+\subject{Notes about my personal experience of Action Research}
 
-One justification of AR is that one must be there on the local level, one must see and experience the local space in order to understand the situation (see Tsing, Friction)
-
-This knowledge tries to answer questions such as - What do we want? Who are we? What do we need to do?
-
-\stopAReminder
-
-\startAReminder
-
-One attribute of \abbr{AR} is its participative research approach. 
-
-im empierischen teil kann ich mit einer karte der bewegungen und orte in são paulo beginnen
-
-außedem eine unterteilung in situation, aktion und organisation?
-
-nochmal drauf hinweisen das ich nicht hundertprozentiger teil einer bewegung war, sondern einzelne menschen aus bewegungen kennenlernte, die teilweise in bewegungen organisiert waren, ich also keinen research mit einer bewegung gemacht habe, sondern mit menschen, und mit den prozessen der stadt(!)
-
-I do not want to observe oppresed people through the lens of the the privileged. 
-\stopAReminder
-
-\startAReminder
-es muß nochmal deutlich werden das ich als bewegung nicht nur zum MNPR meine sonderen auch strukturierte und lose kollektive! also nicht nur massenbewegungen
-
-goals, relate self-determined action to the city, its spaces and places, and to the cities concepts of exlusion and the self determined praxis against it
-
-urban exclusion: (forms of gentrification, forms of spatial in(justice), forms of architectural opression )
-
-more objectives: nutururing people, nuturing academia, nuturing me
-
-co-theorizing sollte noch erwähnt werden am ende, also nicht nur das schreiben der arbeit. steht in dem text über AR in kolumbien
-
-gilles deleuze macht
-\stopAReminder
-
-\spaceHalf
-
-One note though on my role in the contradicting spaces of academia \bracket{as a student} and the streets \bracket{as an activist}. It has been shown that \abbr{AR}, as it is presented here, is a research approach for \aKeyMarVi{movement theorizing}, is thus part of a movements praxis and struggle. Even though I feel sympathetic to the people and support their demands and struggles, show my solidarity and participate in their actions, I had no sufficient time to get really engaged in a continuous and structural manner in existing struggles, may they be occupations for housing or another type of transformation of the street reality, to name just a few right now.  I therefore remained somehow in an intermediate space, not really diving completely into the street reality nor staying outside as a sole observer. I would therefore say that my thesis is not to full extend a work from an activist perspective, from within, but surely it is not about the streets from an academic perspective, even though it incorporates academic knowledge. Probably this space I feel myself located into, is a space 
+Some note though on my role in the contradicting spaces of academia \bracket{as a student} and the streets \bracket{as an activist}. It has been shown that \abbr{AR}, as it is presented here, is a research approach for \aKeyMarVi[movement theorizing]{theorizing+movement}, is thus part of a movements praxis and struggle. Even though I feel sympathetic to the people and support their demands and struggles, show my solidarity and participate in their actions, I had no sufficient time to get really engaged in a continuous and structural manner in existing struggles, may they be occupations for housing or another type of transformation of the street reality, to name just a few right now.  I therefore remained somehow in an intermediate space, not really diving completely into the street reality nor staying outside as a sole observer. I would therefore say that my thesis is not to full extend a work from an activist perspective, from within, but surely it is not about the streets from an academic perspective, even though it incorporates academic knowledge. Probably this space I feel myself located into, is a space 
 
 \spaceHalf
 
@@ -372,6 +379,35 @@ Being back in Germany means that the direct contact to the people has been lost.
 }
 
 So, what to do then? Basically that what is done usually, I write just by myself in order to keep the deadline for this thesis, I will try to translate important parts into Portuguese afterwards, make everything accessible online on the \aLinkF[thesis blog]{https://rtc.noblogs.org}  and will try to keep the contacts alive, try to organize some events on grassroots level to distribute information about the São Paulo experience. 
+
+\startAReminder
+
+One justification of AR is that one must be there on the local level, one must see and experience the local space in order to understand the situation (see Tsing, Friction)
+
+This knowledge tries to answer questions such as - What do we want? Who are we? What do we need to do?
+
+One attribute of \abbr{AR} is its participative research approach. 
+
+im empierischen teil kann ich mit einer karte der bewegungen und orte in são paulo beginnen
+
+außedem eine unterteilung in situation, aktion und organisation?
+
+nochmal drauf hinweisen das ich nicht hundertprozentiger teil einer bewegung war, sondern einzelne menschen aus bewegungen kennenlernte, die teilweise in bewegungen organisiert waren, ich also keinen research mit einer bewegung gemacht habe, sondern mit menschen, und mit den prozessen der stadt(!)
+
+I do not want to observe oppresed people through the lens of the the privileged. 
+
+es muß nochmal deutlich werden das ich als bewegung nicht nur zum MNPR meine sonderen auch strukturierte und lose kollektive! also nicht nur massenbewegungen
+
+goals, relate self-determined action to the city, its spaces and places, and to the cities concepts of exlusion and the self determined praxis against it
+
+urban exclusion: (forms of gentrification, forms of spatial in(justice), forms of architectural opression )
+
+more objectives: nutururing people, nuturing academia, nuturing me
+
+co-theorizing sollte noch erwähnt werden am ende, also nicht nur das schreiben der arbeit. steht in dem text über AR in kolumbien
+
+gilles deleuze macht
+\stopAReminder
 
 \subject{translations}
 \placeRegTransLa
