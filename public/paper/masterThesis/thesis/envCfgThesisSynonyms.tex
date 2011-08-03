@@ -2,7 +2,9 @@
 
 \startenvironment envCfgThesisSynonyms
 
-\definesynonyms	[abbreviation] [abbreviations] [\infull]
+\setupsynonyms[style=cap]
+
+\definesynonyms	[RegAbbreviation] [RegAbbreviations] [\infull]
 
 \defineregister		[RegTransLa][RegTransLas]
 \setupregister		[RegTransLa][coupling=yes, interaction={pagenumber, text}, referencing=on, n=1]
@@ -10,8 +12,10 @@
 \defineregister		[RegTransLaUdef][RegTransLaUdefs]
 \setupregister		[RegTransLaUdef][coupling=yes, interaction={pagenumber, text}, referencing=on, n=1]
 
-%\defineregister[regDefinition][regDefinitions]
-%\setupregister[regDefinition][coupling=yes, indicator=yes, referencing=on, interaction={pagenumber, text}, alternative=A, n=2, balance=yes]
+\defineregister		[RegKeyword][RegKeywords]
+\setupregister		[RegKeyword][alternative=A, n=2, expansion=yes]
+%\setupregister[RegKeyword][ alternative=A, n=2, balance=yes, coupling=yes, indicator=yes, referencing=on, interaction={pagenumber, text}, pagestyle=normal, expansion=yes]
+
 
 \startmode[print]
 \setupsynonyms		[abbreviation] [criterium=used]

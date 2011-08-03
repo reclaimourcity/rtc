@@ -7,9 +7,21 @@
 
 \define[]\subsectionActionsResearch {\subsection[methododology::actions::research]{Action//Activist//Research}}
 
+\define[]\subjectNotes {\subject{Notes about my personal experience of Action Research}}
+\define[]\subjectRelations {\subject{Building Relations}}
+\define[]\subjectKnowing {\subject{Many forms of knowing}}
+\define[]\subjectTendencies {\subject{Tendencies of Action Research}}
+\define[]\subjectPartColl {\subject{Participative//Collaborative}}
+\define[]\subjectKnowledge {\subject{Open Knowledge}}
+\define[]\subjectContent {\subject{Alternative Content}}
+
+%-------------------------------------------
+
+\doifmodeelse{unfinished}
+{ % mode is set to unfinished
+
 \defineregister[MAR][MARS]
 \setupregister[MAR][alternative=A, n=2, expansion=yes]
-
 %\setupregister[MAR][ alternative=A, n=2, balance=yes, coupling=yes, indicator=yes, referencing=on, interaction={pagenumber, text}, pagestyle=normal, expansion=yes]
 
 \def\aKeyMarVi{\dosingleempty\doAKeyMarVi}
@@ -19,10 +31,8 @@
 {%
 	\iffirstargument
 		\doAddToIndex{#2}{#1}
-		%\MAR{#2}{\color[magenta:8]{\em#1}}
 	\else
 		\doAddToIndex{#2}{#2}
-		%\MAR{#2}{\color[magenta:8]{\em#2}}
 	\fi
 }
 \define[1]\aKeyMarInVi{\MAR{#1}}
@@ -30,18 +40,18 @@
 \define[2]\aKeyMarViSee{{\seeMAR{#1}{#2}\color[magenta:8]{\em#1}}}
 \define[2]\aKeyMarInViSee{\seeMAR{#1}{#2}}
 
-\definesynonyms[translation][translations][\infull]
-\setupsynonyms[style=cap]
-         
-\setuptyping[
-	margin=1cm,
-	before=\startAWordMapBack,
-	after=\stopAWordMapBack,
-	tab=5,
-	option=commands]
+} % end unfinished mode
+{ % mode is not set to unfinished
 
-%\enablemode[draft]
-%\disablemode[tocLayout]
+% here we just forward to the normal macros
+\def\aKeyMarVi{\dosingleempty\doAKeyword}
+\define[2]\aKeyMarViSee{\aKeywordSee{#1}{#2}}
+
+\define[1]\aKeyMarInVi{\aKeywordInVi{#1}}
+\define[2]\aKeyMarInViSee{\aKeywordInViSee{#1}{#2}}
+
+} % end not unfinished mode
+%-------------------------------------------
 
 \starttext
 
@@ -50,6 +60,20 @@
 \subsectionActionsResearch
 
 This section describes the concept of Action Research applied as theoretical and practical framework of this thesis.
+
+\subjectKnowing
+
+\subjectTendencies
+
+\subjectPartColl
+
+\subjectKnowledge
+
+\subjectContent
+
+\subjectRelations
+
+\subjectNotes
 
 \stopmode
 
@@ -101,7 +125,7 @@ Flickr + Fotos, Journale + Zeitschriften, Webseiten + Blogs + Portale, Zines + F
 
 \stopAReminder
 
-\subject{Many forms of knowing}
+\subjectKnowing
 
 If I take a look at social movements and collectives and their organized struggle, I can perceive the production and articulation of own content and analysis of the particular reality, in order to develop the necessary step(s) to transform and overcome it. Here, knowledge emerges from within the struggle and is supposed to facilitate it \aQuoteW{Barker, Cox}{2001}.
 
@@ -157,7 +181,7 @@ Looking at the time in São Paulo, I would say that \abbr{AR} has been the conse
 
 I also choose \abbr{AR}, because I think that the knowledge and conceptualisation of the situation on the streets, formulated by the very people from the streets, is an enrichment for academic work in the sense that it could engage people to become more active, contest the status the academic space represents and by that introduce other ways of thinking, theorizing and adopting it. Such an engagement back on the streets, in social life, for an emancipatory transformation, shows that the private is politically, that research is political. The socially constructed spaces of academia and those spaces it aims to explain and conceptualize are supposed to be de-constructed in order to really facilitate a transformation \aQuoteB{Routeledge}{1996b}{400} and not to just reproduce the current status \bracket{which is build upon capitalism, race, gender, patriarchy, violence, power}. Therefore I make plenty of use of the information and content provided and created by the people, along with my personal and collective experiences and general theories.
 
-\subject{Tendencies of Action Research}
+\subjectTendencies
 
 \placefigure[location=local]{Five main tendencies Action Research is aiming for, according to \aQuoteB{Morell}{2009}{23,24}}
 {
@@ -215,7 +239,7 @@ Those tendencies show that \abbrFull{AR} is a organic framework consisting of va
 \inright{starting to frame objectives}
 In this thesis, not all of those suggested tendencies are present nor do they proclaim equal shares. The experience gained in São Paulo is drawn on certain practices that I gather under the term of \abbrFull{AR}. I want to lay out those practices next in order to derive the final objectives of this thesis, that will allow a concrete positioning, a concrete statement about the intention, expectation and realization of this thesis.
 
-\subject{participative//collaborative}
+\subjectPartColl
 
 From my point of view, the participative and collaborative character of this thesis is my most import perspective. As mentioned \refMissingSrc{elsewhere}, I intend a transparent, non-hierarchical and non-authoritative research action, not observed through the lens of a scholar but from the standpoint of the people I stayed with, which is or has become my standpoint as well.
 
@@ -227,7 +251,7 @@ The situations the people experience day by day lead to other organizational for
 
 So to say, our collaborative and participative actions allowed me to learn how to read the city from below, how the lived space that Henri Levebfre is talking about, can be perceived, thus that space that extends over the concrete urban space that we see, touch and feel everyday and over the symbolical urban space that recalls memories or feelings. 
 
-\subject{opening knowledge}
+\subjectKnowledge
 
 \inright{... transparency and free access}
 In the thesis \refMissingSrc{self-conception} I already determined that the process and outcome of this thesis is supposed to be transparent and freely accessible. Thus  \aKeyMarVi{opening knowledge} is a major objective and will respected by making all produced content \aKeyMarVi[instantly accessible]{knowledge+instant access}, for example on the web. Further on, the progress of the thesis can be tracked online as well. Making the progress \aKeyMarVi[transparent ]{knowledge+transparency} may also help others to understand under which conditions research was intended, what worked out, what had been adjusted, what was impossible to do and what was grounded on wrong preconceptions. 
@@ -245,7 +269,7 @@ Another important point is the fact that I went abroad for this thesis. Back at 
 \inright{... free and accessible sources and references}
 Opening knowledge also means that all \bracket{or at least the majority} external references I use, cite and refer to, must be freely \aKeyMarVi[accessible]{knowledge+open sources} as well to allow to inspect them and to independently make up one's own mind about their content and statement instead of relying on my \bracket{probably biased} interpretations.
 
-\subject{Alternative Content}
+\subjectContent
 
 \inright{...immanent}
 The production of \aKeyMarVi{alternative content} is an \aKeyMarVi[immanent attribute]{thesis+attributes} of this thesis, even though it is not its \aKeyMarVi[main perspective]{thesis+objectives}. I understand alternative content as distribution of own positions and \aKeyMarVi[standpoints]{standpoint}. Besides those people that are primarily interested in this content, the movement(s) that produce the content for instance, other people shall be reached by its distribution as well. Alternative content may have diverse forms of expression, different from conventional forms such as an academic thesis or research paper.
@@ -267,7 +291,7 @@ From my perspective, this thesis is a also medium of the struggle of the people,
 \inright{...movement content injected in academia}
 By perceiving this thesis as part of the struggle of the people, a further intention is to \aKeyMarVi[inject movement content]{knowledge+injected} in academic space. It has been already argued \refMissingSrc{elsewhere} that \aKeyMarVi[movement theorizing]{theorizing+movement} is not less relevant than \aKeyMarVi[[academic theorizing]{theorizing+academic} and that the produced content could help to overcome or converge the borderlines between those two very different spaces. 
 
-\subject{Building Relations}
+\subjectRelations
 
 \inright{...personal relations}
 Especially during my stay in São Paulo, new \aKeyMarVi{personal relations} have been established. Actually, it would have been impossible to write this thesis without personal relations. It was a long lasting process to establish them on a friendship base. 
@@ -304,7 +328,7 @@ Leaving the local level for a while, \aKeyMarVi{networking} beyond the time of t
 \stoptyping
 }
 
-\subject{Notes about my personal experience of Action Research}
+\subjectNotes
 
 Some note though on my role in the contradicting spaces of academia \bracket{as a student} and the streets \bracket{as an activist}. It has been shown that \abbr{AR}, as it is presented here, is a research approach for \aKeyMarVi[movement theorizing]{theorizing+movement}, is thus part of a movements praxis and struggle. Even though I feel sympathetic to the people and support their demands and struggles, show my solidarity and participate in their actions, I had no sufficient time to get really engaged in a continuous and structural manner in existing struggles, may they be occupations for housing or another type of transformation of the street reality, to name just a few right now.  I therefore remained somehow in an intermediate space, not really diving completely into the street reality nor staying outside as a sole observer. I would therefore say that my thesis is not to full extend a work from an activist perspective, from within, but surely it is not about the streets from an academic perspective, even though it incorporates academic knowledge. Probably this space I feel myself located into, is a space 
 
@@ -409,17 +433,20 @@ co-theorizing sollte noch erwähnt werden am ende, also nicht nur das schreiben 
 gilles deleuze macht
 \stopAReminder
 
+%---------------------------------------------------
+% gets only displayed in unfinshed mode
+
+\doifmode{unfinished}
+{
+
 \subject{translations}
-\placeRegTransLa
+\placeRegTransLa[criterium=section]
 
 \subject{figures}
-\placelist[figure][criterium=all]
+\placelist[figure][criterium=section]
 
 \subject{keywords}
-\placeMAR
-
-%\subject{definitions}
-%\placeregDefinition
+\placeMAR[criterium=section]
 
 \subject{reference}
 
@@ -449,6 +476,10 @@ Sprague, J. \& Kobrynowicz, D., 2004. {\em A Feminist Epistemology}. In Feminist
 \nl%
 Wildcat, 1995. Renaissance des Operaismus? {\em Wildcat}, 64, p.99-110. Available at: \goto{\hyphenatedurl{http://www.wildcat-www.de/wildcat/64/w64opera.htm}} [url(http://www.wildcat-www.de/wildcat/64/w64opera.htm)] [Accessed July 22, 2011]. \nl%
 \stopREF
+
+} 
+% end unfinished mode
+%---------------------------------------------------
 
 \stopmode
 

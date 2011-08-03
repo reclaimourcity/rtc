@@ -1,0 +1,30 @@
+\startcomponent component_Translations
+\product product_Thesis
+\project project_MasterThesis
+
+% definitions and macros
+\environment envThesisAllEnvironments
+
+\define[]\chapterTranslations{\chapter[ref::translations]{Translations}}
+
+\starttext
+
+\startmode[tocLayout]
+
+\chapterTranslations
+
+Contains all translated words.
+
+\stopmode
+
+\startmode[draft]
+
+\chapterTranslations
+
+\placeRegTransLa[criterium=all]
+
+\stopmode
+
+\stoptext
+
+\stopcomponent

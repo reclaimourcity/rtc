@@ -27,15 +27,64 @@
 \define[1]\cited{\quote{\em#1}}
 \define[1]\bracket{ [{\ss{\small#1}}]}
 
-\define[2]\abbrNew{\color[magenta:8]{\em#1}\bracket{#2}\abbreviation{#2}{#1}}
-\define[2]\abbrNewInVi{\abbreviation{#2}{#1}}
+%-----------------------------------------
+% insertion of keywords and the construction of a corresponding index register
 
-\define[1]\abbr{\color[magenta:8]{\em#1}}	%here we could probably link to the full abbreviation?
+%\define[1]\aKeyword{{\bf\em #1}}
+
+
+\def\aKeyword{\dosingleempty\doAKeyword}
+
+\def\doAddToIndex#1#2{\RegKeyword{#1}{\color[magenta:8]{\em#2}}}
+\def\doAKeyword[#1]#2%
+{%
+	\iffirstargument
+		\doAddToIndex{#2}{#1}
+	\else
+		\doAddToIndex{#2}{#2}
+	\fi
+}
+
+\define[2]\aKeywordSee{{\seeRegKeyword{#1}{#2}\color[magenta:8]{\em#1}}}
+\define[2]\aKeywordInViSee{\seeRegKeyword{#1}{#2}}
+\define[1]\aKeywordInVi{\RegKeyword{#1}}
+
+
+
+
+
+%-----------------------------------------
+% insertion of abbreviations into the text and the construction of a corresponding index of abbreviations
+
+% creates a new abbreviation in the index and displays the full name and the abbreviation in the text as follows: FullName [Abbreviation]
+% argument 1 =  full name
+% argument 2 = abbreviation
+\define[2]\abbrNew{\color[magenta:8]{\em#1}\bracket{#2}\RegAbbreviation{#2}{#1}}
+
+% creates a new abbreviation in the index but does not display them in the text
+% argument 1 =  full name
+% argument 2 = abbreviation
+\define[2]\abbrNewInVi{\RegAbbreviation{#2}{#1}}
+
+% inserts the abbreviation into the text. 
+%here we could probably also link to the full abbreviation in the abbreviation index?
+\define[1]\abbr{\color[magenta:8]{\em#1}}	
+
+% inserts the full name of the abbreviation. 
 \define[1]\abbrFull{\color[magenta:8]{\em\infull{#1}}}
 
-% links a geographical location to the corresponding text and generates a footnote with the link
-\define[1]\aLocation{\from[#1]\footnote[#1]{location: \goto{\url[#1]}[url(#1)]}}
+%-----------------------------------------
+% insertion of map locations into the text
 
+% creates a new location. can be called with two arguments, the first one is optional. the
+% command inserts the location in the text, registers the given location link and
+% generates a footnote
+%
+% argument 1 [optional]	: a synonym for the the location. this synonym can be used
+%					  later when referring to the location with \aLocation. if this
+%					  argument is not given, locations can only referred to later on
+%					  by using the link given in argument two
+% argument 2 [mandatory]	: the link to the location, can be a map, a website, whatever 
 \def\aNewLocation{\dosingleempty\doANewLocation}
 \def\doANewLocation[#1]#2%
 {%
@@ -46,6 +95,15 @@
 	\fi
 	\footnote[#2]{location: \goto{\url[#2]}[url(#2)]}
 }
+
+% links a geographical location to the corresponding text and generates a footnote with the link. the corresponding link must have been created with \aNewLocation already. as rgument one can give the link or the synonym, depending how \aNewLocation was invoked
+\define[1]\aLocation{\from[#1]\footnote[#1]{location: \goto{\url[#1]}[url(#1)]}}
+
+% just highlights a location text without creating footnote or links
+\define[1]\aLocationE{\inframed[frame=off, background=color, backgroundcolor=blue:4]{\bf#1 }}
+
+%-----------------------------------------
+% insertion of links and footnotes into text
 
 % just display the link in the text and generate a footnote, hence link must have been registered already
 \define[1]\aLink{\from[#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
@@ -98,7 +156,8 @@
 \define[1]\aLinkE{\inframed[frame=off, background=color, backgroundcolor=green:4]{\bf#1 }}
 
 
-\define[1]\aLocationE{\inframed[frame=off, background=color, backgroundcolor=blue:4]{\bf#1 }}
+%-----------------------------------------
+% generates a dictionary of translated words
 
 \def\toTranslate{\dosingleempty\doTranslate}
 
@@ -113,8 +172,9 @@
 	\fi 
 }
 
+%-----------------------------------------
 \define[1]\toMark{\startAMark{\bf#1}\stopAMark}
-\define[1]\aKeyword{{\bf\em #1}}
+
 \define\refMissing{\color[red:8]{\tt{\small{REF MISSING }}}}
 \define[1]\refMissingSrc{\color[red:8]{\tt{\small{REF MISSING(#1)}}}}
 

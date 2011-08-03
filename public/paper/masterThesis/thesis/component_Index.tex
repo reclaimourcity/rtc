@@ -1,0 +1,30 @@
+\startcomponent component_Index
+\product product_Thesis
+\project project_MasterThesis
+
+% definitions and macros
+\environment envThesisAllEnvironments
+
+\define[]\chapterIndex{\chapter[ref::index]{Index}}
+
+\starttext
+
+\startmode[tocLayout]
+
+\chapterIndex
+
+Contains all keywords in an index.
+
+\stopmode
+
+\startmode[draft]
+
+\chapterIndex
+
+\placeRegKeyword[criterium=all]
+
+\stopmode
+
+\stoptext
+
+\stopcomponent

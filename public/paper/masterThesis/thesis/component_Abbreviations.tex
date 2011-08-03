@@ -6,18 +6,22 @@
 \environment envThesisAllEnvironments
 \environment envCfgThesisSynonyms
 
+\define[]\chapterAbbreviations{\chapter[ref::abbreviations]{Abbreviations}}
+
 \starttext
 
 \startmode[tocLayout]
-\chapter[refAbb]{Abbreviations}
+
+\chapterAbbreviations
 
 Contains all abbreviations.
+
 \stopmode
 
 \startmode[draft]
-\chapter[refAbb]{Abbreviations}
+\chapterAbbreviations
 
-\placelistofabbreviations
+\placelistofRegAbbreviations
 
 \stopmode
 \stoptext

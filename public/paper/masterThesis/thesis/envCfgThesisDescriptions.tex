@@ -46,6 +46,9 @@
         	frame=off
 ]
 
+%---------------------------------------
+% word maps that are arranged according to their real position in the text
+
 \definetextbackground[AWordMapBack]
 [
 	location=text,
@@ -67,27 +70,39 @@
 	after={\stoptextbackground}
 ]
 
+\setuptyping%
+[%
+	margin=1cm,
+	before=\startAWordMapBack,
+	after=\stopAWordMapBack,
+	tab=5,
+	option=commands%
+]
+
+%---------------------------------------
+
 \definetextbackground[ARemarkBack]
 [
-	location=text,
-       	background=color,
-	backgroundcolor=gray:2,
-	color=magenta:7,
-        	frame=off
+	location=text,%
+       	background=color,%
+	backgroundcolor=gray:2,%
+	color=magenta:7,%
+        	frame=off%
 ]
 
-\definedescription[ARemark]
-[
-	headstyle=slanted,
-	style={\tt},
-	align=normal,
-	location=inright,
-	width=broad,
-	margin=, 
-	before={\starttextbackground[ARemarkBack]}, 
-	after={\stoptextbackground}
+\definedescription[ARemark]%
+[%
+	headstyle=slanted,%
+	style={\tt},%
+	align=normal,%
+	location=text,%
+	width=broad,%
+	margin=,%
+	before={\starttextbackground[ARemarkBack]},%
+	after={\stoptextbackground}%
 ]
 
+%---------------------------------------
 
 \definedescription[TextQuote][
 	headstyle=slanted,
