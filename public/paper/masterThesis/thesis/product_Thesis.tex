@@ -1,11 +1,16 @@
 \startproduct product_Thesis
 \project project_MasterThesis
 
-% definitions and macros
+%---------------------------------------------------------------------------------------------
+% include environments
+
 \environment envCfgThesisModes
 \environment envCfgPaperLanguageEn
 \environment envThesisText		% Text
 \environment envThesisUrl			% Url
+
+%---------------------------------------------------------------------------------------------
+% definitions, setups  and macros
 
 % switch background to cover page color
 \setupbackgrounds[page][background=color,backgroundcolor=gray:8]
@@ -13,12 +18,17 @@
 % change link color and styke for coverpage
 \setupinteraction[state=start,color=gray:1, click=yes, style=slanted]
 
+% always switch off local mode in order to prevent that local changes enter the overall document
+\preventmode[local]
+
+%---------------------------------------------------------------------------------------------
 % define the layout for the cover page
 \definelayout[pageOne][margin=0mm,width=middle]
 \setuplayout[pageOne]
 
 \component component_Coverpage
 
+%---------------------------------------------------------------------------------------------
 % new page for toc and in order to change local styles
 \page
 
@@ -35,6 +45,7 @@
 
 \component component_TOC
 
+%---------------------------------------------------------------------------------------------
 % start page numbering from now on
 \page[1]
 \setuppagenumbering[state=start]

@@ -187,6 +187,20 @@
 
 \define[]\spaceHalf{\blank[0.5cm]}
 
+%-----------------------------------------
+% definition of various text frames
+
+% generates a text frame with black background and green outlines. indicates a definition
+\def\textBoxedRoundMaxDef{\dosingleempty\doTextBoxedRoundMaxDef}
+\def\doTextBoxedRoundMaxDef[#1]#2%
+{%
+	\iffirstargument
+		\definitionFramed{#2} \blank[#1cm]
+	\else
+		\definitionFramed{#2}
+	\fi 
+}
+
 \defineframed[definitionFramed]
 [	
 	frame=on, 
@@ -205,20 +219,47 @@
 	backgrounddepth=2pt
 ]
 
-%\define[1]\aDefinition{\regDefinition{#1}}
-
-\def\textBoxedRoundMaxDef{\dosingleempty\doTextBoxedRoundMaxDef}
-
-\def\doTextBoxedRoundMaxDef[#1]#2%
+% generates a text frame with black background and blue outlines. indicates a question
+\def\textBoxedRoundMaxQuestion{\dosingleempty\doTextBoxedRoundMaxQuestion}
+\def\doTextBoxedRoundMaxQuestion[#1]#2%
 {%
 	\iffirstargument
-		\definitionFramed{#2} \blank[#1cm]
+		\questionFramed{#2} \blank[#1cm]
 	\else
-		\definitionFramed{#2}
+		\questionFramed{#2}
 	\fi 
 }
 
 \defineframed[questionFramed]
+[
+	frame=on, 
+	corner=0, 
+	width=local,
+	align={width, verytolerant, nothyphenated},
+	frameoffset=1pt,
+   	framecolor=blue:7,
+	background=color,
+   	backgroundcolor=black, 
+	backgroundoffset=1pt, 
+   	foreground=color,
+	foregroundcolor=white,
+	rulethickness=3pt,
+	framedepth=2pt,
+	backgrounddepth=2pt,
+]
+
+% generates a text frame with black background and magenta outlines. indicates something important that is neither a question nor a definition
+\def\textBoxedRoundMax{\dosingleempty\doTextBoxedRoundMax}
+\def\doTextBoxedRoundMax[#1]#2%
+{%
+	\iffirstargument
+		\textFramed{#2} \blank[#1cm]
+	\else
+		\textFramed{#2}
+	\fi 
+}
+
+\defineframed[textFramed]
 [
 	frame=on, 
 	corner=0, 
@@ -235,16 +276,5 @@
 	framedepth=2pt,
 	backgrounddepth=2pt,
 ]
-
-\def\textBoxedRoundMax{\dosingleempty\doTextBoxedRoundMax}
-
-\def\doTextBoxedRoundMax[#1]#2%
-{%
-	\iffirstargument
-		\questionFramed{#2} \blank[#1cm]
-	\else
-		\questionFramed{#2}
-	\fi 
-}
 
 \stopenvironment

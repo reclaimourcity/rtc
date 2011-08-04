@@ -2,31 +2,73 @@
 \product product_Thesis
 \project project_MasterThesis
 
+%---------------------------------------------------------------------------------------------
 % definitions and macros
 \environment envThesisAllEnvironments
 
-%\disablemode[tocLayout]
-%\enablemode[draft]
+%---------------------------------------------------------------------------------------------
+% in local mode generate toc and use thesis layout
+
+\enablemode[local]
+\doifmode{local}
+{
+% insert table of content
+
+\completecontent
+
+% start thesis layout from now on
+\page[1]
+\setuppagenumbering[state=start]
+
+% enable headers/footers from now on
+\setupfooter[state=start, color=gray:1, style=small, strut=yes]
+\setupheader[state=start, color=gray:1, style=small]
+
+\setupbackgrounds[header, footer][text][background=color,backgroundcolor=gray:8]
+\setupbackgrounds[header, footer][rightmargin][background=color,backgroundcolor=gray:5]
+
+\setupheadertexts
+        [  {\myTitle}]    []
+
+\setupfootertexts
+        [  {\getmarking[chapter]}]    [{page \pagenumber/\lastpagenumber } ]
+\setuppagenumbering[location=]
+
+}
+
+%---------------------------------------------------------------------------------------------
+% the single sections of this chapter
 
 \component component_MethodologyIntro
-\component component_MethodologyExperience
-\component component_MethodologyMotivation
-\component component_MethodologyMotivationNonAuthoritarian
-\component component_MethodologyTheoryAndPractice
-\component component_MethodologyTheoryAndPracticeEmpirical
-\component component_MethodologyTheoryAndPracticeInductive
-\component component_MethodologyTheoryAndPracticeQualitative
-\component component_MethodologyTheoryAndPracticeParticipative
-\component component_MethodologyTheoryAndPracticeOpenAccessible
-\component component_MethodologyRelevance
-\component component_MethodologySelfConception
-\component component_MethodologyActions
-\component component_MethodologyActionsResearch
-\component component_MethodologyActionsParticipantObservation
-\component component_MethodologyActionsGroundedTheory
-\component component_MethodologyActionsTheory
 
-%\disablemode[draft]
-%\enablemode[tocLayout]
+% asking who I am
+\component component_Methodology_WhoAmI
+\component component_Methodology_WhoAmI_Experience
+\component component_Methodology_WhoAmI_Motivation
+\component component_Methodology_WhoAmI_NonAuthoritarian
+\component component_Methodology_WhoAmI_SelfConception
+
+\component component_Methodology_WhoAmI_Actions
+\component component_Methodology_WhoAmI_ActionResearch
+\component component_Methodology_WhoAmI_Relevance
+
+% asking what I want
+\component component_Methodology_WhatDoIWant
+\component component_Methodology_WhatDoIWant_ObjectivesGeneral
+\component component_Methodology_WhatDoIWant_ObjectivesSpecific
+
+% asking what I should do
+\component component_Methodology_WhatShouldIDo
+\component component_Methodology_WhatShouldIDo_TheoryAndPractice
+\component component_Methodology_WhatShouldIDo_Empirical
+\component component_Methodology_WhatShouldIDo_Inductive
+\component component_Methodology_WhatShouldIDo_Qualitative
+\component component_Methodology_WhatShouldIDo_Participative
+\component component_Methodology_WhatShouldIDo_OpenAccessible
+
+\component component_Methodology_WhatShouldIDo_ParticipantObservation
+\component component_Methodology_WhatShouldIDo_Theory
+
+\disablemode[local]
 
 \stopcomponent
