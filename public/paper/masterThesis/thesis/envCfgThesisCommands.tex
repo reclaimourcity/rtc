@@ -160,15 +160,26 @@
 % generates a dictionary of translated words
 
 \def\toTranslate{\dosingleempty\doTranslate}
-
 \def\doTranslate[#1]#2%
 {%
 	\iffirstargument
 		\RegTransLa{{\ss#2}\bracket{#1}}
-		\color[magenta:8]{\em#2}\bracket{#1}
+		\color[green]{\em#2}\bracket{#1}
 	\else
 		\RegTransLaUdef{{\ss#1} <> translation missing}
-		\color[magenta:8]{\em#1}\bracket{translation missing}
+		\color[green]{\em#1}\bracket{translation missing}
+	\fi 
+}
+
+\def\toTranslateO{\dosingleempty\doTranslateO}
+\def\doTranslateO[#1]#2%
+{%
+	\iffirstargument
+		\RegTransLa{{\ss#2}\bracket{#1}}
+		\color[green]{\em\tt#2}
+	\else
+		\RegTransLaUdef{{\ss#1} <> translation missing}
+		\color[green]{\em\tt#1}
 	\fi 
 }
 

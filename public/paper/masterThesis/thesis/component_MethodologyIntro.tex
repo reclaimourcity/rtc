@@ -7,7 +7,7 @@
 \environment envCfgThesisCommands
 \environment envCfgThesisDescriptions
 
-\define[]\chapterMethodology {\chapter[methodology]{Methodology}}
+\define[]\chapterMethodology {\chapter[methodology::intro]{Methodology}}
 
 \starttext
 
@@ -21,10 +21,16 @@ The methodology chapter. Describes the thesis methodology in terms of theoretica
 \startmode[draft]
 \chapterMethodology
 
-\inright{aims of this chapter}
-The aim of this \aKeyword[Methodology]{methodology} chapter should be to transparently describe the context this thesis is embedded in and the appropriate actions that have been chosen in order to articulate and fulfil the thesis' aims. Transparency in order to expose the reasons why \bracket{research} actions, methods and tools have been chosen. Transparency in order to permit the appraisal of my own subjectivity in narrations, observations and actions. 
+\startKeywords
+methodology, introduction, guiding questions, who am i?, what should i do?, what do I want?
+\stopKeywords
 
-Supplementary, or better complementary, from my point of view, is the question on which base the argumentation for selected approaches and the thesis objectives are grounded. This means in particular to ask how the thesis underlying motivation and self-conception can be articulated and how this articulation impacts the selection to \bracket{research} approaches and the definition of possible objectives and \bracket{research} actions. 
+\spaceHalf
+
+\inright{aims of this chapter}
+The aim of this \aKeyword[Methodology chapter]{methodology+introduction} should be to transparently describe the context this thesis is embedded in and the appropriate actions that have been chosen in order to articulate and fulfil the thesis' aims.\aKeyword[Transparency]{transparency} in order to expose the reasons why \bracket{research} \aKeyword[actions]{research+actions}, \aKeyword[methods]{research+methods} and \aKeyword[tools]{research+tools} have been chosen. Transparency in order to permit the appraisal of my own subjectivity in narrations, observations and actions. 
+
+Supplementary, or better complementary, from my point of view, is the question on which base the argumentation for selected approaches and the thesis objectives are grounded. This means in particular to ask how the thesis underlying \aKeyword[motivation]{thesis+motivation} and \aKeyword[self-conception]{thesis+self-conception} can be articulated and how this articulation impacts the selection to \bracket{research} approaches and the definition of possible \aKeyword[objectives]{thesis+objectives} and \bracket{research} actions. 
 
 \spaceHalf
 
@@ -37,15 +43,42 @@ Before I carry on I would like to briefly describe my thoughts about the structu
 More formally, movement theorizing consists of the processes of unofficial thought that movement activists constantly work with - geared primarily towards the practical question 'what should we do?', but including all sorts of related questions, such as 'who are we?', 'what do we want?', 'who is on our side?', 'who are they and what are they doing?', 'what can we do?' \aQuoteW{Barker and Cox}{2001}
 \stopCitation
 
-The following four questions will frame the sections of my \aKeyword[Methodology]{methodology} which hopefully provides answers to all of them. Each section addresses two perspectives on the given question.
+The following three \aKeyword[questions]{methodology+guiding questions} will frame the sections of my \aKeyword[Methodology]{methodology} which hopefully provides answers to all of them. Each section addresses two perspectives on the given question.
 
-\textBoxedRoundMaxQuestion[0.4]{{\ss Who am I? Wer bin ich?} Outlines the basic thesis' self-conception and attitude which is strongly interrelated with my personal conviction; Outlines the general thesis perspective on research actions which is mainly driven by the question of knowledge production and my role in research.}
+\spaceHalf
 
-\textBoxedRoundMaxQuestion[0.4]{{\ss What do I want? Was will ich?} Determines the thesis objectives determined off the first question. Those objectives are of general and specific nature.}
+\textBoxedRoundMaxQuestion[0.4]{\aKeywordInVi{who am I?}{\ss\toTranslateO[Wer bin ich?]{Who am I?}} Outlines the basic thesis' self-conception and attitude which is strongly interrelated with my personal conviction; Outlines the general thesis perspective on research actions which is mainly driven by the question of knowledge production and my role in research.}
 
-\textBoxedRoundMaxQuestion[0.4]{{\ss What should I do? Was soll ich tun?} Outlines concrete methods, tools and research actions off the two previous questions. What shall be done is asked for practical/empirical and theoretical research actions.}
+\textBoxedRoundMaxQuestion[0.4]{\aKeywordInVi{what do I want?}{\ss\toTranslateO[Was will ich?]{What do I want?}} Determines the thesis objectives determined off the first question. Those objectives are of general and specific nature.}
+
+\textBoxedRoundMaxQuestion[0.4]{\aKeywordInVi{what should I do?}{\ss\toTranslateO[Was soll ich tun?]{What should I do?}} Outlines concrete methods, tools and research actions off the two previous questions. What shall be done is asked for practical/empirical and theoretical research actions.}
 
 \stopmode
+
+%---------------------------------------------------
+% gets only displayed in unfinshed mode
+
+\doifmode{unfinished}
+{
+
+\subject{keywords}
+\placeRegKeyword[criterium=section]
+
+\subject{translations}
+\placeRegTransLa[criterium=section]
+
+\subject{references}
+
+\startREF
+
+\nl%
+Barker, C. \& Cox, L., 2001. “What have the Romans ever done for us?” Academic and activist forms of movement theorizing. Available at: \goto{\hyphenatedurl{http://www.iol.ie/\~mazzoldi/toolsforchange/afpp/afpp8.html}} [url(http://www.iol.ie/\~mazzoldi/toolsforchange/afpp/afpp8.html)] [Accessed July 18, 2011]. \nl%
+
+\stopREF
+
+}
+
+%---------------------------------------------------
 
 \stoptext
 
