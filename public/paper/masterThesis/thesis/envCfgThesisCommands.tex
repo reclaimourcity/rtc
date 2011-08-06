@@ -3,29 +3,34 @@
 
 \startenvironment envCfgThesisCommands
 
+%-----------------------------------------
+% insertion of reference qoutes
+
 % quote such as a book with author and year parameters, without specific page reference
-\define[2]\aQuote{\color[magenta:8]{\tt{\small{(#1, #2)}}}}
+\define[2]\aQuote{\color[magenta:8]{\tt{\small{(#1, #2)}}}\doRegQuote{#1, #2}}
 
 % quote such as a book with author and year parameters, with specific page reference
-\define[3]\aQuoteB{\color[magenta:8]{\tt{\small{(#1, #2, p.#3 )}}}}
+\define[3]\aQuoteB{\color[magenta:8]{\tt{\small{(#1, #2, p.#3 )}}}\doRegQuote{#1, #2, #3}}
 
 % website quote, author and year
-\define[2]\aQuoteW{\color[magenta:8]{\tt{\small{(#1, #2, web)}}}}
+\define[2]\aQuoteW{\color[magenta:8]{\tt{\small{(#1, #2, web)}}}\doRegQuote{#1, #2, web}}
 
 % source quote, just the year
 \define[1]\aQuoteY{\color[magenta:8]{\tt{\small{(#1)}}}}
 
 % personal information quotes, just year
-\define[1]\aQuoteP{\color[magenta:8]{\tt{\small{(own Source, #1)}}}}
+\define[1]\aQuoteP{\color[magenta:8]{\tt{\small{(own Source, #1)}}}\doRegQuote{own source: #1}}
 
 % the quote of authors within the text flow
-\define[1]\aQuoteInTextA{\color[magenta:8]{\tt{\small{#1}}}}
+\define[1]\aQuoteInTextA{\color[magenta:8]{\tt{\small{#1}}}\doRegQuote{author: #1}}
 
 % the quote of a title within the text flow
-\define[1]\aQuoteInTextT{\color[magenta:8]{\tt{\small{\quote{#1}}}}}
+\define[1]\aQuoteInTextT{\color[magenta:8]{\tt{\small{\quote{#1}}}}\doRegQuote{title: #1}}
 
-\define[1]\cited{\quote{\em#1}}
-\define[1]\bracket{ [{\ss{\small#1}}]}
+\define[1]\doRegQuote{\RegQuote{#1}}
+
+\define\placeQuotesLocal{\placeRegQuote[criterium=section]}
+\define\placeQuotesAll{\placeRegQuote[criterium=all]}
 
 %-----------------------------------------
 % insertion of keywords and the construction of a corresponding index register
@@ -48,10 +53,6 @@
 \define[2]\aKeywordSee{{\seeRegKeyword{#1}{#2}\color[magenta:8]{\em#1}}}
 \define[2]\aKeywordInViSee{\seeRegKeyword{#1}{#2}}
 \define[1]\aKeywordInVi{\RegKeyword{#1}}
-
-
-
-
 
 %-----------------------------------------
 % insertion of abbreviations into the text and the construction of a corresponding index of abbreviations
@@ -163,11 +164,11 @@
 \def\doTranslate[#1]#2%
 {%
 	\iffirstargument
-		\RegTransLa{{\ss#2}\bracket{#1}}
+		\RegTranslation{{\ss#2}\bracket{#1}}
 		\color[green]{\em#2}\bracket{#1}
 	\else
-		\RegTransLaUdef{{\ss#1} <> translation missing}
-		\color[green]{\em#1}\bracket{translation missing}
+		\RegTranslationUndefined{{\ss#2} <> translation missing}
+		\color[green]{\em#2}\bracket{translation missing}
 	\fi 
 }
 
@@ -175,19 +176,61 @@
 \def\doTranslateO[#1]#2%
 {%
 	\iffirstargument
-		\RegTransLa{{\ss#2}\bracket{#1}}
+		\RegTranslation{{\ss#2}\bracket{#1}}
 		\color[green]{\em\tt#2}
 	\else
-		\RegTransLaUdef{{\ss#1} <> translation missing}
+		\RegTranslationUndefined{{\ss#1} <> translation missing}
 		\color[green]{\em\tt#1}
 	\fi 
 }
 
-%-----------------------------------------
-\define[1]\toMark{\startAMark{\bf#1}\stopAMark}
+\define[]\placeTranslationsLocal{\placeRegTranslation[criterium=section]}
+\define[]\placeTranslationsAll{\placeRegTranslation[criterium=all]}
 
-\define\refMissing{\color[red:8]{\tt{\small{REF MISSING }}}}
-\define[1]\refMissingSrc{\color[red:8]{\tt{\small{REF MISSING(#1)}}}}
+\define[]\placeUndefinedTranslationsLocal{\placeRegTranslationUndefined[criterium=section]}
+\define[]\placeUndefinedTranslationsAll{\placeRegTranslationUndefined[criterium=all]}
+
+
+%-----------------------------------------
+
+\def\startARemark#1%
+{%
+	\RegRemark{#1}
+	\startDoARemark#1
+}
+
+\def\stopARemark{\stopDoARemark}
+
+\define[]\placeRemarksLocal{\placeRegRemark[criterium=section]}
+\define[]\placeRemarksAll{\placeRegRemark[criterium=all]}
+
+
+\define[1]\toMark%
+{%
+	\RegTextMark{#1}\startAMark{\bf#1}\stopAMark
+}
+
+\define[]\placeTextMarksLocal{\placeRegTextMark[criterium=section]}
+\define[]\placeTextMarksAll{\placeRegTextMark[criterium=all]}
+
+%-----------------------------------------
+
+\define\refMissing%
+{%
+	\color[red:8]{\tt{\small{REF MISSING}}}
+	\RegMissingRef{undefined ref missing}
+}
+
+\define[1]\refMissingSrc%
+{%
+	\color[red:8]{\tt{\small{REF MISSING(#1)}}}
+	\RegMissingRef{#1}
+}
+
+\define[]\placeMissingReferencesLocal{\placeRegMissingRef[criterium=section]}
+\define[]\placeMissingReferencesAll{\placeRegMissingRef[criterium=all]}
+
+%-----------------------------------------
 
 \define[1]\toLink{\inframed[frame=off, background=color, backgroundcolor=yellow:2]{\bf#1 }}
 \define[1]\isCorrect{\inframed[frame=off, background=color, backgroundcolor=magenta:4]{\bf #1(?) }}
@@ -197,6 +240,9 @@
 % \define[]\media
 
 \define[]\spaceHalf{\blank[0.5cm]}
+
+\define[1]\cited{\quote{\em#1}}
+\define[1]\bracket{ [{\ss{\small#1}}]}
 
 %-----------------------------------------
 % definition of various text frames
