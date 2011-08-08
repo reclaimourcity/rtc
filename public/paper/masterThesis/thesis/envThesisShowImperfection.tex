@@ -1,0 +1,48 @@
+\environment envCmdPaper
+\environment envMacrosPaper
+\environment envCfgThesisModes
+\environment envCfgThesisCommands
+
+\startenvironment envThesisShowImperfection
+
+\define[1]\showImperfection%
+{%
+\doifmode{unfinished}%
+{%
+%
+\subject{keywords}%
+\placeRegKeyword[criterium=section]%
+%
+\subject{translations}%
+\placeTranslationsLocal%
+%
+\subject{still to translate}%
+\placeUndefinedTranslationsLocal%
+%
+\subject{references missing}%
+\placeMissingReferencesLocal%
+%
+\subject{text marks}%
+\placeTextMarksLocal%
+%
+\subject{remarks}%
+\placeRemarksLocal%
+%
+\subject{reminders}%
+\placeRemindersLocal%
+%
+\subject{used references in text}%
+\placeQuotesLocal%
+%
+\subject{references}%
+%
+\startREF%
+\nl%
+#1%
+\stopREF%
+%
+}%
+}
+
+
+\stopenvironment

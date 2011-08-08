@@ -192,14 +192,35 @@
 
 
 %-----------------------------------------
+% places reminders in text
 
-\def\startARemark#1%
+\def\startAReminder{\dosingleempty\doStartAReminder}
+\def\stopAReminder{\stopDoAReminder}
+
+\def\doStartAReminder[#1]%
 {%
-	\RegRemark{#1}
-	\startDoARemark#1
+	\startDoAReminder
+	\iffirstargument
+		{\tt#1}\RegReminder{#1}
+	\else	
+		\RegReminder{not further specified}
+	\fi
 }
 
-\def\stopARemark{\stopDoARemark}
+\define[]\placeRemindersLocal{\placeRegReminder[criterium=section]}
+\define[]\placeRemindersAll{\placeRegReminder[criterium=all]}
+
+%-----------------------------------------
+% places marks in text
+
+\define[1]\startARemark%
+{%
+	\RegRemark{#1}%
+	\startDoARemark%
+	#1%
+}
+
+\define\stopARemark{\stopDoARemark}
 
 \define[]\placeRemarksLocal{\placeRegRemark[criterium=section]}
 \define[]\placeRemarksAll{\placeRegRemark[criterium=all]}

@@ -30,7 +30,7 @@
         	frame=off
 ]
 
-\definetextbackground[AReminder]
+\definetextbackground[DoAReminder]
 [
 	location=text,
        	background=color,
@@ -83,7 +83,6 @@
 
 \definetextbackground[DoARemarkBack]
 [
-	location=text,%
        	background=color,%
 	backgroundcolor=gray:2,%
 	color=magenta:7,%
@@ -92,12 +91,10 @@
 
 \definedescription[DoARemark]%
 [%
-	headstyle=slanted,%
 	style={\tt},%
 	align=normal,%
-	location=text,%
-	width=broad,%
-	margin=,%
+	location=top,%
+	width=fit,%
 	before={\starttextbackground[DoARemarkBack]},%
 	after={\stoptextbackground}%
 ]
@@ -108,7 +105,7 @@
 	headstyle=slanted,
 	style={\tt},
 	align=left,
-	location=text,
+	location=here,
 	width=fit,
 	margin=1cm, 
 	before=", 
