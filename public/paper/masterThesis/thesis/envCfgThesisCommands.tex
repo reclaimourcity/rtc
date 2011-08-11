@@ -15,6 +15,9 @@
 % website quote, author and year
 \define[2]\aQuoteW{\color[magenta:8]{\tt{\small{(#1, #2, web)}}}\doRegQuote{#1, #2, web}}
 
+% website quote, just author
+\define[1]\aQuoteWA{\color[magenta:8]{\tt{\small{(#1, web)}}}\doRegQuote{#1, web}}
+
 % source quote, just the year
 \define[1]\aQuoteY{\color[magenta:8]{\tt{\small{(#1)}}}}
 
@@ -109,7 +112,9 @@
 % just display the link in the text and generate a footnote, hence link must have been registered already
 \define[1]\aLink{\from[#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
 
-% register a new link, display it in the text and generate a footnote. the label in the text can be set by the optional first argument. if the first argument is not given, the whole link address gets displayed in the text
+% register a new link, display it in the text and generate a footnote. the text label can be set by the optional first argument. if the first argument is not given, the whole link address gets displayed in the text
+% argument one [optional]: text label
+% argument  two [mandatory]: link url. if first argument is nor given, the link serves as label as well
 \def\aLinkNew{\dosingleempty\doALinkNew}
 \def\doALinkNew[#1]#2%
 {%
@@ -293,6 +298,35 @@
    	foreground=color,
 	foregroundcolor=white,
 	rulethickness=3pt,
+	framedepth=2pt,
+	backgrounddepth=2pt
+]
+
+% generates a text frame with black background and green outlines. indicates a definition
+\def\textBoxedRoundMaxObj{\dosingleempty\doTextBoxedRoundMaxObj}
+\def\doTextBoxedRoundMaxObj[#1]#2%
+{%
+	\iffirstargument
+		\objectiveFramed{#2} \blank[#1cm]
+	\else
+		\objectiveFramed{#2}
+	\fi 
+}
+
+\defineframed[objectiveFramed]
+[	
+	frame=on, 
+	corner=0, 
+	width=local,
+	align={width, verytolerant, nothyphenated},
+	frameoffset=1pt,
+   	framecolor=yellow,
+	background=color,
+   	backgroundcolor=black, 
+	backgroundoffset=1pt, 
+   	foreground=color,
+	foregroundcolor=white,
+	rulethickness=4pt,
 	framedepth=2pt,
 	backgrounddepth=2pt
 ]
