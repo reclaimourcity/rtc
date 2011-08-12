@@ -106,6 +106,12 @@
 % just highlights a location text without creating footnote or links
 \define[1]\aLocationE{\inframed[frame=off, background=color, backgroundcolor=blue:4]{\bf#1 }}
 
+\define[1]\locMissingSrc%
+{%
+	\color[red:8]{\tt{\small{LOC MISSING(#1)}}}
+	\RegMissingRef{#1}
+}
+
 %-----------------------------------------
 % insertion of links and footnotes into text
 
