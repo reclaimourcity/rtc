@@ -1,5 +1,6 @@
 \environment envCfgThesisDescriptions
 \environment envCfgThesisSynonyms
+\environment envMacrosPaper
 
 \startenvironment envCfgThesisCommands
 
@@ -394,5 +395,26 @@
 	framedepth=2pt,
 	backgrounddepth=2pt,
 ]
+
+%-----------------------------------------
+% registering and placement of reference
+
+\define[1]\addReference{\RegReference{#1}}
+\define[1]\addLink{\RegLink{#1}}
+\define[1]\addLocation{\RegLocation{#1}}
+\define[1]\addMedia{\RegMedia{#1}}
+
+\define[]\showReferences{\placeRefs{\placeRegReference}}
+\define[]\showLinks{\placeRefs{\placeRegLink}}
+\define[]\showMedias{\placeRefs{\placeRegMedia}}
+\define[]\showLocations{\placeRefs{\placeRegLocation}}
+
+\define[1]\placeRefs%
+{%
+\startREF%
+\nl%
+#1%
+\stopREF%
+}
 
 \stopenvironment

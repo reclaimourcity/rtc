@@ -5,47 +5,102 @@
 
 \startenvironment envThesisShowImperfection
 
-\define[1]\showImperfection%
-{%
-\doifmode{unfinished}%
-{%
 %
-\subject{keywords}%
-\placeRegKeyword[criterium=section]%
+\def\showImperfection{\dosingleempty\doShowImperfection}
+\def\doShowImperfection[#1]%
+{%
+	\iffirstargument
+		\doifmode{#1}{\page \placeAll}
+	\else
+		\doifmode{unfinished}{\page \placeUnfinished}
+	\fi
+}\subject
+
 %
-\subject{abbreviations}%
+\define[]\placeUnfinished%
+{%
+\section{Keywords}%
+\placeRegKeyword%
+%
+\section{Abbreviations}%
 \placelistofRegAbbreviations%
 %
-\subject{translations}%
+\section{Translations}%
 \placeTranslationsLocal%
 %
-\subject{still to translate}%
+\section{Still to Translate}%
 \placeUndefinedTranslationsLocal%
 %
-\subject{references missing}%
-\placeMissingReferencesLocal%
-%
-\subject{text marks}%
+\section{Text Marks}%
 \placeTextMarksLocal%
 %
-\subject{remarks}%
+\section{Remarks}%
 \placeRemarksLocal%
 %
-\subject{reminders}%
+\section{Reminders}%
 \placeRemindersLocal%
 %
-\subject{used references in text}%
+\section{References Missing}%
+\placeMissingReferencesLocal%
+%
+\section{Used References}%
 \placeQuotesLocal%
 %
-\subject{references}%
-%
-\startREF%
-\nl%
-#1%
-\stopREF%
-%
-}%
+\placeReferences%
 }
 
+%
+\define[]\placeAll%
+{%
+\section{Keywords}%
+\placeRegKeyword%
+%
+\section{Abbreviations}%
+\placelistofRegAbbreviations%
+%
+\section{Translations}%
+\placeTranslationsAll%
+%
+\section{Still to Translate}%
+\placeUndefinedTranslationsAll%
+%
+\section{Text Marks}%
+\placeTextMarksAll%
+%
+\section{Remarks}%
+\placeRemarksAll%
+%
+\section{Reminders}%
+\placeRemindersAll%
+%
+\section{References Missing}%
+\placeMissingReferencesAll%
+%
+\section{Used References}%
+\placeQuotesAll%
+%
+\placeReferences%
+}
+
+\define[]\placeReferences%
+{%
+\section{List of Figures}%
+\placelist[figure][criterium=all]%
+%
+\section{List of Tables}%
+\placelist[table][criterium=all]%
+%
+\section{List of References}%
+\showReferences%
+%
+\section{List of Links}%
+\showLinks%
+%
+\section{List of Media}%
+\showMedias%
+%
+\section{List of Locations}%
+\showLocations%
+}
 
 \stopenvironment

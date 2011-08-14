@@ -2,14 +2,7 @@
 
 % pagelayout
 \setuppapersize[A4][A4] % this is default and may be omitted
-\setuplayout[	backspace=20mm,
-			leftmargindistance=20mm,rightmargindistance=20mm,
-			width=170mm,
-			topspace=20mm, top=0mm,
-			height= 257mm,
-			header=5mm,
-			footer=5mm,
-			footerdistance=2.5mm,
-			headerdistance=2.5mm]
+\definelayout[document][margin=0mm,width=middle, footer=5mm, footerdistance=5mm, header=0mm, headerdistance=5mm]
+\setuplayout[document]
 
 \stopenvironment

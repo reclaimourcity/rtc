@@ -10,6 +10,8 @@
 % in local mode generate toc and use thesis layout
 
 \enablemode[local]
+\preventmode[unfinished]
+
 \doifmode{local}
 {
 % insert table of content
@@ -66,7 +68,7 @@
 \component component_Methodology_WhatShouldIDo_Qualitative
 \component component_Methodology_WhatShouldIDo_Participative
 
-\component component_Methodology_WhatShouldIDo_OpenAccessible
+%\component component_Methodology_WhatShouldIDo_OpenAccessible
 
 \component component_Methodology_WhatShouldIDo_Theorizing
 
@@ -74,6 +76,9 @@
 \component component_Methodology_WhatShouldIDo_ParticipantObservation
 
 \component component_Methodology_WhatShouldIDo_Tools
+
+%only available in local mode, thus only when this document gets compiled
+\showImperfection[local]
 
 \disablemode[local]
 
