@@ -4,6 +4,26 @@
 
 % definitions and macros
 \environment envThesisAllEnvironments
+\environment envCfgThesisImages
+
+% setup for table all cells
+\setupTABLE[row][each]
+[
+	background=color,
+	foreground=color,
+	frame=on,
+	rulethickness=2pt,
+	corner=00,
+	offset=2pt
+]
+
+\setupTABLE [y][first]
+[	
+	background=color,
+	frame=off,
+	rulethickness=2pt,
+	foregroundcolor=black
+]
 
 \define[]\subsectionTools{\subsection[methodology::whatshouldido::tools]{Tools//Online//Offline}}
 
@@ -25,13 +45,35 @@ Describes all used tools for research and writing.
 tools, writing, research, thesis, research, bibliography management, open maps, media archives, blog
 \stopKeywords
 
-The tools that I used during may research actions and thesis completion are mainly tools for documentation purposes and information structuring. I intend to raise \aKeyword{transparency} about what I am doing here and how I reached the various stations from the begin to the end of my research. Transparency can only be reached if the information, the theorized knowledge, the produced content this thesis is composed of, is freely accessible. This also means for me that other should be able to reproduce \bracket{technical wise} what I have done. Thus, \aKeyword{open access} to this thesis is mandatory but it also means that free access to the used tools is mandatory. 
+The tools that I used during may research actions and thesis completion are mainly tools for documentation purposes and information structuring. I intend to raise \aKeyword{transparency} about what I am doing and how I reached the various stations from since the begin of my research. Transparency can only be reached if information, theorized knowledge and produced content this thesis is composed of is freely accessible. This also means for me that others should be able to reproduce \bracket{technical wise} what I have done. They should be able to access the same tools that I accessed, without barriers and limitations. Thus, \aKeyword{open access} to this thesis content is mandatory while at the same time \aKeyword[free access]{tools+free access} to applied tools is inevitable. 
 
-The tools that I mainly applied are made for the virtual space, made to manage the flow of information in various fashions. They are mainly composed of \aKeyword[free software]{tools+free software}\footnote{\refMissingSrc{what is free software}} and \aKeyword[non-commercial]{tools+non-commercial} \aKeyword[social web services]{tools+social web}.
+Those notions imply a \aKeyword[non-commercial]{tools+non-commercial} and \aKeyword[political attitude]{tools+political} in order to guarantee for instance that the blog platform functions as long as its is supported by its community and not as long advertising generates sufficient cash, that censorship is not an option for the service providers, that the means of publishing and communicating and the corresponding infrastructure lay in the hand of the communities and not in the hand of a single individuals or corporations. 
 
-Free software tools help me above all to produce content while non-commercial web services help me to document, freely publish and establish transparency.
+In a sense, the chosen tools fall to a certain extend into the category of \aKeyword[techno-political tools]{tools+techno-political}, that \aQuoteInTextA{Morell} referred to as an experience of \abbrFull{AR} that aims for
 
-\placefigure[location=here]{Scope for tools applicable during thesis realization.}
+\spaceHalf
+
+[...] \startCitation
+systematizing information for the creation of (networking) tools.\aQuoteB{Morell}{2009}{25}
+\stopCitation
+
+\spaceHalf
+
+I do not aim for the creation of \aKeyword[techno-political tools]{tools+techno-political} in the first place but aim to apply and make use of them. Most of the tools I use are made for the virtual space, made to feed the flow of information with own content but also to manage it in various fashions, for instance when structuring my literature sources or when scanning through \abbr{OA} journals for existing sources of knowledge. They help me writing this thesis chapters and blog posts, to backup and share them. They are mainly composed of \aKeyword[free software]{tools+free software}\footnote
+{
+\startCitation
+Free Software is a set of principles designed to protect the freedom of individuals to use computer software. It emerged in the 1980s against a backdrop of increasing restrictions on the use and production of software. Free Software can therefore be understood historically and ethically as the defence of freedom against a genuine threat.\aQuoteW{Myers}{2006}\aLinkNewF{http://rhizome.org/editorial/2006/sep/22/open-source-art-again/}
+\stopCitation
+} and \aKeyword[non-commercial]{tools+non-commercial} \aKeyword[social web services]{tools+social web}. Free software tools help me, above all, to produce content while non-commercial web services \bracket{based on free/open source software} help me to document, freely publish, distribute and establish transparency.
+
+\spaceHalf
+
+\inright{tools for documentation}
+Besides those tools for digital information production and the realization of writing activities, I use a couple of gadgets in order to document what I experience, see, hear and feel. Those \aKeyword[documentation tools]{tools+documentation} allow me take a snapshot of a particular situation, in most cases in form of photos, but also videos, field recordings and personal notes. 
+
+Documentation mainly produces multimedia content that is made available on the thesis blog but which is also supposed to enter the thesis. My personal notes and memory protocols are one source for the rendition of my São Paulo experience.
+
+\placefigure[force]{Scope of application for tools utilized during thesis realization.}
 {
 \starttyping
 
@@ -41,36 +83,179 @@ Free software tools help me above all to produce content while non-commercial we
 	/BTEX \tfa\ss\color[green]{Management} /ETEX 
 
 		/BTEX \tfa\ss\color[green]{Writing} /ETEX 
-		/BTEX \tfa\ss\color[green]{Environment} /ETEX 			  
+		/BTEX \tfa\ss\color[green]{Environment} /ETEX 
+			  
 /BTEX {Written} /ETEX					/BTEX \tfa\ss\color[green]{Blog} /ETEX		/BTEX \tfa\ss\color[green]{Open} /ETEX		/BTEX {Audio\/Visual} /ETEX
 /BTEX {Content} /ETEX							/BTEX \tfa\ss\color[green]{Maps} /ETEX		/BTEX {Content}/ETEX
-								
+					
 								/BTEX \tfa\ss\color[green]{Media} /ETEX 
-								/BTEX \tfa\ss\color[green]{Archives} /ETEX			 
-/BTEX \nl /ETEX
+								/BTEX \tfa\ss\color[green]{Archives} /ETEX
+	
+								/BTEX \tfa\ss\color[yellow:2]{Documentation} /ETEX
+
 				/BTEX {Research Actions} /ETEX
 
 \stoptyping
 }
 
-The thesis blog is the main platform that interconnects all content produced with other tools and services, on other platforms. From there, all available content can be freely accessed, the thesis and research history can be traced and reproduced. In detail, the applied tools and services are
+\spaceHalf
 
-\textBoxedRoundMaxDef[0.4]{blog: rtc.noblogs.org}
+\inright{the thesis blog as main publishing platform}
+The \aKeyword[thesis' blog]{tools+blog} is the main platform that interconnects all content, produced with different tools and services, published on different platforms. The blog interlinks them all, the platforms that make available content freely and easily accessible for usage and reproduction, services and tools that allow tracing of thesis progress and tracking of research history. The blog that interlinks virtual platforms turns into \goto{alternative content}[methodology::whoami::actionresearch::alternativecontent] itself which is not directly entering this thesis in its present form because this content represents knowledge in motion, which emerged from the \goto{São Paulo Experience}[methodology::whoami::experience], unstructured, unordered, unpredicted and theorized based on the very moment of its occurrence. 
 
-\textBoxedRoundMaxDef[0.4]{media archives: archive.org}
+\spaceHalf
 
-\textBoxedRoundMaxDef[0.4]{media archive: videobin.org}
+\setupTABLE[row][each]
+[
+	backgroundcolor=black,
+	foregroundcolor=white,
+	framecolor=magenta:7,
+]
 
-\textBoxedRoundMaxDef[0.4]{writing tools: github}
+\setupTABLE [y][first]
+[	
+	backgroundcolor=magenta:7,
+	foregroundcolor=white,
+]
 
-\textBoxedRoundMaxDef[0.4]{writing tools: context}
+\placetable[force, split]{Tools and services utilized for virtual content production. and open distribution, theorizing and multimedially documentation.}
+{
+\bTABLE
+\bTR
+	\bTH[nc=3, align={middle,lohi}] {\tt\bf Tools and Services} \eTH
+\eTR
+\bTR
+\bTD \color[green]{\tt blog}\blank[0.20cm]\aLinkNew[rtc.noblogs.org]{https://rtc.noblogs.org} used as main publishing platform\eTD
+\bTD \color[green]{\tt bibliography}\blank[0.20cm]\aLinkNew[zotero.org]{https://www.zotero.org/r3cla1m_7h3_c17y/items} used for storing and sharing references and sources of this thesis\eTD
+\bTD \color[green]{\tt open maps}\blank[0.20cm]\aLinkNew[openstreetmap.org]{http://www.openstreetmap.org/user/reclaimourcity} used for adding geographical content for São Paulo and generating maps found in this thesis\eTD
+\eTR
+\bTR
+\bTD \color[green]{\tt open maps}\blank[0.20cm]\aLinkNew[Merkkartor]{http://merkaartor.be} used for offline map manipulation \eTD
+\bTD \color[green]{\tt media archive}\blank[0.20cm]\aLinkNew[archive.org]{http://www.archive.org/search.php?query=creator:"r3cl41m"} used as online audio archive\eTD
+\bTD \color[green]{\tt media archive}\blank[0.20cm]\aLinkNew[videobin.org]{http://videobin.org} used as online video archive\eTD
+\eTR
+\bTR
+\bTD \color[green]{\tt writing environment}\blank[0.20cm]\aLinkNew[TeXworks]{http://www.tug.org/texworks/} used for text writing and editing\eTD
+\bTD \color[green]{\tt writing environment}\blank[0.20cm]\aLinkNew[Gimp]{http://www.gimp.org/} used for image manipulation\eTD
+\bTD \color[green]{\tt writing environment}\blank[0.20cm]\aLinkNew[github.com]{https://github.com/reclaimourcity/rtc} used for thesis bakups and text reconstruction \eTD
+\eTR
+\bTR
+\bTD \color[magenta:7]{\tt communication}\blank[0.20cm]\aLinkNew[Jabber Chat]{r3cl41m@jabber.ccc.de} used for instant messaging\eTD
+\bTD \color[magenta:7]{\tt communication}\blank[0.20cm]\aLinkNew[Email]{mailto:r3cl41m@riseup.net} used for message exchange\eTD
+\bTD \color[magenta:7]{\tt communication}\blank[0.20cm]\aLinkNew[MicroBlog]{https://identi.ca/r3cl41m} used information distribution\eTD
+\eTR
+\bTR
+\bTD \color[yellow:2]{\tt documentation}\blank[0.20cm] portable stereo audio recorder for field recordings\eTD
+\bTD \color[yellow:2]{\tt documentation}\blank[0.20cm] mobile phone for taking photos and videos\eTD
+\bTD \color[yellow:2]{\tt documentation}\blank[0.20cm] a jotter for taking notes \eTD
+\eTR
+\eTABLE
+}
 
-\textBoxedRoundMaxDef[0.4]{open maps: openstreetmap.org}
+\spaceHalf
 
-\textBoxedRoundMaxDef[0.4]{bibliography management: zotero}
+Having defined this rooster of application categories and tools, lets take a brief look at them in order to discover their concrete purpose in the course of research action(s) and thesis writing.
 
+\subject{Means of Communication}
 
-\placefigure[location=here]{Applied tools for thesis realization.}
+\inright{email @ riseup.net}
+\aLinkNew[r3cl41m@riseup.net]{mailto:r3cl41m@riseup.net} is my email account provided by the \aLinkNew[riseup collective]{https://riseup.net} which provides secure communication services for activists that work on \aQuoteInText{liberatory social change}\aQuoteWA{riseup.net}. Riseup is a self-determined project that aims to control its communication and web infrastructure.
+
+\spaceHalf
+
+\inright{chat @ jabber.ccc.de}
+\aLinkNew{r3cl41m@jabber.ccc.de} is my jabber account for instant messaging, provided by the \aLinkNew[Chaos Computer Club]{http://www.ccc.de/}\abbrNewInVi{Chaos Computer Club}{CCC}, the largest organized and publicly visible group of computer enthusiasts and hackers in Germany. \aLinkNew[Jabber]{http://en.wikipedia.org/wiki/Extensible_Messaging_and_Presence_Protocol} is an open and freely available instant messaging protocol which is supported by a variety of mail clients, such as \aLinkNew[Pidgin]{http://pidgin.im}. The \abbr{CCC} provides free infrastructure such as the jabber server I registered my account with.
+
+\spaceHalf
+
+\imgThesisIdentica
+
+\inright{microblog @ identi.ca}
+\aLinkNew{https://identi.ca/r3cl41m} is a \aKeyword[microblog]{tools+microblog}, similar to twitter but based on open source software and microblogging protocols. This \aKeyword[microblog]{tools+microblog} has mainly the purpose of distributing short snippets of information related to my research to the people that follow this blog. Even though this \aKeyword[microblog]{tools+microblog} has been registered since the beginning of my time in São Paulo, I made little use of it then because I didn't see a real advantage of using it for the realization of my research action(s). This will probably change during the course of the writing process because it seems suitable for me to just publish interesting and relevant information related to my research. Even though I did not utilized my \aKeyword[microblog]{tools+microblog} during or for research actions, I made plenty of use of information published on Twitter, mainly announced events of collectives and social movements in São Paulo. Thus, microblogging has been relevant for me as consumer, for getting to know what is happening in the city, but not as part of my own praxis.
+
+\subject{Writing Environment}
+
+\imgThesisGithub
+
+\spaceHalf
+
+\inright{thesis documents @ github.com}
+\aLinkNew{https://github.com/reclaimourcity/rtc} is the online repository where I \aKeyword[backup]{tools+backup} and \aKeyword[share]{tools+share} the written chapters of this thesis. \aLinkNew[Git]{http://git-scm.com/about} allows me to backup my written files, compare different versions of one file and to \aKeyword[recover]{tools+recover} any file or file version that I may have lost on my local computer. I share my thesis files with others on \aLinkNew[Github]{https://github.com}, an \bracket{commercial} online platform that hosts a multitude of git repositories, mainly related to software projects. Setting up an own file repository on \aKeyword[Github]{tools+github} is free but implies certain restrictions such as non-private repositories only. Git allows me trace the history of my written files from their beginning as empty files until their final version, completed and formatted correctly.
+
+\spaceHalf
+
+\inright{TeX}
+\aLinkNew[TeXworks]{http://www.tug.org/texworks/} is an editor that understands the \aKeyword[TeX]{tools+tex} language. \aLinkNew[TeX]{https://secure.wikimedia.org/wikipedia/en/wiki/TeX} is a typesetting language which generates nicely formatted pdf documents from plain text documents. TeX is a programming language that provides syntax to format text and to layout documents, in a sense similar to the formatting capabilities of wikis, but much more powerful. I use \aKeyword[ConTeXt]{tools+ConTeXt}, a TeX derivation, to write this thesis. In general, TeX files are plain text files, thus human readable, which is nice in order to track their changes via \aKeyword[Git]{tools+git} or for comparing different versions of one file. \aKeyword[TeX]{tools+TeX}, \aKeyword[ConTeXt]{tools+ConTeXt} and \aKeyword[TeXworks]{tools+TeXworks} is free software.
+
+\spaceHalf
+
+\inright{gimp}
+\aLinkNew[Gimp]{http://www.gimp.org/} is a free software image manipulation program that I use to prepare all graphical content placed in this thesis and on the blog.
+
+\spaceHalf
+
+\imgThesisZotero
+
+\spaceHalf
+
+\inright{references and sources @ zotero.org}
+\aLinkNew[http://www.zotero.org/r3cla1m\_7h3\_c17y/items]{http://www.zotero.org/r3cla1m_7h3_c17y/items} is the online repository where I store and share all bibliographic references and sources. This repository is public accessible and contains all references and sources that I consider to use for my thesis. By doing so, I comply with my demand to make my used sources accessible for others. After this thesis completion, my online repository will contain lists of used and unused references, including their positions in the virtual space where I discovered most of them. \aLinkNew[Zotero]{http://www.zotero.org} is a free software add-on for the \aLinkNew[Firefox-Browser]{https://www.mozilla.com/en/firefox/} that allows me to generate references from websites, library portals, \bracket{\abbr{OA}} journals and literally all sources imaginable. I use Zotero for the automated generation of a reference list for my thesis as well as for the structuring and clustering of references by using \aLinkNew[tags]{http://www.zotero.org/support/doku.php?id=tags}.
+
+\subject{Media Archives}
+
+\imgThesisArchive
+
+\spaceHalf
+
+\inright{audios @ archive.org}
+\aLinkNew{http://www.archive.org/search.php?query=creator:"r3cl41m"} is the space where I stored those audio recordings that I made during my time in São Paulo. Those recordings have been mainly made during public assemblies of social movements and the civic society of the city. Two interviews has been conducted and recorded as well, one with \toMark{Alderon} from \refMissingSrc{RedeRua} and one with people from the \refMissingSrc{Ocupacão Ipiranga}. \aLinkNew[archive.org]{http://www.archive.org} is a non-commercial archive of the internet and of all types of media whose copyrights expired and which now belong to the public domain, thus to us all. \aKeyword[archive.org]{tools+archive.org} provides also space for self-made media as long as it is published under an \aKeyword{open licence}.
+
+\spaceHalf
+
+\inright{videos @ videobin.org}
+\aLinkNew{https://videobin.org} is a non-commercial hosting service for online videos. I used to upload some videos that I made during my time in São Paulo.
+
+\subject{Mapping Tools}
+
+\imgThesisOsm
+
+\spaceHalf
+
+\inright{community maps @ openstreetmap.org}
+\aLinkNew{http://www.openstreetmap.org/user/reclaimourcity} is a collaborative and open map maintained by its community and anybody how wants to participate in map completion. I used \aLinkNew[openstreetmap.org]{http://www.openstreetmap.org} mainly to add missing spots of São Paulo that I have been visited and passed through. \toMark{Some maps based on \aKeyword[openstreetmap.org]{tools+openstreetmap} will be prepared for this thesis in order to visualize our radius of action in and our perception of the city.}
+
+\spaceHalf
+
+\inright{merkaartor}
+\aLinkNew{http://merkaartor.be} is free software that mainly has been used mainly to add content to the \abbrNew{openstreetmap}{osm} of São Paulo. This includes streets, cultural centres, public squares, thus many places I frequented during my time in the city and which had not been entered into the map. I use Merkaartor also to draw the paths of the journeys I undertook in São Paulo in order visualize at which place and in which areas I have been. Later on, I also used the build in online editor of \abbr{osm}. Meerkaartor is free software for offline \aKeyword[openstreetmap.org]{tools+openstreetmap} manipulation.
+
+\subject{Directing the Flow  of Information}
+
+\imgThesisRtc
+
+\inright{publishing @ rtc.noblogs.org}
+\aLinkNew{https://rtc.noblogs.org} is the blog that serves as the main publishing platform of this thesis. During research action(s), this blog is used to gather street diaries, to publish theorized knowledge, events and thoughts about research and what I experienced. The blog also interlinks those platforms that are used to store and publish audio and video content, that publish gathered bibliographic references and sources and all other content related to research. Besides documenting the progress of research another important aim shall be the publishing of the entire thesis in English and the translation of relevant parts in Portuguese later on. Finally, all produced content and theorized knowledge shall be made available there, in order to give as much accompanying context for the written thesis as possible. The thesis blog may draw a picture of research progress and by this it embeds the research history and provides evidence about my personal standpoint and the standpoint of this thesis theorizing. I consider the blog as complementary to the written thesis because the blog's content is in a sense visible through a rougher and unfiltered lens \bracket{not considering my personal filter and triggers that led to the contents' creation}, unlike the written thesis that represents cycles of writing, reflection and rewriting.
+
+\spaceHalf
+
+\subject{Documenting experiences and the urban space}
+
+\inright{audio recordings}
+I used my portable audio recorder mainly to record public assemblies and impressions from the city. I did conduct just a few interviews, even if we planed to conduct more, thus me and the people I stayed with, but eventually those plans never worked out due to the unpredictability of the daily street life which often prevented our recording plans. I would also say that the traditional way of interviewing, having prepared a certain set of questions that cover a certain catalogue of indicators relevant for analysis has not been an option for me because primarily I had to know which questions would be relevant to ask and once I knew them I would also know their answer implicitly because I then possessed the knowledge to know what is relevant and for what reasons. However, I am glad that I had the opportunity to record my current set of audio's and for the next time I would consider audio recording more as a kind of radio program, where people freely express what they want to communicate, as if it would be their radio program. I think that audio recordings can be used in a more organic way then the artificially created interview situations, which would probably also lead to immediately benefit the people if they organize their \quote{program} and distribute it independently. Conversations must also not necessarily one by one but can easily involve more people.
+
+\spaceHalf
+
+\inright{photos and videos}
+I used my mobile phone to take plenty of pictures and to record short video sequences. Similar to the question of audio recording, I did not take photos or record videos of every situation. Especially when other people have been involved I usually did not even ask for permission to take photos because many people felt a kind of repression on the streets, mainly based on threatening experience with police or other state agents and did not like to see them on photos, probably published online, where they could be recognized. On the other hand, some people on the streets are used to take own photos and videos with mobile phones for instance \bracket{of they can afford them}, which are meant as a protection, especially when it comes to violent infringements against street people are recorded by the witnesses for preserving evidence. As my personal policy, I only took photos after I got the permission of the people and I always garble faces on photos where necessary. In general, the mobile phone is a handy gadget that seemed suitable for me for instant documentation, even though its quality is by far not as good as a digital camera. On the other hand, a mobile phone is something normal while carrying many electronic gadgets for this and that tasks may increase the possibility of loosing them.
+
+\spaceHalf
+
+\inright{written notes}
+My small jotter I carried along with me, served as the medium to write down my experiences or the things that we discussed among each other. I did not record every single situation because sometimes it would not have been the right time to do so, sometimes I forgot my jotter or I forgot to take notes. Writing for me is quote different then taking photos or recording videos because it is a visible work, which often interrupts the flow of the situation and the flow of conversation if I am an active participant, in contrast to recordings which are less disturbing and almost invisible. Therefore I mainly tried to take notes when I felt myself in a calm environment, often at home or lonely at some public spot.
+
+\spaceHalf
+
+\placefigure[location=here]{Utilized tools during thesis realization.}
 {
 \starttyping
 
@@ -79,21 +264,40 @@ The thesis blog is the main platform that interconnects all content produced wit
 	/BTEX \tfa\ss\color[green]{zotero.org} /ETEX 
 
 		/BTEX \tfa\ss\color[green]{github.com} /ETEX 
-		/BTEX \tfa\ss\color[green]{tex} /ETEX 			  
+		/BTEX \tfa\ss\color[green]{TeX} /ETEX 		
+	  
 /BTEX {Written} /ETEX				/BTEX \tfa\ss\color[green]{rtc.noblogs.org} /ETEX			/BTEX {Audio\/Visual} /ETEX
-/BTEX {Content} /ETEX										/BTEX {Content}/ETEX
+/BTEX {Content} /ETEX				/BTEX \tfa\ss\color[green]{identi.ca} /ETEX		/BTEX \tfa\ss\color[green]{gimp}/ETEX			/BTEX {Content}/ETEX
+							
 							/BTEX \tfa\ss\color[green]{openstreetmap.org} /ETEX
+							/BTEX \tfa\ss\color[green]{merkaartor} /ETEX
 
 								/BTEX \tfa\ss\color[green]{archive.org} /ETEX 
 								/BTEX \tfa\ss\color[green]{videobin.org} /ETEX			 
-/BTEX \nl /ETEX
+
+					/BTEX \tfa\ss\color[yellow:2]{jotter} /ETEX			/BTEX \tfa\ss\color[yellow:2]{audio recorder} /ETEX			 
+								/BTEX \tfa\ss\color[yellow:2]{mobile phone} /ETEX
+
 				/BTEX {Research Actions} /ETEX
 
 \stoptyping
 }
 
+I excluded the means of communication in the above mapping because those means are meant as channels for discussions, to stay in touch with each other and to exchange \bracket{local} information that are relevant for us.
+
+A final point to mention before turning to the next chapter is the fact that even if open and free access to the means of production is given, it does not necessarily mean that those means can be applied and reused immediately. Other factors may influence their usage such as affiliation with or denial of technology in general, access to an internet connection or computer, the skills necessary to use these tools. At the end, the tools I have chosen fit my needs best and can only be considered as a proposal \quote{how to do things}.
+
 %--------------------------------------
 % only active in "unfinished" mode
+
+\addReference
+{
+Morell, M.F., 2009. Action research: mapping the nexus of research and political action. {\em Interface: a journal for and about social movements}, 1(1), p.21-45. Available at: \goto{\hyphenatedurl{http://interfacejournal.nuim.ie/wordpress/wp-content/uploads/2010/11/interface-issue-1-1-pp21-45-Fuster.pdf}} [url(http://interfacejournal.nuim.ie/wordpress/wp-content/uploads/2010/11/interface-issue-1-1-pp21-45-Fuster.pdf)] [Accessed May 20, 2011].
+}
+\addReference
+{
+Myers, R., 2006. Open Source Art Again. {\em Rhizome}. Available at: \goto{\hyphenatedurl{http://rhizome.org/editorial/2006/sep/22/open-source-art-again/}} [url(http://rhizome.org/editorial/2006/sep/22/open-source-art-again/)] [Accessed August 15, 2011].
+}
 
 \showImperfection
 

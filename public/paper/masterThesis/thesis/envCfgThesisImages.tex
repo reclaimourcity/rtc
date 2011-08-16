@@ -17,8 +17,14 @@
 
 \useexternalfigure[imgTheory][theoryEn.png][frame=off, factor=fit]
 
+\useexternalfigure[imgOsm][screenshotOsm.jpg][frame=off, factor=fit]
+\useexternalfigure[imgArchive][screenshotArchiveOrg.jpg][frame=off, factor=fit]
+\useexternalfigure[imgGithub][screenshotGitHub.jpg][frame=off, factor=fit]
+\useexternalfigure[imgZotero][screenshotZotero.jpg][frame=off, factor=fit]
+\useexternalfigure[imgRtc][screenshotRtc.jpg][frame=off, factor=fit]
+\useexternalfigure[imgIdentica][screenshotIdentica.jpg][frame=off, factor=fit]
 
-\define[]\imgPenafortePoliceOne{\placefigure[here]{BelaVista: Police intervention in front of Penaforte (cc-by-sa Author)}{\externalfigure[imgPenafortePolice1]}}
+\define[]\imgPenafortePoliceOne{\placefigure[here]{BelaVista: Police intervention in front of Penaforte (cc-by-sa A\externalfigureuthor)}{\externalfigure[imgPenafortePolice1]}}
 \define[]\imgPenafortePoliceTwo{\placefigure[here]{BelaVista: Police intervention in front of Penaforte (cc-by-sa Author)}{\externalfigure[imgPenafortePolice2]}}
 
 \define[]\imgSpActionMindMap{\placefigure[force]{action mind map (cc-by-sa Author)}{\externalfigure[imgSaoPauloActionMindMap]}}
@@ -32,5 +38,20 @@
 \define[]\imgThesisRedLine{\placefigure[force]{red line of the thesis (cc-by-sa Author)}{\externalfigure[imgRedLine]}}
 
 \define[]\imgThesisTheroy{\placefigure[force]{empirical-theorectical; inductive-deductive [source: author, derived from Wikipedia as cc-by-sa 3.0]}{\externalfigure[imgTheory]}}
+
+\setupclipping[height=30mm]
+
+\define[]\imgThesisOsm{\placefigure[force]{New map content @ openstreetmap.org}{\framed[frame=off, leftframe=on, rightframe=on, rulethickness=5pt, width=broad]{\clip[voffset=30mm]{\externalfigure[imgOsm]}}}}
+
+\define[]\imgThesisArchive{\placefigure[force]{Audio recordings @ archive.org}{\framed[frame=off, leftframe=on, rightframe=on, rulethickness=5pt, width=broad]{\clip[voffset=30mm]{\externalfigure[imgArchive]}}}}
+
+\define[]\imgThesisGithub{\placefigure[force]{Repository for thesis text files @ github.com}{\framed[frame=off, leftframe=on, rightframe=on, rulethickness=5pt, width=broad]{\clip[voffset=70mm]{\externalfigure[imgGithub]}}}}
+
+\define[]\imgThesisZotero{\placefigure[force]{Repository for thesis bibliographic references and sources @ zotero.org}{\framed[frame=off, leftframe=on, rightframe=on, rulethickness=5pt, width=broad]{\clip[voffset=30mm]{\externalfigure[imgZotero]}}}}
+
+
+\define[]\imgThesisRtc{\placefigure[force]{The thesis blog @ rtc.noblogs.org}{\framed[frame=off, leftframe=on, rightframe=on, rulethickness=5pt, width=broad]{\clip[voffset=64mm]{\externalfigure[imgRtc]}}}}
+
+\define[]\imgThesisIdentica{\placefigure[force]{The thesis micro blog @ identi.ca}{\framed[frame=off, leftframe=on, rightframe=on, rulethickness=5pt, width=broad]{\clip[voffset=30mm]{\externalfigure[imgIdentica]}}}}
 
 \stopenvironment

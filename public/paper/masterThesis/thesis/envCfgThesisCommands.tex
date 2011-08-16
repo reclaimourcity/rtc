@@ -31,6 +31,8 @@
 % the quote of a title within the text flow
 \define[1]\aQuoteInTextT{\color[magenta:8]{\tt{\small{\quote{#1}}}}\doRegQuote{title: #1}}
 
+\define[1]\aQuoteInText{\color[magenta:8]{\tt{\small{\quote{#1}}}}\doRegQuote{citation: #1}}
+
 \define[1]\doRegQuote{\RegQuote{#1}}
 
 \define\placeQuotesLocal{\placeRegQuote[criterium=section]}
@@ -131,6 +133,7 @@
 		\useURL[#2][#2][][#2]\from[#2]
 	\fi
 	\footnote[#2]{website: \goto{\url[#2]}[url(#2)]}
+	\RegLink{\goto{\url[#2]}[url(#2)]}
 }
 
 % register a new link, display a generic "link" surrounded by brackets in the text and generate a footnote
@@ -138,6 +141,7 @@
 {%
  	\useURL[#1][#1][][link]\small\bracket{\from[#1]}
 	\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}
+	\RegLink{\goto{\url[#1]}[url(#1)]}
 }
 
 % registers a new link but does not display it in the text. only generates a footnote
@@ -145,6 +149,7 @@
 {%
  	\useURL[#1][#1][][link]
 	\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}
+	\RegLink{\goto{\url[#1]}[url(#1)]}
 }
 
 % display a generic "link" surrounded by brackets in the text and generate a footnote, thus link must have been registered already
@@ -164,7 +169,12 @@
 }
 
 % register a link url and generate a footnote
-\define[1]\aLinkNewF{\useURL[#1][#1][][#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
+%\define[1]\aLinkNewF%
+%{%
+%	\useURL[#1][#1][][#1]
+%	\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}
+%	\RegLink{\goto{\url[#1]}[url(#1)]}
+%}
 
 \define[1]\aLinkE{\inframed[frame=off, background=color, backgroundcolor=green:4]{\bf#1 }}
 
