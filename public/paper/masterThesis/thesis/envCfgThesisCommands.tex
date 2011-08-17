@@ -25,6 +25,9 @@
 % personal information quotes, just year
 \define[1]\aQuoteP{\color[magenta:8]{\tt{\small{(own Source, #1)}}}\doRegQuote{own source: #1}}
 
+% just quote page in this document
+\define[1]\aQuoteThis{\color[magenta:8]{\tt{\small{(p.#1)}}}\doRegQuote{this document: p. #1}}
+
 % the quote of authors within the text flow
 \define[1]\aQuoteInTextA{\color[magenta:8]{\tt{\small{#1}}}\doRegQuote{author: #1}}
 
@@ -425,6 +428,19 @@
 \nl%
 #1%
 \stopREF%
+}
+
+%-----------------------------------------
+% referencing of text marks
+
+\def\gotoTextMark{\dosingleempty\doGotoTextMark}
+\def\doGotoTextMark[#1]#2%
+{%
+	\iffirstargument
+		\goto{#1}[#2] \aQuoteThis{\at[#2]}
+	\else
+		\aQuoteThis{\at[#2]}
+	\fi
 }
 
 \stopenvironment
