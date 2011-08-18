@@ -33,7 +33,7 @@
         [  {\myTitle}]    []
 
 \setupfootertexts
-        [  {\getmarking[chapter]}]    [{page \pagenumber/\lastpagenumber } ]
+        [  {\getmarking[chapter] } {> \getmarking[section] } {> \getmarking[subsection]}]    [{page \pagenumber/\lastpagenumber } ]
 \setuppagenumbering[location=]
 
 }
