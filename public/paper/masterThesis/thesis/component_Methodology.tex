@@ -14,9 +14,9 @@
 
 \doifmode{local}
 {
-% insert table of content
 
-\completecontent
+% insert table of content
+\completecontent\reference[thetoc]{}
 
 % start thesis layout from now on
 \page[1]
@@ -33,7 +33,7 @@
         [  {\myTitle}]    []
 
 \setupfootertexts
-        [  {\getmarking[chapter] } {> \getmarking[section] } {> \getmarking[subsection]}]    [{page \pagenumber/\lastpagenumber } ]
+        [  {\goto{Start}[thetoc]} { > \getmarking[chapter] } {> \getmarking[section] } {> \getmarking[subsection]}]    [{page \pagenumber/\lastpagenumber } ]
 \setuppagenumbering[location=]
 
 }
@@ -41,42 +41,52 @@
 %---------------------------------------------------------------------------------------------
 % the single sections of this chapter
 
-\component component_Methodology_Intro
+\component component_Methodology_Intro						%finished
 
 % asking who I am
-\component component_Methodology_WhoAmI
-\component component_Methodology_WhoAmI_Experience
-\component component_Methodology_WhoAmI_Motivation
-\component component_Methodology_WhoAmI_NonAuthoritarian
-\component component_Methodology_WhoAmI_SelfConception
+\component component_Methodology_WhoAmI 					%finished
+\component component_Methodology_WhoAmI_Experience			%finished
+\component component_Methodology_WhoAmI_Motivation			%finished
+\component component_Methodology_WhoAmI_NonAuthoritarian		%finished
+\component component_Methodology_WhoAmI_ActionResearch		%finished
 
-\component component_Methodology_WhoAmI_ActionResearch
-\component component_Methodology_WhoAmI_Relevance
+\component component_Methodology_WhoAmI_Relevance			%to be done
 
 % asking what I want
-\component component_Methodology_WhatDoIWant
-\component component_Methodology_WhatDoIWant_ObjectivesGeneral
-\component component_Methodology_WhatDoIWant_ObjectivesSpecific
+\component component_Methodology_WhatDoIWant					%finished
+\component component_Methodology_WhatDoIWant_ObjectivesGeneral	%finished
+\component component_Methodology_WhatDoIWant_ObjectivesSpecific	%finished
 
 % asking what I should do
+
+% What should I do//Structure
 \component component_Methodology_WhatShouldIDo
-\component component_Methodology_WhatShouldIDo_TheoryAndPractice
 
-\component component_Methodology_WhatShouldIDo_Empirical
-\component component_Methodology_WhatShouldIDo_Inductive
-\component component_Methodology_WhatShouldIDo_Qualitative
-\component component_Methodology_WhatShouldIDo_Participative
+% What should I do//Theory and Praxis
+\component component_Methodology_WhatShouldIDo_TheoryVsPractice
 
-%\component component_Methodology_WhatShouldIDo_OpenAccessible
+% Methods//Theorizing
+\component component_Methodology_WhatShouldIDo_MethodTheorizing
+%\component component_Methodology_WhatShouldIDo_TheoryAndPractice	% ist 
+%\component component_Methodology_WhatShouldIDo_Empirical			% ein
+%\component component_Methodology_WhatShouldIDo_Inductive			% kapitel
+%\component component_Methodology_WhatShouldIDo_Qualitative		%
+%\component component_Methodology_WhatShouldIDo_Participative		%
 
-\component component_Methodology_WhatShouldIDo_Theorizing
-
-\component component_Methodology_WhatShouldIDo_Praxis
+% Methods//Participant Observation
+%\component component_Methodology_WhatShouldIDo_MethodParticipantObservation
 \component component_Methodology_WhatShouldIDo_ParticipantObservation
 
-\component component_Methodology_WhoAmI_Actions
+%Tools//Sources
+%\component component_Methodology_WhatShouldIDo_ToolsTheorizing
+\component component_Methodology_WhatShouldIDo_Theorizing 		%finished
 
-\component component_Methodology_WhatShouldIDo_Tools
+%Tools//Publishing
+%\component component_Methodology_WhatShouldIDo_ToolsPublising
+\component component_Methodology_WhatShouldIDo_Tools 			%finished		
+
+%What sould I do//Afterword
+%component_Methodology_WhatShouldIDo_Afterword
 
 %only available in local mode, thus only when this document gets compiled
 \showImperfection[local]
