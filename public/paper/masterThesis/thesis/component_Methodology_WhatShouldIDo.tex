@@ -5,7 +5,30 @@
 % definitions and macros
 \environment envThesisAllEnvironments
 
-\define[]\sectionWhatShouldIDo{\section[methodology::whatshouldido]{What should I do?}}
+% setup for table all cells
+\setupTABLE[row][each]
+[
+	background=color,
+	foreground=color,
+	frame=on,
+	rulethickness=2pt,
+	corner=00,
+	offset=2pt,
+	backgroundcolor=black,
+	foregroundcolor=white,
+	framecolor=yellow,
+]
+
+\setupTABLE [y][first]
+[	
+	background=color,
+	frame=off,
+	rulethickness=2pt,
+	foregroundcolor=black,
+	backgroundcolor=yellow,
+]
+
+\define[]\sectionWhatShouldIDo{\section[methodology_whatshouldido]{What should I do?}}
 
 \starttext
 
@@ -20,6 +43,35 @@ Defines concrete Methods and Tools used in this thesis.
 \startmode[draft]
 
 \sectionWhatShouldIDo
+
+\inright{things done}
+Where am I now? I know \gotoTextMark[who I am]{methodology_whoami} and \gotoTextMark[what I want to do]{methodology_whatdoiwant}. I determined the set of \gotoTextMark[demands]{methodology_whoami_motivation} and \gotoTextMark[attitudes]{methodology_whoami_nonauthoritarian} that constitute my personal and research praxis. Therefore I determined \abbrFull{AR} as the \gotoTextMark[framework for this research actions]{methodology_whoami_actionresearch}. Based on all those conceptions, I tried to demarcate the \gotoTextMark[scope of actions]{methodology_whatdoiwant} that could probably give this thesis a certain \gotoTextMark[relevance]{methodology_whoami_relevance} for the struggle of the people.
+
+I think its time now to become concrete and leave the space of imagination for a while.
+
+\spaceHalf
+
+\inright{theory and praxis revealed}
+I would like to outline the realization of my \aKeyword[research actions]{research+actions} and \aKeyword[thesis theorizing]{thesis+theorizing} in the following sections. This outline is my attempt of a structure to allow \gotoTextMark[theorizing and actions]{methodology_whatshouldido_theoryvspraxis} going hand in hand, to outline which \aKeyword[methods]{thesis+methods} are used for \gotoTextMark[theorizing]{methodology_whatshouldido_methodtheorizing} and \gotoTextMark[research actions]{methododology_whatshouldido_methodparticipantobservation} and which \aKeyword[tools]{thesis+tools} I considered as helpful to support \bracket{alternative} \gotoTextMark[theorizing]{methodology_whatshouldido_toolstheorizing} and producing \gotoTextMark[thesis and its content]{methodology_whatshouldido_toolscontent}.
+
+\placetable[force, split]{What should I do? Theory and Praxis revealed.}
+{
+\bTABLE
+\bTR
+	\bTH[nc=2, align={middle,lohi}] {\tt\bf theory and praxis hand in hand} \eTH
+\eTR
+\bTR
+\bTD \color[yellow]{\tt methods}\blank[0.20cm] for theorizing and knowledge\eTD
+\bTD \color[yellow]{\tt methods}\blank[0.20cm] for research actions\eTD
+\eTR
+\bTR
+\bTD \color[yellow]{\tt tools}\blank[0.20cm] for theorizing and knowledge production\eTD
+\bTD \color[yellow]{\tt tools}\blank[0.20cm] for content production and thesis writing\eTD
+\eTR
+\eTABLE
+}
+
+\showImperfection
 
 \stopmode
 
