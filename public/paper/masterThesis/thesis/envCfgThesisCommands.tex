@@ -100,10 +100,13 @@
 {%
 	\iffirstargument
 		\useURL[#2][#2][][#1]\from[#2]
+		\footnote[#2]{#1: \goto{\url[#2]}[url(#2)]}
+		\RegLocation{#1: \goto{\url[#2]}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]\from[#2]
+		\footnote[#2]{location: \goto{\url[#2]}[url(#2)]}
+		\RegLocation{\goto{\url[#2]}[url(#2)]}
 	\fi
-	\footnote[#2]{location: \goto{\url[#2]}[url(#2)]}
 }
 
 % links a geographical location to the corresponding text and generates a footnote with the link. the corresponding link must have been created with \aNewLocation already. as rgument one can give the link or the synonym, depending how \aNewLocation was invoked
