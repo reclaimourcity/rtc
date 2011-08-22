@@ -1,4 +1,4 @@
-\startcomponent component_SaoPauloDiaries_Penaforte
+\startcomponent component_NarratingInquiries_SaoPauloDiaries_Penaforte
 \product product_Thesis
 \project project_MasterThesis
 
@@ -11,17 +11,19 @@
 \environment envPenaforteText
 \environment envCfgThesisImages
 
+\define[]\subsectionSaoPauloDiariesPenaforte{\subsection[narratinginquiries_saopaulodiaries_penaforte]{Penaforte}}
+
 \starttext
 
 \startmode[tocLayout]
-\section[sp::penaforte]{Penaforte}
+\subsectionSaoPauloDiariesPenaforte
 
 Diary of visiting Penafort on a Sunday in São Paulo.
+
 \stopmode
 
 \startmode[draft]
-\section[sp::penaforte]{Penaforte}
-\subsection[sp::lunch]{Lunch on a Sunday}
+\subsectionSaoPauloDiariesPenaforte
 
 \Gibson is a friend that I met the first time in July, by coincidence, when I met with a former street resident that spend some time with me and showed and explained how the life on the streets functions. 
 
@@ -59,19 +61,12 @@ After some time, we leave as well, together with the guy, in order to take a wal
 
 Finally, right before we split to go our own ways, we made an appointment to meet for lunch at the following Tuesday at the \aLocation{saofrancisco}, a similar place, run by the Franciscan church.
 
-\stopmode
+%---------------------------------------------------
+% gets only displayed in unfinshed mode
 
-% links and refences only visible in drafts mode
+\showImperfection
 
-\startmode[draft]
-\subsection{Footnotes}
-\placefootnotes
-\subsection{Locations}
-\myLocs
-\subsection{Links}
-\myLinks
-\subsection{References}
-\myRefs
+%---------------------------------------------------
 
 \stopmode
 

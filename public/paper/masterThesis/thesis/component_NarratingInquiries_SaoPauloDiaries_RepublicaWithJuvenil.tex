@@ -1,31 +1,38 @@
-\startcomponent component_SaoPauloDiaries_RepublicaWithJuvenil
+\startcomponent component_NarratingInquiries_SaoPauloDiaries_RepublicaWithJuvenil
 \product product_Thesis
 \project project_MasterThesis
 
 % definitions and macros
 \environment envThesisAllEnvironments
 
+\define[]\subsectionSaoPauloDiariesRepublica{\subsection[narratinginquiries_saopaulodiaries_republica]{Around//Praça de República}}
+
+\define[]\subjectSmashed{\subject{Sad Encounter}}
+\define[]\subjectInformalStreetlife{\subject{Informal Streetlife}}
+\define[]\subjectInternetForFree{\subject{Internet for free}}
+\define[]\subjectSaturdays{\subject{Saturday's}}
+
 \starttext
 
 \startmode[tocLayout]
-\section[sp::republica]{Around Praça de República}
+\subsectionSaoPauloDiariesRepublica
 This section contains narratives experienced around Praça de República in the centre of São Paulo.
 
-\subsection[sp::republica::smashed]{Sad Encounter}
+\subjectSmashed
 How we met a battered women that disappeared for several days.
 
-\subsection[sp::republica::informal]{Informal Streetlife}
+\subjectInformalStreetlife
 About informal work on the streets in the centre.
 
-\subsection[sp::republica::informal]{Internet for free}
+\subjectInternetForFree
 About spots with free access to the internet
 
-\subsection[sp::republica::ocas]{Saturday's}
+\subjectSaturdays
 About a saturday in the park and from there to the center
 \stopmode
 
-\startmode[unfinished]
-\section[sp::republica]{Around Praça de República}
+\startmode[draft]
+\subsectionSaoPauloDiariesRepublica
 
 Everytime I met \Juvenil at \aLinkE{ocas} we finally walked by foot from \aLocationE{bras} to \aLocationE{republica} in the centre. \Juvenil walks everyday, in the morning from his \aLinkE{albergue} to several spots in the city, often to \aLinkE{ocas} in \aLocationE{bras}, to temporal work or to his \aLinkE{syndicate}. In the evening he stays at \aLocationE{republica}, right in the centre, before he returns, still by foot, to his \aLinkE{albergue}. 
 
@@ -34,22 +41,6 @@ During this walks we often encountered unexpected situations and other people fr
 \aLocationE{republica} \inright{Praça de República} and its adjacent and diverging streets at night means the encounter of informal DVD vendors (\toTranslate{DVD vendors}), informal food, \toMark{Cachaça} and softdrink distributors, circulating military and civil police, street population, \aLinkE{Catadores}, drag kings and queens, normal pedestrians and other inhabitants of the centre, all passing, meeting and doing business there. 
 
 At night, when the shops are closing, pretty much garbage is dumped in the pedestrian areas forming big piles, often \isCorrect{to the benefit} of the \toMark{Catadores} which are even more present at night then during the day, gathering there and loading their \toTranslate{catador karren} with Cardboard (\toMark{Papelão}) or other recyclable materials.
-
-\subsection[sp::republica::smashed]{Sad Encounter}
-
-\subsection[sp::republica::informal]{Informal Streetlife}
-
-Almost every time we spent some time at \aLocationE{republica}, heavy police presence was 
-
-\subsection[sp::republica::informal]{Internet for free}
-
-\subsection[sp::republica::ocas]{Saturday's}
-\stopmode 
-
-
-\startmode[draft]
-
-\section[sp::republica]{Around Praça de República}
 
 \startPersonalThoughts
 Immer wenn \Juvenil und ich uns in \aLinkE{ocas} getroffen haben sind wir von dort zum \aLocationE{republica} zu Fuß gelaufen. Immer der gleiche Weg über das \aLocationE{viaduto25demarco} nach \aLocationE{se} und von dort über das \aLocationE{viadutocha}, durch die Füßgängerzone zum \aLocationE{republica}.
@@ -63,8 +54,7 @@ Während Abends die Geschäfte im Zentrum schließen, sammeln sich um \aLocation
 Die Straße wird zum Treffpunkt der Straßenbewohner\_Innen, Drag Queens und Kings, Kinderbanden, Bewohner\_Innen der Region, Jugendlichen auf Ihrem Weg zur \aLocationE{galleriaderock}, \isCorrect{nigerianischen} oder \isCorrect{bolivianischen} Immigranten, uns allen, die vorbeigehen, sich treffen und stehen bleiben und Teil dieser abendlichen Szenerie werden.
 \stopPersonalThoughts
 
-\subsection[sp::republica::smashed]{Sad Encounter}
-
+\subjectSmashed
 
 \startPersonalObservation
 
@@ -94,11 +84,11 @@ Auch die Geschwindigkeit und Plötzlichkeit mit der unsere vorher fröhliche Wan
 
 \stopPersonalThoughts
 
-\subsection[sp::republica::informal]{Informal Streetlife}
+\subjectInformalStreetlife
 
-\subsection[sp::republica::informal]{Internet for free}
+Almost every time we spent some time at \aLocationE{republica}, heavy police presence was 
 
-\subsection[sp::republica::ocas]{Saturday's}
+\subjectSaturdays
 
 \startPersonalObservation
 An einem Samstag treffe ich \Bob, \Juvenil und zwei anderen im \aLocationE{parkOcas} unter den Metro-Schienen der \isCorrect{gelben Linie}. \Juvenil \toMark{war betrunken und} hat als Erstes eine Runde mit meinem Fahrrad gedreht. Der Rest blieb im Park. In diesem \aLocation{parkOcas} wohnen einige Menschen, hier treffen sich Jugendliche oder wir um \toMark{Weed zu rauchen und} abzuhängen oder es wird Fußball auf dem \isCorrect{eingezäunten Sandplatz} gespielt.
@@ -177,6 +167,13 @@ Am \aLocationE{republica} angekommen sind wir über den Markt den es dort immer 
 
 Zum Schluss meinte \Juvenil noch das er jederzeit ein Interview mit mir machen würde, weil es seiner Meinung nach immer etwas bringt, bzw. hilft und einen Nutzen hat.
 \stopPersonalObservation
+
+%---------------------------------------------------
+% gets only displayed in unfinshed mode
+
+\showImperfection
+
+%---------------------------------------------------
 
 \stopmode
 

@@ -61,12 +61,14 @@
         [  {\myTitle}]    []
 
 \setupfootertexts
-        [  {\getmarking[chapter]}]    [{page \pagenumber/\lastpagenumber } ]
+         [ {\goto{Start}[tocComplete]} { > \getmarking[chapter] } {> \getmarking[section] } {> \getmarking[subsection]}] [page \pagenumber/\lastpagenumber]
+
 \setuppagenumbering[location=]
 
 % change link color and style for table of content
 \setupinteraction[state=start,color=darkgreen, click=yes, style=slanted]
 
+% the beginning
 \component component_Declaration
 \component component_Acknowledgement
 \component component_Abstract
@@ -74,38 +76,19 @@
 \component component_Introduction
 \component component_Objectives
 
-\component component_TheoreticalFramework
-\component component_City
-\component component_Citizenship
-\component component_Participation
-\component component_Space
-\component component_RightToTheCity
-\component component_SelfDeterminedAction
+% the methodological framework
+% subchapters are included in this component
+\component component_Methodology 
 
-\component component_Methodology % subchapters are declared in this component
+% the standpoint of movement themes
+% subchapters are included in this component
+\component component_NarratingInquiries
 
-% \component component_LiteratureReview
-% \component component_ParticipantObservation
-% \component component_GroundedTheory
+% the standpoint of theoretical themes
+%subchapters are included in this component
+\component component_Theorizing
 
-\component component_Fieldwork
-
-\component component_SaoPauloDiaries
-\component component_SaoPauloDiaries_Penaforte
-\component component_SaoPauloDiaries_RepublicaWithJuvenil
-\component component_SaoPauloDiaries_PadreDeCha
-\component component_SaoPauloDiaries_DayAndNight
-\component component_SaoPauloDiaries_Aruaca
-\component component_SaoPauloDiaries_SomeTalks
-\component component_SaoPauloDiaries_RedeRua
-\component component_SaoPauloDiaries_Ocas
-
-\component component_SaoPaulo
-\component component_SaoPaulo_Actors
-\component component_SaoPaulo_Places
-\component component_SaoPaulo_Actions
-\component component_SaoPaulo_Goals
-
+% the end
 \component component_Conclusion
 \component component_References
 \component component_Links
