@@ -151,12 +151,31 @@
 }
 
 % registers a new link but does not display it in the text. only generates a footnote
-\define[1]\aLinkNewF%
+\def\aLinkNewF{\dosingleempty\doALinkNewF}
+\def\doALinkNewF[#1]#2%
 {%
- 	\useURL[#1][#1][][link]
-	\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}
-	\RegLink{\goto{\url[#1]}[url(#1)]}
+	\iffirstargument
+		\useURL[#2][#2][][#1]
+		\footnote[#2]{#1: \goto{\url[#2]}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]
+		\footnote[#2]{website: \goto{\url[#2]}[url(#2)]}
+	\fi
+	\RegLink{\goto{\url[#2]}[url(#2)]}
 }
+
+
+%\def\doALinkNewF[#1]#2%
+%{%
+%	\iffirstargument
+% 		\useURL[#2][#2][][#1]
+%		\footnote[#1]{#1: \from[#2]}
+%	\else
+%		\useURL[#2][#2][][#2]
+%		\footnote[#2]{website: \from[#2]}
+%	\fi
+%	\RegLink{\goto{\url[#2]}[url(#2)]}
+%}
 
 % display a generic "link" surrounded by brackets in the text and generate a footnote, thus link must have been registered already
 \define[1]\aLinkG{\small\bracket{\from[#1]}\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
