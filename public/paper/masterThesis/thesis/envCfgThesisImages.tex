@@ -6,7 +6,7 @@
 % setup directory of external figures
 \setupexternalfigures[directory={./images}]
 
-\useexternalfigure[imgPenafortePolice1][penafortePolice01.jpg][frame=off, factor=fit]
+\useexternalfigure[imgPenafortePolice1][penafortePolice01.jpg][frame=off, factor=max]
 \useexternalfigure[imgPenafortePolice2][penafortePolice02.jpg][frame=off, factor=fit]
 
 \useexternalfigure[imgSaoPauloActionMindMap][saoPauloActionMindMap.pdf][frame=off, factor=fit]
@@ -24,8 +24,12 @@
 \useexternalfigure[imgRtc][screenshotRtc.jpg][frame=off, factor=fit]
 \useexternalfigure[imgIdentica][screenshotIdentica.jpg][frame=off, factor=fit]
 
-\define[]\imgPenafortePoliceOne{\placefigure[here]{BelaVista: Police intervention in front of Penaforte (cc-by-sa Author)}{\externalfigure[imgPenafortePolice1]}}
-\define[]\imgPenafortePoliceTwo{\placefigure[here]{BelaVista: Police intervention in front of Penaforte (cc-by-sa Author)}{\externalfigure[imgPenafortePolice2]}}
+\useexternalfigure[imgOTrecheiro180][oTrecheiro2009Aug180.png][frame=off, factor=fit]
+
+\define[]\imgOTrecheiroMassacre{\placefigure[here]{Cover of \aKeyword[o Trecheiro]{streets+journals+o trecheiro} about the massacres in 2004 titled \toTranslate[A war without end]{Uma guerra sem fim}}{\rotate[90]{\scale[sx=1.2,sy=1.2]{\externalfigure[imgOTrecheiro180]}}}}
+
+\define[]\imgPenafortePoliceOne{\placefigure[page]{BelaVista: Police intervention in front of Penaforte (cc-by-sa Author)}{\rotate[90]{\scale[sx=1.5,sy=1.5]{\externalfigure[imgPenafortePolice1]}}}}
+\define[]\imgPenafortePoliceTwo{\placefigure[page]{BelaVista: Police intervention in front of Penaforte (cc-by-sa Author)}{\rotate[90]{\scale[sx=1.5,sy=1.5]{\externalfigure[imgPenafortePolice2]}}}}
 
 \define[]\imgSpActionMindMap{\placefigure[force]{action mind map (cc-by-sa Author)}{\externalfigure[imgSaoPauloActionMindMap]}}
 
