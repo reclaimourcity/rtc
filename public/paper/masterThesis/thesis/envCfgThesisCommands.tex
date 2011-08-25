@@ -465,4 +465,30 @@
 	\fi
 }
 
+%-----------------------------------------
+% dialogs
+\define[]\startDialog%
+{%
+%\startcolor[magenta:8]\startlines
+\setupTABLE[r][each][foregroundcolor=color, foregroundcolor=magenta:8, frame=off]
+\setupTABLE[c][1][width=1cm]
+\setupTABLE[c][2][style=\tt]
+\setupTABLE[c][3][style=\tt\em]
+\spaceHalf
+\bTABLE
+}
+
+\define[]\stopDialog%
+{%
+%\stopcolor\stoplines
+\eTABLE
+}
+
+\define[2]\tell
+{
+\bTR
+\bTD\eTD\bTD#1:\eTD\bTD#2\eTD
+\eTR
+}
+
 \stopenvironment
