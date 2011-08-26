@@ -135,11 +135,25 @@
 {%
 	\iffirstargument
 		\useURL[#2][#2][][#1]\from[#2]
+		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]\from[#2]
+		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
 	\fi
-	\footnote[#2]{website: \goto{\url[#2]}[url(#2)]}
-	\RegLink{\goto{\url[#2]}[url(#2)]}
+	\footnote[#2]{website: \goto{\hyphenatedurl{#2}}[url(#2)]}
+}
+
+\def\aLinkNewAlt{\dosingleempty\doALinkNewAlt}
+\def\doALinkNewAlt[#1]#2#3%
+{%
+	\iffirstargument
+		\useURL[#3][#3][][#1]\from[#3]
+		\RegLink{\goto{\hyphenatedurl{#2}}[url(#3)]}
+	\else
+		\useURL[#3][#3][][#2]\from[#3]
+		\RegLink{\goto{\hyphenatedurl{#2}}[url(#3)]}
+	\fi
+	\footnote[#3]{website: \goto{\hyphenatedurl{#2}}[url(#3)]}
 }
 
 % register a new link, display a generic "link" surrounded by brackets in the text and generate a footnote
@@ -207,15 +221,21 @@
 %-----------------------------------------
 % generates a dictionary of translated words
 
+\define[2]\toTranslateT%
+{%
+	\RegTranslation{{\ss#1}\bracket{#2}}
+	\bracket{#2}
+}
+
 \def\toTranslate{\dosingleempty\doTranslate}
 \def\doTranslate[#1]#2%
 {%
 	\iffirstargument
 		\RegTranslation{{\ss#2}\bracket{#1}}
-		\color[green]{\em#2}\bracket{#1}
+		\color[blue]{\em#2}\bracket{#1}
 	\else
 		\RegTranslationUndefined{{\ss#2} <> translation missing}
-		\color[green]{\em#2}\bracket{translation missing}
+		\color[blue]{\em#2}\bracket{translation missing}
 	\fi 
 }
 
@@ -263,11 +283,11 @@
 \define[1]\startARemark%
 {%
 	\RegRemark{#1}%
-	\startDoARemark%
+	\startRemark%
 	#1%
 }
 
-\define\stopARemark{\stopDoARemark}
+\define\stopARemark{\stopRemark}
 
 \define[]\placeRemarksLocal{\placeRegRemark[criterium=section]}
 \define[]\placeRemarksAll{\placeRegRemark[criterium=all]}
@@ -464,6 +484,29 @@
 		\aQuoteThis{\at[#2]}
 	\fi
 }
+
+%-----------------------------------------
+
+\definestartstop[Citation]
+[
+   style=slanted,
+   before={\blank[0.5cm]\setupnarrower[left=1cm, right=0.75pc]\startnarrower[left, right]\noindent\startcolor[magenta:8]\switchtobodyfont[type]\setuptolerance[{horizontal,stretch}]},
+   after={\stopcolor\stopnarrower\blank[0.5cm]\indenting[next]}
+]
+
+\definestartstop[Personal]
+[
+   style=slanted,
+   before={\blank[0.5cm]},
+   after={\blank[0.5cm]}
+]
+
+\definestartstop[Remark]
+[
+   style=slanted,
+   before={\blank[0.5cm]\starttextbackground[RemarkBack]\startcolor[blue]},
+   after={\stopcolor\stoptextbackground\blank[0.5cm]},
+]
 
 %-----------------------------------------
 % dialogs

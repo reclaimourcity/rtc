@@ -12,6 +12,7 @@
 	backgroundcolor=red:3,
         	frame=off]
 
+
 \definetextbackground[QuestionBack]
 [
         	location=paragraph,
@@ -81,22 +82,11 @@
 
 %---------------------------------------
 
-\definetextbackground[DoARemarkBack]
+\definetextbackground[RemarkBack]
 [
        	background=color,%
-	backgroundcolor=gray:2,%
-	color=magenta:7,%
-        	frame=off%
-]
-
-\definedescription[DoARemark]%
-[%
-	style={\tt},%
-	align=normal,%
-	location=top,%
-	width=fit,%
-	before={\starttextbackground[DoARemarkBack]},%
-	after={\stoptextbackground}%
+	backgroundcolor=lightgray,%
+	frame=off%
 ]
 
 %---------------------------------------
@@ -123,7 +113,7 @@
 	after=, 
 	color=green:8]
 
-\definedescription[Citation][
+\definedescription[CitationDisabled][
 	align={flushleft, nothyphenated, verytolerant},
 	style=\tt,
 	location=inleft,
@@ -133,7 +123,7 @@
 	after=, 
 	color=magenta:8]
 
-\definedescription[Dialog][
+\definedescription[DialogDisabled][
 	align={flushleft, nothyphenated, verytolerant},
 	style=\tt,
 	location=left,
@@ -144,7 +134,7 @@
 	after=, 
 	color=magenta:8]
 
-\definedescription[PersonalObservation][
+\definedescription[PersonalObservationDisabled][
 	headstyle=,
 	align=normal,
 	location=text, 
@@ -154,7 +144,7 @@
 	after={\stoptextbackground}, 
 	color=black]
 
-\definedescription[PersonalThoughts][
+\definedescription[PersonalThoughtsDisabled][
 	headstyle=, 
 	style={\em}, 
 	align=normal, 
