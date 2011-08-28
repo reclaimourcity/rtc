@@ -44,12 +44,9 @@
 %-----------------------------------------
 % insertion of keywords and the construction of a corresponding index register
 
-%\define[1]\aKeyword{{\bf\em #1}}
-
-
 \def\aKeyword{\dosingleempty\doAKeyword}
 
-\def\doAddToIndex#1#2{\RegKeyword{#1}{\color[magenta:8]{\em#2}}}
+\def\doAddToIndex#1#2{\RegKeyword{#1}{\color[magenta:8]{#2}}}
 \def\doAKeyword[#1]#2%
 {%
 	\iffirstargument
@@ -69,7 +66,7 @@
 % creates a new abbreviation in the index and displays the full name and the abbreviation in the text as follows: FullName [Abbreviation]
 % argument 1 =  full name
 % argument 2 = abbreviation
-\define[2]\abbrNew{\color[magenta:8]{\em#1}\bracket{#2}\RegAbbreviation{#2}{#1}}
+\define[2]\abbrNew{\color[yellow:8]{#1\bracket{#2}}\RegAbbreviation{#2}{#1}}
 
 % creates a new abbreviation in the index but does not display them in the text
 % argument 1 =  full name
@@ -78,10 +75,10 @@
 
 % inserts the abbreviation into the text. 
 %here we could probably also link to the full abbreviation in the abbreviation index?
-\define[1]\abbr{\color[magenta:8]{\em#1}}	
+\define[1]\abbr{\color[yellow:8]{#1}}	
 
 % inserts the full name of the abbreviation. 
-\define[1]\abbrFull{\color[magenta:8]{\em\infull{#1}}}
+\define[1]\abbrFull{\color[yellow:8]{\infull{#1}}}
 
 %-----------------------------------------
 % insertion of map locations into the text
@@ -127,9 +124,21 @@
 % just display the link in the text and generate a footnote, hence link must have been registered already
 \define[1]\aLink{\from[#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
 
+% for registering links of (mass) media sources
+\def\aLinkMediaNew{\dosingleempty\doALinkMediaNew}
+\def\doALinkMediaNew[#1]#2%
+{%
+	\iffirstargument
+		\aLinkNew[#1]{#2}
+	\else
+		\aLinkNew{#2}
+	\fi
+}
+
 % register a new link, display it in the text and generate a footnote. the text label can be set by the optional first argument. if the first argument is not given, the whole link address gets displayed in the text
-% argument one [optional]: text label
-% argument  two [mandatory]: link url. if first argument is nor given, the link serves as label as well
+%
+% #1 [optional]: text label
+% #2 [mandatory]: link url. if first argument is nor given, the link serves as label as well
 \def\aLinkNew{\dosingleempty\doALinkNew}
 \def\doALinkNew[#1]#2%
 {%
@@ -178,6 +187,18 @@
 	\RegLink{\goto{\url[#2]}[url(#2)]}
 }
 
+\def\aLinkNewNoF{\dosingleempty\doALinkNewNoF}
+\def\doALinkNewNoF[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]\from[#2]
+		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]\from[#2]
+		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
 
 %\def\doALinkNewF[#1]#2%
 %{%
@@ -221,33 +242,48 @@
 %-----------------------------------------
 % generates a dictionary of translated words
 
+% only displays the translated word in brackets
+% registers original and translation them in the translation list
+%
+% #1 original
+% #2 translation
 \define[2]\toTranslateT%
 {%
 	\RegTranslation{{\ss#1}\bracket{#2}}
-	\bracket{#2}
+	\color[blue]{\bracket{#2}}
 }
 
-\def\toTranslate{\dosingleempty\doTranslate}
-\def\doTranslate[#1]#2%
-{%
-	\iffirstargument
-		\RegTranslation{{\ss#2}\bracket{#1}}
-		\color[blue]{\em#2}\bracket{#1}
-	\else
-		\RegTranslationUndefined{{\ss#2} <> translation missing}
-		\color[blue]{\em#2}\bracket{translation missing}
-	\fi 
-}
-
+% only displays original word
+% registers original and translation them in the translation list
+%
+% #1 original
+% #2 translation
 \def\toTranslateO{\dosingleempty\doTranslateO}
 \def\doTranslateO[#1]#2%
 {%
 	\iffirstargument
-		\RegTranslation{{\ss#2}\bracket{#1}}
-		\color[green]{\em\tt#2}
+		\RegTranslation{{\ss#1}\bracket{#2}}
+		\color[blue]{#2}
+	\else
+		\RegTranslationUndefined{translation missing <> {\ss#2}}
+		\color[blue]{#2}
+	\fi 
+}
+
+% displays original and translated word
+% registers them in the translation list
+%
+% #1 original
+% #2 translation
+\def\toTranslate{\dosingleempty\doTranslate}
+\def\doTranslate[#1]#2%
+{%
+	\iffirstargument
+		\RegTranslation{{\ss#1}\bracket{#2}}
+		\color[blue]{#1\bracket{#2}}
 	\else
 		\RegTranslationUndefined{{\ss#1} <> translation missing}
-		\color[green]{\em\tt#1}
+		\color[blue]{#1\bracket{translation missing}}
 	\fi 
 }
 
