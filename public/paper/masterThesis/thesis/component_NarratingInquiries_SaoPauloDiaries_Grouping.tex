@@ -14,106 +14,118 @@
 	background=color,
 	foreground=color,
 	frame=on,
-	rulethickness=2pt,
+	rulethickness=1pt,
 	corner=00,
 	offset=2pt,
 	backgroundcolor=black,
 	foregroundcolor=yellow,
-	framecolor=yellow
+	framecolor=yellow,
+	style=\tt\small,
 ]
 
-\setupTABLE [y][first]
+\setupTABLE [column][first]
 [	
 	background=color,
 	frame=off,
 	rulethickness=2pt,
 	backgroundcolor=yellow,
-	foregroundcolor=black
+	foregroundcolor=black,
 ]
 
 \starttext
 
-%---------------------------------------------------
-% gets only displayed in unfinished mode
-
-\startmode[unfinished]
+\startmode[draft]
 \sectionSaoPauloDiariesGrouping 
 
 \placetable[force]{keywords são paulo diaries}
 {
 \bTABLE
 \bTR
-	\bTD[nc=4, align={middle,lohi}] {\tt\bf actors} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD collectives \eTD \bTD movements \eTD \bTD individuals \eTD \bTD groups \eTD
+	\bTD[nr=2, align={middle,lohi}, width=3cm] actors \eTD 
+	\bTD collectives \eTD 
+	\bTD movements \eTD 	
+	\bTD individuals \eTD 
+	\bTD groups \eTD
 \eTR
 \bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf places} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD public spaces \eTD \bTD cultural places \eTD \bTD self determined places \eTD \bTD institutional places\eTD
+\eTR
+\bTR
+	\bTD[nr=2, align={middle,lohi}] places \eTD 
+	\bTD public spaces \eTD 
+	\bTD cultural \eTD 
+	\bTD self determined \eTD 
+	\bTD institutional \eTD
+\eTR
+\bTR
+	\bTD abandoned \eTD
+	\bTD settlements \eTD
 \eTR 
 \bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf places} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD abandoned buildings\eTD \bTD \eTD \bTD \eTD \bTD \eTD
-\eTR 
-\bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf standpoint} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD jail \eTD \bTD crime \eTD \bTD addicted \eTD \bTD individual \eTD
+	\bTD[nr=2, align={middle,lohi}] standpoint \eTD 
+	\bTD jail \eTD 
+	\bTD crime \eTD 
+	\bTD addict \eTD 
+	\bTD individual \eTD
 \eTR 
 \bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf standpoint} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD movement \eTD \bTD \eTD \bTD \eTD \bTD \eTD
+	\bTD movement \eTD
+	\bTD in street situation \eTD
 \eTR 
 \bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf aims and goals} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD visility \eTD \bTD dignity \eTD \bTD right to the city\eTD \bTD participation \eTD
-\eTR 
-\bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf aims and goals} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD work \eTD \bTD housing \eTD \bTD health care \eTD \bTD eduction \eTD
+	\bTD[nr=3, align={middle,lohi}] aims and goals \eTD 
+	\bTD visility \eTD 
+	\bTD dignity \eTD 
+	\bTD right to the city\eTD 
+	\bTD participation \eTD
 \eTR 
 \bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf aims and goals} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD acces to the city \eTD \bTD \eTD \bTD \eTD \bTD \eTD
-\eTR 
-\bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf roles} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD passive \eTD \bTD participant \eTD \bTD observer \eTD
+	\bTD work \eTD 
+	\bTD housing \eTD 
+	\bTD health care \eTD 
+	\bTD eduction \eTD
 \eTR 
 \bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf actions} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD cinema \eTD \bTD workshops \eTD \bTD theatre \eTD \bTD occupation \eTD
+	\bTD access to the city \eTD
 \eTR 
 \bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf actions} \eTD 
-\eTR 
-\bTR[style=\tt]
-	\bTD daily solidarity \eTD \bTD filmmaking \eTD \bTD manifestations \eTD \bTD  \eTD
+	\bTD[nr=2, align={middle,lohi}] roles \eTD 
+	\bTD passive observer \eTD 
+	\bTD observing participant \eTD 
+	\bTD participating observer \eTD
 \eTR 
 \bTR
-	\bTD[nc=4, align={middle,lohi}, backgroundcolor=yellow, foregroundcolor=black, framecolor=yellow] {\tt\bf organizing} \eTD 
+\eTR
+\bTR
+	\bTD[nr=4, align={middle,lohi}] actions \eTD 
+	\bTD street cinema \eTD 
+	\bTD workshops \eTD 
+	\bTD psycho drama \eTD 
+	\bTD housing occupation \eTD
 \eTR 
-\bTR[style=\tt]
-	\bTD rules of conduct \eTD \bTD assembly \eTD \bTD horizontal \eTD \bTD vertical \eTD
+\bTR
+	\bTD daily solidarity \eTD 
+	\bTD film making \eTD 
+	\bTD manifestations \eTD 
+	\bTD recycling \eTD
+\eTR
+\bTR
+	\bTD mini-feira \eTD 
+	\bTD open university \eTD
+	\bTD collective lunch \eTD
+	\bTD festivals \eTD
 \eTR 
+\bTR
+	\bTD street journals \eTD 
+\eTR
+\bTR
+	\bTD[nr=2, align={middle,lohi}] organizing \eTD 
+	\bTD rules of conduct \eTD 
+	\bTD assembly \eTD 
+	\bTD horizontal \eTD 
+	\bTD vertical \eTD
+\eTR 
+\bTR
+\eTR
 \eTABLE
 }
 
