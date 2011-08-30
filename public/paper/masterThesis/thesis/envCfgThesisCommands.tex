@@ -92,6 +92,8 @@
 %					  argument is not given, locations can only referred to later on
 %					  by using the link given in argument two
 % argument 2 [mandatory]	: the link to the location, can be a map, a website, whatever 
+\define[2]\aLocationNew{\aNewLocation[#1]{#2}}
+
 \def\aNewLocation{\dosingleempty\doANewLocation}
 \def\doANewLocation[#1]#2%
 {%

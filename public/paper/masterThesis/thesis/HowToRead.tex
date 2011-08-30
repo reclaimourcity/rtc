@@ -1,0 +1,129 @@
+\startcomponent component_HowToRead
+\product product_Thesis
+\project project_MasterThesis
+
+% definitions and macros
+\environment envThesisAllEnvironments
+
+
+% setup for table all cells
+\setupTABLE[row][each]
+[
+	background=color,
+	foreground=color,
+	frame=off,
+	rulethickness=1pt,
+	corner=00,
+	offset=2pt,
+	backgroundcolor=lightgray,
+	foregroundcolor=black,
+	framecolor=yellow,
+	style=\tt\small,
+]
+
+%\setupTABLE [column][first]
+%[	
+%	background=color,
+%	frame=off,
+%	rulethickness=2pt,
+%	backgroundcolor=yellow,
+%	foregroundcolor=black,
+%]
+
+
+\define[]\sectionHowToRead{\section[howtoread]{Read//This//Text}}
+
+\starttext
+
+\startmode[tocLayout]
+\sectionHowToRead
+
+describes how to read this thesis
+\stopmode
+
+\startmode[draft]
+\sectionHowToRead
+
+This thesis utilizes its own text formatting and colouring style in order to visually determine the meaning of certain words and text passages.
+
+The following list describes the applied formats and their corresponding meanings.
+
+\spaceHalf
+
+\placetable[left]{How to read: thesis layout and format}
+{
+\bTABLE
+\bTR
+\bTD translations \eTD 
+\bTD \eTD 
+\eTR
+\bTR
+\bTD abbreviations \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD citations \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD text sources \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD narrations and inquiry \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD  narrations and theorizing \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD dialog \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD definitions \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD objectives \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD keywords \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD links to text passages \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD links to online sources \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD links to locations \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD footnotes \eTD 
+\bTD\eTD
+\eTR
+\bTR
+\bTD layout \eTD 
+\bTD\eTD
+\eTR
+\eTABLE
+}
+
+%---------------------------------------------------
+% gets only displayed in unfinished mode
+
+\showImperfection
+
+%---------------------------------------------------
+\stopmode
+
+\stoptext
+
+\stopcomponent
