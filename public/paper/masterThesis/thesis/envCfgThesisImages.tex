@@ -1,5 +1,7 @@
 \startenvironment envCfgThesisImages
 
+\environment envThesisText
+
 % setup the figures list
 \setuplist[figure][criterium=all, interaction=all, coupling=on]
 
@@ -30,6 +32,15 @@
 \useexternalfigure[imgCatadores][catadoresSammelstelle1.jpg][frame=off, factor=fit]
 \useexternalfigure[imgCatadoresAy1][trashCatadoresAy1.jpg][frame=off, factor=fit]
 \useexternalfigure[imgCatadoresAy2][trashCatadoresAy2.jpg][frame=off, factor=fit]
+
+\useexternalfigure[imgAyPanoramaNight][ayCarmelaFestivalMappa.jpg][frame=off, factor=fit]
+\useexternalfigure[imgPsychoDrama1][psychodramaVa1.jpg][frame=off, factor=fit]
+\useexternalfigure[imgPsychoDrama2][psychodramaVa2.jpg][frame=off, factor=fit]
+
+\define[]\imgAyPanoramaNightFestivalMapa{\placefigure[page]{\Ay at night (cc-by-sa Author)}{\rotate[90]{\scale[sx=1.625,sy=1.625]{\externalfigure[imgAyPanoramaNight]}}}}
+
+\define[]\imgPsychoDramaOne{\placefigure[page]{Psycho Drama at \CCSP (cc-by-sa Author)}{\rotate[90]{\scale[sx=1.5,sy=1.5]{\externalfigure[imgPsychoDrama1]}}}}
+\define[]\imgPsychoDramaTwo{\placefigure[page]{Psycho Drama at \CCSP (cc-by-sa Author)}{\rotate[90]{\scale[sx=1.5,sy=1.5]{\externalfigure[imgPsychoDrama2]}}}}
 
 \define[]\imgCatadoresAyOne{\placefigure[page]{Bundled up recycled material at \Ay (cc-by-sa Author)}{\rotate[90]{\scale[sx=1.5,sy=1.5]{\externalfigure[imgCatadoresAy1]}}}}
 

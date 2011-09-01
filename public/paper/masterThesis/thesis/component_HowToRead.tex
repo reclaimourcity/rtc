@@ -5,8 +5,9 @@
 % definitions and macros
 \environment envThesisAllEnvironments
 
+\define[]\chapterHowToRead{\chapter[howtoread]{Read//This//Text}}
 
-% setup for table all cells
+% setup table and cells
 \setupTABLE[row][each]
 [
 	background=color,
@@ -21,28 +22,16 @@
 	style=\tt\small,
 ]
 
-%\setupTABLE [column][first]
-%[	
-%	background=color,
-%	frame=off,
-%	rulethickness=2pt,
-%	backgroundcolor=yellow,
-%	foregroundcolor=black,
-%]
-
-
-\define[]\sectionHowToRead{\section[howtoread]{Read//This//Text}}
-
 \starttext
 
 \startmode[tocLayout]
-\sectionHowToRead
+\chapterHowToRead
 
 describes how to read this thesis
 \stopmode
 
 \startmode[draft]
-\sectionHowToRead
+\chapterHowToRead
 
 This thesis utilizes its own text formatting and colouring style in order to visually determine the meaning of certain words and text passages.
 

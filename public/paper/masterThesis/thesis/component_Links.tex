@@ -4,15 +4,20 @@ project_MasterThesis
 % definitions and macros
 \environment envThesisAllEnvironments
 
+\define[]\chapterLinks{\chapter[refLinks]{Links}}
+
 \starttext
 \startmode[tocLayout]
-\chapter[refLinks]{Links}
+\chapterLinks
 
 Contains the complete list of used web-links.
 \stopmode
 
 \startmode[draft]
-\chapter[refLinks]{Links}
+\chapterLinks
+
+\showLinksAll
+
 \stopmode
 
 \stoptext

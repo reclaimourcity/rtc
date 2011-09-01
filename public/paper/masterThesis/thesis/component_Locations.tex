@@ -1,0 +1,27 @@
+\startcomponent component_Locations
+\product product_Thesis 
+\project 
+project_MasterThesis
+
+% definitions and macros
+\environment envThesisAllEnvironments
+
+\define[]\chapterLocations{\chapter[refLocations]{Locations}}
+
+\starttext
+\startmode[tocLayout]
+\chapterLocations
+
+Contains the complete list of visited locations linked to \abbrFull{osm}.
+\stopmode
+
+\startmode[draft]
+\chapterLocations
+
+\showLocationsAll
+
+\stopmode
+
+\stoptext
+
+\stopcomponent

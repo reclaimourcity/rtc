@@ -502,6 +502,11 @@
 \define[]\showMedias{\placeRefs{\placeRegMedia}}
 \define[]\showLocations{\placeRefs{\placeRegLocation}}
 
+\define[]\showReferencesAll{\placeRefs{\placeRegReference[criterium=all]}}
+\define[]\showLinksAll{\placeRefs{\placeRegLink[criterium=all]}}
+\define[]\showMediasAll{\placeRefs{\placeRegMedia[criterium=all]}}
+\define[]\showLocationsAll{\placeRefs{\placeRegLocation[criterium=all]}}
+
 \define[1]\placeRefs%
 {%
 \startREF%
@@ -556,7 +561,7 @@
 \setupTABLE[c][2][style=\tt]
 \setupTABLE[c][3][style=\tt\em]
 \spaceHalf
-\bTABLE
+\bTABLE[split=yes]
 }
 
 \define[]\stopDialog%
