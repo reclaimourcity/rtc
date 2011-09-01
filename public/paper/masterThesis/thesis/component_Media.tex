@@ -5,17 +5,19 @@
 % definitions and macros
 \environment envThesisAllEnvironments
 
+\define[]\chapterMedia{\chapter[refLinksMedia]{Links//Media}}
+
 \starttext
 \startmode[tocLayout]
-\chapter[refMedia]{Media}
+\chapterMedia
 
 Contains the complete list of used and/or cited media such as videos, audio, maps
 \stopmode
 
 \startmode[draft]
-\chapter[refMedia]{Media}
+\chapterMedia
 
-\showMediasAll
+\showLinksMediasAll
 
 \stopmode
 \stoptext

@@ -7,19 +7,37 @@
 \environment envCfgPaperLanguageEn
 \environment envThesisUrl
 \environment envThesisText
+\environment envCfgThesisCommands
+
+\define[]\chapterReferencesBibliography{\chapter[refRefBib]{Reference//Bibliography}}
+\define[]\chapterReferencesSources{\chapter[refRefSources]{Reference//Sources}}
+\define[]\chapterReferencesMedia{\chapter[refRefMedia]{Reference//Media}}
 
 \starttext
 
 \startmode[tocLayout]
-\chapter[refBib]{Bibliography}
+\chapterReferencesBibliography
 
 Contains the complete list of cited books, journals, articles, etc.
+
+\chapterReferencesSources
+
+\chapterReferencesMedia
+
 \stopmode
 
 \startmode[draft]
-\chapter[refBib]{Bibliography}
+\chapterReferencesBibliography
 
 \showReferencesAll
+
+\chapterReferencesSources
+
+\showReferencesSourceAll
+
+\chapterReferencesMedia
+
+\showReferencesMediaAll
 
 \stopmode
 

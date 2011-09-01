@@ -131,9 +131,42 @@
 \def\doALinkMediaNew[#1]#2%
 {%
 	\iffirstargument
-		\aLinkNew[#1]{#2}
+		\useURL[#2][#2][][#1]\from[#2]
+		\RegMedia{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
 	\else
-		\aLinkNew{#2}
+		\useURL[#2][#2][][#2]\from[#2]
+		\RegMedia{media: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{media: \goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+% for registering links of (mass) media sources
+\def\aLinkSourceNew{\dosingleempty\doALinkSourceNew}
+\def\doALinkSourceNew[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]\from[#2]
+		\RegSource{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]\from[#2]
+		\RegSource{source: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+\def\aLinkSourceNewInVi{\dosingleempty\doALinkSourceNewInVi}
+\def\doALinkSourceNewInVi[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]
+		\RegSource{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]
+		\RegSource{source: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
 	\fi
 }
 
@@ -146,12 +179,13 @@
 {%
 	\iffirstargument
 		\useURL[#2][#2][][#1]\from[#2]
-		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLink{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]\from[#2]
 		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{website: \goto{\hyphenatedurl{#2}}[url(#2)]}
 	\fi
-	\footnote[#2]{website: \goto{\hyphenatedurl{#2}}[url(#2)]}
 }
 
 \def\aLinkNewAlt{\dosingleempty\doALinkNewAlt}
@@ -182,11 +216,12 @@
 	\iffirstargument
 		\useURL[#2][#2][][#1]
 		\footnote[#2]{#1: \goto{\url[#2]}[url(#2)]}
+		\RegLink{#1: \goto{\url[#2]}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]
 		\footnote[#2]{website: \goto{\url[#2]}[url(#2)]}
+		\RegLink{\goto{\url[#2]}[url(#2)]}
 	\fi
-	\RegLink{\goto{\url[#2]}[url(#2)]}
 }
 
 \def\aLinkNewNoF{\dosingleempty\doALinkNewNoF}
@@ -493,19 +528,28 @@
 % registering and placement of reference
 
 \define[1]\addReference{\RegReference{#1}}
-\define[1]\addLink{\RegLink{#1}}
-\define[1]\addLocation{\RegLocation{#1}}
-\define[1]\addMedia{\RegMedia{#1}}
+\define[1]\addMedia{\RegReferenceMedia{#1}}
+\define[1]\addSource{\RegReferenceSource{#1}}
+%\define[1]\addLink{\RegLink{#1}}
+%\define[1]\addLocation{\RegLocation{#1}}
 
 \define[]\showReferences{\placeRefs{\placeRegReference}}
+\define[]\showReferencesMedia{\placeRefs{\placeRegReferenceMedia}}
+\define[]\showReferencesSource{\placeRefs{\placeRegReferenceSource}}
+
 \define[]\showLinks{\placeRefs{\placeRegLink}}
-\define[]\showMedias{\placeRefs{\placeRegMedia}}
-\define[]\showLocations{\placeRefs{\placeRegLocation}}
+\define[]\showLinksSources{\placeRefs{\placeRegSource}}
+\define[]\showLinksMedias{\placeRefs{\placeRegMedia}}
+\define[]\showLinksLocations{\placeRefs{\placeRegLocation}}
 
 \define[]\showReferencesAll{\placeRefs{\placeRegReference[criterium=all]}}
+\define[]\showReferencesMediaAll{\placeRefs{\placeRegReferenceMedia[criterium=all]}}
+\define[]\showReferencesSourceAll{\placeRefs{\placeRegReferenceSource[criterium=all]}}
+
 \define[]\showLinksAll{\placeRefs{\placeRegLink[criterium=all]}}
-\define[]\showMediasAll{\placeRefs{\placeRegMedia[criterium=all]}}
-\define[]\showLocationsAll{\placeRefs{\placeRegLocation[criterium=all]}}
+\define[]\showLinksSourcesAll{\placeRefs{\placeRegSource[criterium=all]}}
+\define[]\showLinksMediasAll{\placeRefs{\placeRegMedia[criterium=all]}}
+\define[]\showLinksLocationsAll{\placeRefs{\placeRegLocation[criterium=all]}}
 
 \define[1]\placeRefs%
 {%
