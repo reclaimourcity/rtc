@@ -5,24 +5,42 @@ project_MasterThesis
 \environment envThesisAllEnvironments
 
 \define[]\chapterLinks{\chapter[refLinks]{Links//General}}
-
-\define[]\chapterLinksSources{\chapter[refLinksSources]{Links//Sources}}
+\define[]\chapterLinksSourcesMedia{\chapter[refLinksSourcesMedia]{Links//Sources//Media}}
+\define[]\chapterLinksSourcesContent{\chapter[refLinksSourcesContent]{Links//Sources//Content}}
+\define[]\chapterLinksSourcesThesis{\chapter[refLinksSourcesThesis]{Links//Sources//Thesis}}
 
 \starttext
 \startmode[tocLayout]
 \chapterLinks
+Contains a complete list of used web-links.
 
-Contains the complete list of used web-links.
+\chapterLinksSourcesContent
+Contains a complete list to content sources
+
+\chapterLinksSourcesMedia
+Contains a complete list to media sources
+
+\chapterLinksSourcesThesis
+Contains a complete list of links to thesis content
+
 \stopmode
 
 \startmode[draft]
 \chapterLinks
 
-\showLinksAll
+\showLinksGeneralAll
 
-\chapterLinksSources
+\chapterLinksSourcesContent
 
-\showLinksSourcesAll
+\showLinksSourcesContentAll
+
+\chapterLinksSourcesMedia
+
+\showLinksSourcesMediaAll
+
+\chapterLinksSourcesThesis
+
+\showLinksSourcesThesisAll
 
 \stopmode
 

@@ -10,34 +10,47 @@
 \environment envCfgThesisCommands
 
 \define[]\chapterReferencesBibliography{\chapter[refRefBib]{Reference//Bibliography}}
-\define[]\chapterReferencesSources{\chapter[refRefSources]{Reference//Sources}}
-\define[]\chapterReferencesMedia{\chapter[refRefMedia]{Reference//Media}}
+\define[]\chapterReferencesMedia{\chapter[refRefMedia]{Reference//Media Coverage}}
+\define[]\chapterReferencesContentSources{\chapter[refRefBibSources]{Reference//Contentt//Sources}}
+\define[]\chapterReferencesMediaSources{\chapter[refRefMediaSource]{Reference//Media//Sources}}
 
 \starttext
 
 \startmode[tocLayout]
 \chapterReferencesBibliography
 
-Contains the complete list of cited books, journals, articles, etc.
-
-\chapterReferencesSources
+Contains the complete list of cited books, journals, articles, movement content, etc.
 
 \chapterReferencesMedia
+
+Contains a complete list of cited media articles
+
+\chapterReferencesContentSources
+
+Contains a complete list of sources of content
+
+\chapterReferencesMediaSources
+
+Contains a complete list of sources of media
 
 \stopmode
 
 \startmode[draft]
 \chapterReferencesBibliography
 
-\showReferencesAll
-
-\chapterReferencesSources
-
-\showReferencesSourceAll
+\showReferencesContentAll
 
 \chapterReferencesMedia
 
 \showReferencesMediaAll
+
+\chapterReferencesContentSources
+
+\showSourcescontentAll
+
+\chapterReferencesMediaSources
+
+\showSourcesMediaAll
 
 \stopmode
 

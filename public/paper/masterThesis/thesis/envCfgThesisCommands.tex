@@ -100,11 +100,11 @@
 	\iffirstargument
 		\useURL[#2][#2][][#1]\from[#2]
 		\footnote[#2]{#1: \goto{\url[#2]}[url(#2)]}
-		\RegLocation{#1: \goto{\url[#2]}[url(#2)]}
+		\RegLinkLocation{#1: \goto{\url[#2]}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]\from[#2]
 		\footnote[#2]{location: \goto{\url[#2]}[url(#2)]}
-		\RegLocation{\goto{\url[#2]}[url(#2)]}
+		\RegLinkLocation{\goto{\url[#2]}[url(#2)]}
 	\fi
 }
 
@@ -127,45 +127,146 @@
 \define[1]\aLink{\from[#1]\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
 
 % for registering links of (mass) media sources
+\def\aLinkSourceMediaNew{\dosingleempty\doALinkSourceMediaNew}
+\def\doALinkSourceMediaNew[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]\from[#2]
+		\RegLinkSourceMedia{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]\from[#2]
+		\RegLinkSourceMedia{media source: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{media: \goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+\def\aLinkSourceMediaNewF{\dosingleempty\doALinkSourceMediaNewInVi}
+\def\doALinkSourceMediaNewInVi[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]
+		\RegLinkSourceMedia{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]
+		\RegLinkSourceMedia{media source: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{media: \goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+% for registering links of content sources
+\def\aLinkSourceContentNew{\dosingleempty\doALinkSourceContentNew}
+\def\doALinkSourceContentNew[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]\from[#2]
+		\RegLinkSourceContent{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]\from[#2]
+		\RegLinkSourceContent{content source: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+\def\aLinkSourceContentNewF{\dosingleempty\doALinkSourceContentNewInVi}
+\def\doALinkSourceContentNewInVi[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]
+		\RegLinkSourceContent{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]
+		\RegLinkSourceContent{content source: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+% for registering links of particular media articles
 \def\aLinkMediaNew{\dosingleempty\doALinkMediaNew}
 \def\doALinkMediaNew[#1]#2%
 {%
 	\iffirstargument
 		\useURL[#2][#2][][#1]\from[#2]
-		\RegMedia{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
-		\footnote[#2]{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
-	\else
-		\useURL[#2][#2][][#2]\from[#2]
-		\RegMedia{media: \goto{\hyphenatedurl{#2}}[url(#2)]}
-		\footnote[#2]{media: \goto{\hyphenatedurl{#2}}[url(#2)]}
-	\fi
-}
-
-% for registering links of (mass) media sources
-\def\aLinkSourceNew{\dosingleempty\doALinkSourceNew}
-\def\doALinkSourceNew[#1]#2%
-{%
-	\iffirstargument
-		\useURL[#2][#2][][#1]\from[#2]
-		\RegSource{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLinkMedia{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
 		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]\from[#2]
-		\RegSource{source: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLinkMedia{media: \goto{\hyphenatedurl{#2}}[url(#2)]}
 		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
 	\fi
 }
 
-\def\aLinkSourceNewInVi{\dosingleempty\doALinkSourceNewInVi}
-\def\doALinkSourceNewInVi[#1]#2%
+\def\aLinkMediaNewF{\dosingleempty\doALinkMediaNewInVi}
+\def\doALinkMediaNewInVi[#1]#2%
 {%
 	\iffirstargument
 		\useURL[#2][#2][][#1]
-		\RegSource{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLinkMedia{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
 		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]
-		\RegSource{source: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLinkMedia{media: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+% for registering links of particular content
+\def\aLinkContentNew{\dosingleempty\doALinkContentNew}
+\def\doALinkContentNew[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]\from[#2]
+		\RegLinkContent{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]\from[#2]
+		\RegLinkContent{content: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+\def\aLinkContentNewF{\dosingleempty\doALinkContentNewInVi}
+\def\doALinkContentNewInVi[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]
+		\RegLinkContent{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]
+		\RegLinkContent{content: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+% for registering links of particular content
+\def\aLinkSourceThesisNew{\dosingleempty\doALinkSourceThesisNew}
+\def\doALinkSourceThesisNew[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]\from[#2]
+		\RegLinkSourceThesis{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]\from[#2]
+		\RegLinkSourceThesis{thesis: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\fi
+}
+
+\def\aLinkSourceThesisNewF{\dosingleempty\doALinkSourceThesisNewF}
+\def\doALinkSourceThesisNewF[#1]#2%
+{%
+	\iffirstargument
+		\useURL[#2][#2][][#1]
+		\RegLinkSourceThesis{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
+	\else
+		\useURL[#2][#2][][#2]
+		\RegLinkSourceThesis{thesis: \goto{\hyphenatedurl{#2}}[url(#2)]}
 		\footnote[#2]{\goto{\hyphenatedurl{#2}}[url(#2)]}
 	\fi
 }
@@ -179,11 +280,11 @@
 {%
 	\iffirstargument
 		\useURL[#2][#2][][#1]\from[#2]
-		\RegLink{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLinkGeneral{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
 		\footnote[#2]{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]\from[#2]
-		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLinkGeneral{\goto{\hyphenatedurl{#2}}[url(#2)]}
 		\footnote[#2]{website: \goto{\hyphenatedurl{#2}}[url(#2)]}
 	\fi
 }
@@ -193,10 +294,10 @@
 {%
 	\iffirstargument
 		\useURL[#3][#3][][#1]\from[#3]
-		\RegLink{\goto{\hyphenatedurl{#2}}[url(#3)]}
+		\RegLinkGeneral{\goto{\hyphenatedurl{#2}}[url(#3)]}
 	\else
 		\useURL[#3][#3][][#2]\from[#3]
-		\RegLink{\goto{\hyphenatedurl{#2}}[url(#3)]}
+		\RegLinkGeneral{\goto{\hyphenatedurl{#2}}[url(#3)]}
 	\fi
 	\footnote[#3]{website: \goto{\hyphenatedurl{#2}}[url(#3)]}
 }
@@ -206,7 +307,7 @@
 {%
  	\useURL[#1][#1][][link]\small\bracket{\from[#1]}
 	\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}
-	\RegLink{\goto{\url[#1]}[url(#1)]}
+	\RegLinkGeneral{\goto{\url[#1]}[url(#1)]}
 }
 
 % registers a new link but does not display it in the text. only generates a footnote
@@ -216,11 +317,11 @@
 	\iffirstargument
 		\useURL[#2][#2][][#1]
 		\footnote[#2]{#1: \goto{\url[#2]}[url(#2)]}
-		\RegLink{#1: \goto{\url[#2]}[url(#2)]}
+		\RegLinkGeneral{#1: \goto{\url[#2]}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]
 		\footnote[#2]{website: \goto{\url[#2]}[url(#2)]}
-		\RegLink{\goto{\url[#2]}[url(#2)]}
+		\RegLinkGeneral{\goto{\url[#2]}[url(#2)]}
 	\fi
 }
 
@@ -229,25 +330,12 @@
 {%
 	\iffirstargument
 		\useURL[#2][#2][][#1]\from[#2]
-		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLinkGeneral{#1: \goto{\hyphenatedurl{#2}}[url(#2)]}
 	\else
 		\useURL[#2][#2][][#2]\from[#2]
-		\RegLink{\goto{\hyphenatedurl{#2}}[url(#2)]}
+		\RegLinkGeneral{website: \goto{\hyphenatedurl{#2}}[url(#2)]}
 	\fi
 }
-
-
-%\def\doALinkNewF[#1]#2%
-%{%
-%	\iffirstargument
-% 		\useURL[#2][#2][][#1]
-%		\footnote[#1]{#1: \from[#2]}
-%	\else
-%		\useURL[#2][#2][][#2]
-%		\footnote[#2]{website: \from[#2]}
-%	\fi
-%	\RegLink{\goto{\url[#2]}[url(#2)]}
-%}
 
 % display a generic "link" surrounded by brackets in the text and generate a footnote, thus link must have been registered already
 \define[1]\aLinkG{\small\bracket{\from[#1]}\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}}
@@ -265,16 +353,7 @@
 	\fi
 }
 
-% register a link url and generate a footnote
-%\define[1]\aLinkNewF%
-%{%
-%	\useURL[#1][#1][][#1]
-%	\footnote[#1]{website: \goto{\url[#1]}[url(#1)]}
-%	\RegLink{\goto{\url[#1]}[url(#1)]}
-%}
-
 \define[1]\aLinkE{\inframed[frame=off, background=color, backgroundcolor=green:4]{\bf#1 }}
-
 
 %-----------------------------------------
 % generates a dictionary of translated words
@@ -527,30 +606,64 @@
 %-----------------------------------------
 % registering and placement of reference
 
-\define[1]\addReference{\RegReference{#1}}
-\define[1]\addMedia{\RegReferenceMedia{#1}}
-\define[1]\addSource{\RegReferenceSource{#1}}
-%\define[1]\addLink{\RegLink{#1}}
-%\define[1]\addLocation{\RegLocation{#1}}
+% add a bibliographic reference, ie. a journal article, book, movement content
+\define[1]\addReference{\RegReferenceContent{#1}}
+% add a media reference, ie. a particular newspaper or journal article
+\define[1]\addReferenceMedia{\RegReferenceMedia{#1}}
 
-\define[]\showReferences{\placeRefs{\placeRegReference}}
+% add source for content, ie, a journal website, a movement website, etc
+\define[1]\addSourceContent{\RegSourceContent{#1}}
+% add source for media content, ie, a newspaper website
+\define[1]\addSourceMedia{\RegSourceMedia{#1}}
+
+% show the bibliographic references
+\define[]\showReferencesContent{\placeRefs{\placeRegReferenceContent}}
+\define[]\showReferencesContentAll{\placeRefs{\placeRegReferenceContent[criterium=all]}}
+
+% show media references
 \define[]\showReferencesMedia{\placeRefs{\placeRegReferenceMedia}}
-\define[]\showReferencesSource{\placeRefs{\placeRegReferenceSource}}
-
-\define[]\showLinks{\placeRefs{\placeRegLink}}
-\define[]\showLinksSources{\placeRefs{\placeRegSource}}
-\define[]\showLinksMedias{\placeRefs{\placeRegMedia}}
-\define[]\showLinksLocations{\placeRefs{\placeRegLocation}}
-
-\define[]\showReferencesAll{\placeRefs{\placeRegReference[criterium=all]}}
 \define[]\showReferencesMediaAll{\placeRefs{\placeRegReferenceMedia[criterium=all]}}
-\define[]\showReferencesSourceAll{\placeRefs{\placeRegReferenceSource[criterium=all]}}
 
-\define[]\showLinksAll{\placeRefs{\placeRegLink[criterium=all]}}
-\define[]\showLinksSourcesAll{\placeRefs{\placeRegSource[criterium=all]}}
-\define[]\showLinksMediasAll{\placeRefs{\placeRegMedia[criterium=all]}}
-\define[]\showLinksLocationsAll{\placeRefs{\placeRegLocation[criterium=all]}}
+% show all particular content sources
+\define[]\showSourcesContent{\placeRefs{\placeRegSourceContent}}
+\define[]\showSourcescontentAll{\placeRefs{\placeRegSourceContent[criterium=all]}}
 
+% show all particular media sources
+\define[]\showSourcesMedia{\placeRefs{\placeRegSourceMedia}}
+\define[]\showSourcesMediaAll{\placeRefs{\placeRegSourceMedia[criterium=all]}}
+
+% show links to locations
+\define[]\showLinksLocations{\placeRefs{\placeRegLinkLocation}}
+\define[]\showLinksLocationsAll{\placeRefs{\placeRegLinkLocation[criterium=all]}}
+
+% show all links that are not fitting in any of the other categories
+% used in aLinkNewX
+\define[]\showLinksGeneral{\placeRefs{\placeRegLinkGeneral}}
+\define[]\showLinksGeneralAll{\placeRefs{\placeRegLinkGeneral[criterium=all]}}
+
+% show links to particular content sources, such as open access journals, movement websites, etc
+% used in aLinkContentSourceNewX
+\define[]\showLinksSourcesContent{\placeRefs{\placeRegLinkSourceContent}}
+\define[]\showLinksSourcesContentAll{\placeRefs{\placeRegLinkSourceContent[criterium=all]}}
+
+% show links to particular media sources, such as newspapers, etc
+% used in aLinkMediaSourceNewX
+\define[]\showLinksSourcesMedia{\placeRefs{\placeRegLinkSourceMedia}}
+\define[]\showLinksSourcesMediaAll{\placeRefs{\placeRegLinkSourceMedia[criterium=all]}}
+
+% 
+\define[]\showLinksSourcesThesis{\placeRefs{\placeRegLinkSourceThesis}}
+\define[]\showLinksSourcesThesisAll{\placeRefs{\placeRegLinkSourceThesis[criterium=all]}}
+
+% 
+\define[]\showLinksMedia{\placeRefs{\placeRegLinkMedia}}
+\define[]\showLinksMediaAll{\placeRefs{\placeRegLinkMedia[criterium=all]}}
+
+% 
+\define[]\showLinksContent{\placeRefs{\placeRegLinkContent}}
+\define[]\showLinksContentAll{\placeRefs{\placeRegLinkContent[criterium=all]}}
+
+% a helper macro
 \define[1]\placeRefs%
 {%
 \startREF%
@@ -594,6 +707,19 @@
    before={\blank[0.5cm]\starttextbackground[RemarkBack]\startcolor[blue]},
    after={\stopcolor\stoptextbackground\blank[0.5cm]},
 ]
+
+\definestartstop[Press]
+[
+   style=\tt,
+   before={\blank[0.5cm]},
+   after={\blank[0.5cm]},
+]
+
+%-----------------------------------------
+% press coverage
+
+\define[1]\startPressCoverage{\startPress#1}
+\define[]\stopPressCoverage{\stopPress}
 
 %-----------------------------------------
 % dialogs

@@ -6,26 +6,53 @@
 
 \definesynonyms	[RegAbbreviation] [RegAbbreviations] [\infull]
 
-\defineregister		[RegReference][RegReferences]
-\setupregister		[RegReference][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+%-----------------------------
 
+% bibliography reference
+\defineregister		[RegReferenceContent][RegReferencesContent]
+\setupregister		[RegReferenceContent][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+
+% media article reference
 \defineregister		[RegReferenceMedia][RegReferencesMedia]
 \setupregister		[RegReferenceMedia][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
 
-\defineregister		[RegReferenceSource][RegReferencesSource]
-\setupregister		[RegReferenceSource][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+% content sources
+\defineregister		[RegSourceContent][RegSourcesContent]
+\setupregister		[RegSourceContent][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
 
-\defineregister		[RegLink][RegLinks]
-\setupregister		[RegLink][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+% media sources
+\defineregister		[RegSourceMedia][RegSourcesMedia]
+\setupregister		[RegSourceMedia][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
 
-\defineregister		[RegSource][RegSources]
-\setupregister		[RegSource][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+% links to content sources
+\defineregister		[RegLinkSourceContent][RegLinksSourceContent]
+\setupregister		[RegLinkSourceContent][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
 
-\defineregister		[RegMedia][RegMedias]
-\setupregister		[RegMedia][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+% links to media sources
+\defineregister		[RegLinkSourceMedia][RegLinksSourceMedia]
+\setupregister		[RegLinkSourceMedia][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
 
-\defineregister		[RegLocation][RegLocations]
-\setupregister		[RegLocation][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+% links to thesis sources
+\defineregister		[RegLinkSourceThesis][RegLinksSourceThesis]
+\setupregister		[RegLinkSourceThesis][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+
+% links to locations
+\defineregister		[RegLinkLocation][RegLinkLocations]
+\setupregister		[RegLinkLocation][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+
+% general links
+\defineregister		[RegLinkGeneral][RegLinksGeneral]
+\setupregister		[RegLinkGeneral][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+
+% links to content articles, books, etc
+\defineregister		[RegLinkContent][RegLinksContent]
+\setupregister		[RegLinkContent][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+
+% links to media articles
+\defineregister		[RegLinkMedia][RegLinksMedia]
+\setupregister		[RegLinkMedia][coupling=no, indicator=no, sectionnumber=no, interaction=, referencing=off, symbol=none, n=1, location=left, textstyle=small]
+
+%-----------------------------_
 
 \defineregister		[RegTranslation][RegTranslations]
 \setupregister		[RegTranslation][coupling=yes, interaction={pagenumber, text}, referencing=on, n=1]
