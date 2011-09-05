@@ -725,10 +725,10 @@
 % dialogs
 \define[]\startDialog%
 {%
-%\startcolor[magenta:8]\startlines
-\setupTABLE[r][each][foregroundcolor=color, foregroundcolor=magenta:8, frame=off]
+\setupTABLE[r][each][frame=off]
+\setupTABLE[r][first][background=color, backgroundcolor=white, foreground=color, foregroundcolor=magenta:8]
 \setupTABLE[c][1][width=1cm]
-\setupTABLE[c][2][style=\tt]
+\setupTABLE[c][2][width=2cm, style=\tt\bf]
 \setupTABLE[c][3][style=\tt\em]
 \spaceHalf
 \bTABLE[split=yes]
@@ -736,14 +736,13 @@
 
 \define[]\stopDialog%
 {%
-%\stopcolor\stoplines
 \eTABLE
 }
 
 \define[2]\tell
 {
-\bTR
-\bTD\eTD\bTD#1:\eTD\bTD#2\eTD
+\bTR[background=color, backgroundcolor=white, foreground=color, foregroundcolor=magenta:8]
+\bTD[background=color, backgroundcolor=white]\eTD\bTD#1:\eTD\bTD#2\eTD
 \eTR
 }
 
