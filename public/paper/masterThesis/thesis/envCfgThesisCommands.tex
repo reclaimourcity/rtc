@@ -445,9 +445,10 @@
 \define[]\placeRemarksAll{\placeRegRemark[criterium=all]}
 
 
-\define[1]\toMark%
+\def\toMark{\bgroup\obeyspaces\doToMark}
+\def\doToMark#1%
 {%
-	\RegTextMark{#1}\startAMark{\bf#1}\stopAMark
+	\RegTextMark{#1}\startTextMark{#1}\stopTextMark\egroup
 }
 
 \define[]\placeTextMarksLocal{\placeRegTextMark[criterium=section]}
@@ -713,6 +714,13 @@
    style=\tt,
    before={\blank[0.5cm]},
    after={\blank[0.5cm]},
+]
+
+\definestartstop[TextMark]
+[
+   style=normal,
+   before={\starttextbackground[TextMarkBack]},
+   after={\stoptextbackground},
 ]
 
 %-----------------------------------------

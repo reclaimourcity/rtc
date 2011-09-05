@@ -29,7 +29,7 @@
 \definelayout[pageOne][margin=0mm,width=middle]
 \setuplayout[pageOne]
 
-\component component_Coverpage
+\component component_Coverpage		% finished
 
 %---------------------------------------------------------------------------------------------
 % new page for toc and in order to change local styles
@@ -46,8 +46,8 @@
 % reset paper layout to normal style
 \setuplayout[reset]
 
-\component component_TOC
-
+\component component_TOC 			% automatically generated
+	
 %---------------------------------------------------------------------------------------------
 % start page numbering from now on
 \page[1]
@@ -69,37 +69,37 @@
 \setupinteraction[state=start,color=darkgreen, click=yes, style=slanted]
 
 % the beginning
-\component component_Declaration
-\component component_Acknowledgement
-\component component_Abstract
-\component component_Zusammenfassung
-\component component_HowToRead
-\component component_Introduction
-% \component component_Objectives
+\component component_Declaration		% finished
+\component component_Acknowledgement	% to be done
+\component component_Abstract			% to be done
+\component component_Zusammenfassung	% to be done
+\component component_HowToRead		% in progress
+\component component_Introduction		% to be done
+% \component component_Objectives		% do i need it?
 
 % the methodological framework
 % subchapters are included in this component
-\component component_Methodology 
+\component component_Methodology 		% finished
 
 % the standpoint of movement themes
 % subchapters are included in this component
-\component component_NarratingInquiries
+\component component_NarratingInquiries	% in progress
 
 % the standpoint of theoretical themes
 %subchapters are included in this component
-\component component_Theorizing
+\component component_Theorizing		% in progress
 
 % the end
-\component component_Conclusion
-\component component_References
-\component component_Links
-\component component_Locations
-\component component_Media
-\component component_Figures
-\component component_Tables
-\component component_Translations
-\component component_Abbreviations
-\component component_Index
-\component component_Appendices
+\component component_Conclusion		% in progress
+\component component_References		% automagically generated
+\component component_Links			% automagically generated
+\component component_Locations		% automagically generated
+\component component_Media			% automagically generated
+\component component_Figures			% automagically generated
+\component component_Tables			% automagically generated
+\component component_Translations		% automagically generated
+\component component_Abbreviations		% automagically generated
+\component component_Index			% automagically generated
+% \component component_Appendices	% do i need it?
 
 \stopproduct
