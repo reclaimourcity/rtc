@@ -29,12 +29,13 @@
 \define[1]\aQuoteThis{\color[magenta:8]{\tt{\small{(p.#1)}}}\doRegQuote{this document: p. #1}}
 
 % the quote of authors within the text flow
-\define[1]\aQuoteInTextA{\color[magenta:8]{\tt{\small{#1}}}\doRegQuote{author: #1}}
+\define[1]\aQuoteInTextA{\color[magenta:8]{#1}\doRegQuote{author: #1}}
 
 % the quote of a title within the text flow
-\define[1]\aQuoteInTextT{\color[magenta:8]{\tt{\small{\quote{#1}}}}\doRegQuote{title: #1}}
+\define[1]\aQuoteInTextT{\color[magenta:8]{\quote{#1}}\doRegQuote{title: #1}}
 
-\define[1]\aQuoteInText{\color[magenta:8]{\tt{\small{\quote{#1}}}}\doRegQuote{citation: #1}}
+% the quote of a text passage within the text flow
+\define[1]\aQuoteInText{\color[magenta:8]{\quote{#1}}\doRegQuote{citation: #1}}
 
 \define[1]\doRegQuote{\RegQuote{#1}}
 
