@@ -1,29 +1,52 @@
 \startenvironment envThesisTextKeywords
 
+%----------- authors
+
+\define[]\JRanciere{\aKeyword[Jaques Rancière]{authors+jaques rancière}}
+
+%----------- roles (?)
 
 \define[]\Catador{\aKeyword[Catador]{streets+actors+individuals+catadores}}
 \define[]\Catadores{\aKeyword[Catadores]{streets+actors+individuals+catadores}}
+\define[]\catadores{\aKeyword[catadores]{streets+actors+individuals+catadores}}
+
+%----------- social movements
 
 \define[]\Mncr{\aKeyword[MNCR]{streets+actors+movements+mncr}}
 \define[]\Mnpr{\aKeyword[MNPR]{streets+actors+movements+mnpr}}
 \define[]\Mst{\aKeyword[MST]{streets+actors+movements+mst}}
 
+%----------- self-determined and cultural places
+
 \define[]\Ay{\aKeyword[Ay Carmela]{streets+places+self-determined+espaço ay carmela}}
 \define[]\CCSP{\aKeyword[Centro Cultural de São Paulo]{streets+places+cultural+ccsp}}
+\define[]\Mohinho{\aKeyword[Mohinho]{streets+places+self-determined+mohino}}
+\define[]\Ocas{\aKeyword[OCAS]{streets+places+social+ocas}}
 
-\define[]\Penaforte{\aKeyword[Tendas]{streets+places+institutional+refeitorio+penaforte}}
+%----------- institutional places
 
-\define[]\Tendas{\aKeyword[Tendas]{streets+places+institutional+tendas}}
 \define[]\Albergue{\aKeyword[Albergue]{streets+places+institutional+albergue}}
 \define[]\Albergues{\aKeyword[Albergues]{streets+places+institutional+albergue}}
+\define[]\Penaforte{\aKeyword[Penaforte]{streets+places+institutional+refeitorio+penaforte}}
+\define[]\Refeitorio{\aKeyword[Refeitorio]{streets+places+institutional+refeitorio}}
+\define[]\Refeitorios{\aKeyword[Refeitorios]{streets+places+institutional+refeitorio}}
+\define[]\Tendas{\aKeyword[Tendas]{streets+places+institutional+tendas}}
 
-\define[]\Refeitorio{\aKeyword[Albergue]{streets+places+institutional+refeitorio}}
-\define[]\Refeitorios{\aKeyword[Albergue]{streets+places+institutional+refeitorio}}
+%----------- urban spaces
 
 \define[]\AvPaulista{\aKeyword[Avenida Paulista]{streets+places+public spaces+avenida paulista}}
-\define[]\Republica{\aKeyword[República]{streets+places+public spaces+república}}
-\define[]\Se{\aKeyword[Tendas]{streets+places+public spaces+sé}}
+\define[]\Crackolandia{\aKeyword[Crackolândia]{streets+places+public+spaces+crackolandia}}
 \define[]\Minocao{\aKeyword[Minhocão]{streets+places+public spaces+minhocão}}
+\define[]\Republica{\aKeyword[República]{streets+places+public spaces+república}}
+\define[]\Se{\aKeyword[Sé]{streets+places+public spaces+sé}}
+
+%----------- urban districts
+
+\define[]\Luz{\aKeyword[Luz]{streets+places+districts+luz}}
+\define[]\Bras{\aKeyword[Brás]{streets+places+districts+bras}}
+\define[]\Centre{\aKeyword[Centre]{streets+places+districts+centre}}
+
+%----------- concepts
 
 \define[]\RightToTheCity{\aKeyword[Right to the City]{theorizing+right to the city}}
 \define[]\rightToTheCity{\aKeyword[right to the city]{theorizing+right to the city}}
@@ -39,6 +62,7 @@
 
 \define[]\participation{\aKeyword[participation]{theorizing+participation}}
 \define[]\participate{\aKeyword[participation]{theorizing+participation}}
+\define[]\participatory{\aKeyword[participatory]{theorizing+participation}}
 
 \define[]\Participating{\aKeyword[Participating]{theorizing+participation}}
 \define[]\Participation{\aKeyword[Participation]{theorizing+participation}}
@@ -49,6 +73,7 @@
 \define[]\ParticipationRe{\aKeyword[Participation]{theorizing+reconstruction+participation}}
 \define[]\participationRe{\aKeyword[participation]{theorizing+reconstruction+participation}}
 
+\define[]\selfDetermined{\aKeyword[self determined]{theorizing+self-determination}}
 \define[]\SelfDetermination{\aKeyword[Self-Determination]{theorizing+self-determination}}
 \define[]\SelfDeterminationDe{\aKeyword[Self-Determination]{theorizing+deconstruction+self-determination}}
 \define[]\SelfDeterminationRe{\aKeyword[Self-Determination]{theorizing+reconstruction+self-determination}}
@@ -56,6 +81,9 @@
 \define[]\sspace{\aKeyword[space]{theorizing+space}}
 \define[]\minDifference{\aKeyword[minimum difference]{theorizing+minimum difference}}
 \define[]\maxDifference{\aKeyword[maximum difference]{theorizing+maximumdifference}}
+
+\define[]\emancipatory{\aKeyword[emancipatory]{theorizing+emancipatory}}
+\define[]\Emancipatory{\aKeyword[Emancipatory]{theorizing+emancipatory}}
 
 \define[]\Autonomy{\aKeyword[Autonomy]{theorizing+autonomy}}
 \define[]\AutonomyDe{\aKeyword[Autonomy]{theorizing+deconstruction+autonomy}}
@@ -73,8 +101,9 @@
 
 \define[]\deconstruct {\aKeyword[deconstruct]{theorizing+deconstruction}}
 \define[]\deconstructing {\aKeyword[deconstructing]{theorizing+deconstruction}}
-\define[]\deconstruction {\aKeyword[deconstruction]{theorizing+reconstruction}}
-\define[]\Deconstruction {\aKeyword[Deconstruction]{theorizing+reconstruction}}
+\define[]\deconstruction {\aKeyword[deconstruction]{theorizing+deconstruction}}
+\define[]\Deconstruction {\aKeyword[Deconstruction]{theorizing+deconstruction}}
+\define[]\Deconstructing {\aKeyword[Deconstructing]{theorizing+deconstruction}}
 
 \define[]\depoliticized{\aKeyword[depoliticized]{theorizing+deconstruction+participation+depoliticization}}
 \define[]\depoliticization{\aKeyword[depoliticization]{theorizing+deconstruction+participation+depoliticization}}
@@ -86,9 +115,17 @@
 
 \define[]\powerHierarchies{\aKeyword[power hierarchies]{theorizing+deconstruction+power + hierarchy}}
 \define[]\powerHierarchy{\aKeyword[power hierarchy]{theorizing+deconstruction+power  + hierarchy}}
-\define[]\powerDe{\aKeyword[power]{theorizing+deconstruction+power+not distributed}}
+
 \define[]\powerStructures{\aKeyword[power structures]{theorizing+deconstruction+power+not distributed}}
 \define[]\PowerStructures{\aKeyword[power structures]{theorizing+deconstruction+power+not distributed}}
+
+\define[]\powerDe{\aKeyword[power]{theorizing+deconstruction+power+not distributed}}
+\define[]\police{\aKeyword[police]{theorizing+deconstruction+police}}
+
+\define[]\politicsDe{\aKeyword[politics]{theorizing+deconstruction+politics}}
+\define[]\politicsRe{\aKeyword[politics]{theorizing+reconstruction+politics}}
+\define[]\PoliticsDe{\aKeyword[Politics]{theorizing+deconstruction+politics}}
+\define[]\PoliticsRe{\aKeyword[Politics]{theorizing+reconstruction+politics}}
 
 \define[]\technocraticMean{\aKeyword[technocratic mean]{theorizing+deconstruction+technocratic mean}}
 
@@ -98,10 +135,22 @@
 \define[]\InvitedSpaces{\aKeyword[Invited spaces]{theorizing+deconstruction+invited space}}
 \define[]\InvitedSpace{\aKeyword[Invited space]{theorizing+deconstruction+invited space}}
 
+\define[]\participatorySpacesDe{\aKeyword[participatory spaces]{theorizing+deconstruction+participatory space}}
+\define[]\participatorySpace{\aKeyword[participatory space]{theorizing+deconstruction+participatory space}}
+
+\define[]\ParticipatorySpaces{\aKeyword[Participatory spaces]{theorizing+deconstruction+participatory space}}
+\define[]\ParticipatorySpace{\aKeyword[Participatory space]{theorizing+deconstruction+participatory space}}
+
 \define[]\politicalSpaces{\aKeyword[political spaces]{theorizing+deconstruction+political space}}
 \define[]\politicalSpace{\aKeyword[political space]{theorizing+deconstruction+political space}}
 
 \define[]\PoliticalSpaces{\aKeyword[Political spaces]{theorizing+deconstruction+political space}}
 \define[]\PoliticalSpace{\aKeyword[Political space]{theorizing+deconstruction+political space}}
+
+\define[]\policeSpaces{\aKeyword[police spaces]{theorizing+deconstruction+police space}}
+\define[]\policeSpace{\aKeyword[police space]{theorizing+deconstruction+police space}}
+
+\define[]\PoliceSpaces{\aKeyword[Police spaces]{theorizing+deconstruction+police space}}
+\define[]\PoliceSpace{\aKeyword[Police space]{theorizing+deconstruction+police space}}
 
 \stopenvironment
