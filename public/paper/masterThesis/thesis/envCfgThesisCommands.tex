@@ -754,9 +754,6 @@
 {%
 \setupTABLE[r][each][frame=off]
 \setupTABLE[r][first][background=color, backgroundcolor=white, foreground=color, foregroundcolor=magenta:8]
-\setupTABLE[c][1][width=1cm]
-\setupTABLE[c][2][width=2cm, style=\tt\bf]
-\setupTABLE[c][3][style=\tt\em]
 \spaceHalf
 \bTABLE[split=yes]
 }
@@ -769,7 +766,9 @@
 \define[2]\tell
 {
 \bTR[background=color, backgroundcolor=white, foreground=color, foregroundcolor=magenta:8]
-\bTD[background=color, backgroundcolor=white]\eTD\bTD#1:\eTD\bTD#2\eTD
+\bTD[background=color, backgroundcolor=white, width=1cm]\eTD
+\bTD[style={\tt\bf}, width=2cm]#1:\eTD
+\bTD[style={\tt\em}]#2\eTD
 \eTR
 }
 
