@@ -15,7 +15,7 @@
 % switch background to cover page color
 \setupbackgrounds[page][background=color,backgroundcolor=gray:8]
 
-% change link color and styke for coverpage
+% change link color and style for coverpage
 \setupinteraction[state=start,color=gray:1, click=yes, style=slanted]
 
 % always switch off local mode in order to prevent that local changes enter the overall document
@@ -51,17 +51,19 @@
 %---------------------------------------------------------------------------------------------
 % start page numbering from now on
 \page[1]
-\setuppagenumbering[state=start]
+\setuppagenumbering[state=start, alternative=singlesided]
+%\setuppagenumbering[state=start, alternative={singlesided,doublesided}]
+%\installpagebreakhandler{last}{}
 
 % enable headers/footers from now on
 \setupfooter[state=start, color=gray:1, style=small, strut=yes]
 \setupheader[state=start, color=gray:1, style=small]
 
 \setupheadertexts
-        [  {\myTitle}]    []
+        [ {\myTitle} ] []
 
 \setupfootertexts
-         [ {\goto{Start}[tocComplete]} { > \getmarking[chapter] } {> \getmarking[section] } {> \getmarking[subsection]}] [page \pagenumber/\lastpagenumber]
+         [ {\goto{Start}[tocComplete]} { > \getmarking[chapter] } {> \getmarking[section] } {> \getmarking[subsection]}] [ page \pagenumber/\lastpagenumber ]
 
 \setuppagenumbering[location=]
 
