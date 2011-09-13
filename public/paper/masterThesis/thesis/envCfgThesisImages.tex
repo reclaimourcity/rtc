@@ -46,7 +46,14 @@
 \useexternalfigure[imgMncrDireitoACidade2][mncrDireitoACidade2.jpg][frame=off, factor=fit]
 \useexternalfigure[imgMncrDireitoACidade3][mncrDireitoACidade3.jpg][frame=off, factor=fit]
 
+% maps and sat imiages
+
 \useexternalfigure[imgSaoPauloSat][saoPauloSat.jpg][frame=off, factor=fit]
+\useexternalfigure[imgSaoPauloOsm][osmSaoPaulo.jpg][frame=off, factor=fit]
+
+\define[]\imgSaoPauloSatellite{\placefigure[force]{São Paulo by satellite (attribution by \aLinkNew[NASA]{ http://edcsns17.cr.usgs.gov/NewEarthExplorer/} via \aLinkNew[Wikimedia Commons]{http://bit.ly/ore2kU})}{{\scale[sx=0.115,sy=0.115]{\externalfigure[saoPauloSat]}}}}
+
+\define[]\imgOsmSaoPaulo{\placefigure[here]{\aLinkNew[Territories of actions]{http://osm.org/go/M@ziLXvk-} in São Paulo (attribution: © \aLinkNew[OpenStreetMap und Mitwirkende]{http://www.openstreetmap.org/copyright}, \aLinkNew[CC-BY-SA]{http://creativecommons.org/licenses/by-sa/2.0/})}{{\scale[sx=1,sy=1]{\externalfigure[imgSaoPauloOsm]}}}}
 
 % random places
 
@@ -93,8 +100,6 @@
 \define[]\imgOccupationLuz{\placefigure[page]{The last occupied house at the demolished site of the ancient main bus terminal \aLocationNew{Estacão Júlio Prestes}{http://osm.org/go/M@ziNz7ui--} at \Luz (cc-by-sa Author)}{\scale[sx=1,sy=1.1175]{\externalfigure[imgLuz2]}}}
 
 \define[]\imgBuildingLuz{\placefigure[page]{Seen at \Luz (cc-by-sa Author)}{\rotate[90]{\scale[sx=1.5,sy=1.5]{\externalfigure[imgLuz1]}}}}
-
-\define[]\imgSaoPauloSatellite{\placefigure[force]{São Paulo by satellite (attribution by \aLinkNew[NASA]{ http://edcsns17.cr.usgs.gov/NewEarthExplorer/} via \aLinkNew[Wikimedia Commons]{http://bit.ly/ore2kU})}{{\scale[sx=0.115,sy=0.115]{\externalfigure[saoPauloSat]}}}}
 
 \define[]\imgMncrDireitoACidadeOne{\placefigure[page]{Bring down repression against Catadores! Catadores in restistance (source: MNCR)}{{\scale[sx=1,sy=1]{\externalfigure[imgMncrDireitoACidade1]}}}}
 
